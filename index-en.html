@@ -198,7 +198,7 @@ nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
   .hero-ctas .btn { width: 100%; justify-content: center; font-size: 16px; padding: 16px; }
 
   /* Trust badges: stack vertically so they don't get clipped by floating buttons */
-  .trust-badges { flex-direction: column !important; gap: 10px !important; padding-right: 0 !important; }
+  .trust-badges { flex-direction: row !important; justify-content: center !important; }
   .trust-badge { font-size: 14px !important; }
 
   /* Widget */
@@ -376,6 +376,11 @@ section { padding: 80px 24px; }
 .badge-soon { background: #FEF3C7; color: #D97706; }
 .badge-explore { background: var(--lt-blue); color: var(--blue); }
 .badge-help { background: var(--lt-green); color: var(--green); }
+
+/* Widget font size adjustments */
+.widget-q { font-size: 22px !important; }
+.widget-opt-text h4 { font-size: 18px !important; }
+.widget-opt-text p { font-size: 15px !important; }
 
 /* ── STATS BAR ─────────────────────────────────────────── */
 .stats-bar {
@@ -661,6 +666,8 @@ input, select, textarea { font-size: 16px !important; }
 @media (max-width: 768px) {
   .widget-q { font-size: 19px !important; line-height: 1.35 !important; }
   .widget-qsub { font-size: 14px !important; }
+  .widget-opt-text h4 { font-size: 17px !important; }
+  .widget-opt-text p { font-size: 14px !important; }
   /* Push page content above sticky bar */
   footer { padding-bottom: 80px !important; }
   /* Contact methods: bigger tap area */
@@ -814,10 +821,9 @@ a[href^="tel"] { white-space: nowrap; }
               <i class="fas fa-calendar-check"></i> <span>Free Consultation</span>
             </a>
           </div>
-          <div class="trust-badges" style="border-top:none;padding-top:16px">
+          <div class="trust-badges" style="border-top:none;padding-top:16px;display:flex;flex-direction:row;justify-content:center;gap:20px;flex-wrap:nowrap">
             <div class="trust-badge"><i class="fas fa-check-circle"></i> <span>100% Free</span></div>
             <div class="trust-badge"><i class="fas fa-check-circle"></i> <span>Bilingual Support</span></div>
-            <div class="trust-badge"><i class="fas fa-check-circle"></i> <span>No Obligation</span></div>
           </div>
         </div>
 
@@ -1079,13 +1085,75 @@ a[href^="tel"] { white-space: nowrap; }
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section style="padding:60px 24px;background:var(--lt-gray)">
+    <div class="container" style="max-width:900px">
+      <div style="text-align:center;margin-bottom:48px">
+        <div class="section-label" style="color:var(--teal);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:12px">FREQUENTLY ASKED QUESTIONS</div>
+        <h2 style="font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1.3">Questions we hear all the time</h2>
+      </div>
+
+      <div style="max-width:800px;margin:0 auto">
+        <div class="faq-item" style="background:white;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
+          <button class="faq-question" onclick="toggleFAQ(this)" style="padding:24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--navy);background:white;border:none;width:100%;transition:all 0.3s ease;font-size:17px">
+            <span>How much does this service cost?</span>
+            <i class="fas fa-chevron-down faq-icon" style="transition:transform 0.3s ease;font-size:16px"></i>
+          </button>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;padding:0 24px;background:white;transition:max-height 0.4s ease-out,padding 0.3s ease">
+            <p style="margin:0;font-size:15px;color:var(--gray);line-height:1.7">Nothing. Our service is 100% free for you. Insurance carriers compensate us directly, so you get expert guidance at no cost.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="background:white;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
+          <button class="faq-question" onclick="toggleFAQ(this)" style="padding:24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--navy);background:white;border:none;width:100%;transition:all 0.3s ease;font-size:17px">
+            <span>Can my parent keep their current doctor?</span>
+            <i class="fas fa-chevron-down faq-icon" style="transition:transform 0.3s ease;font-size:16px"></i>
+          </button>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;padding:0 24px;background:white;transition:max-height 0.4s ease-out,padding 0.3s ease">
+            <p style="margin:0;font-size:15px;color:var(--gray);line-height:1.7">In many cases, yes. We verify that your doctors and medications are covered before recommending any plan. That is the first thing we check.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="background:white;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
+          <button class="faq-question" onclick="toggleFAQ(this)" style="padding:24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--navy);background:white;border:none;width:100%;transition:all 0.3s ease;font-size:17px">
+            <span>When can my parent enroll in Medicare?</span>
+            <i class="fas fa-chevron-down faq-icon" style="transition:transform 0.3s ease;font-size:16px"></i>
+          </button>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;padding:0 24px;background:white;transition:max-height 0.4s ease-out,padding 0.3s ease">
+            <p style="margin:0;font-size:15px;color:var(--gray);line-height:1.7">Most people can enroll 3 months before turning 65, during their birthday month, or 3 months after. There are also special periods if you move or lose other coverage. We guide you every step of the way.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="background:white;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
+          <button class="faq-question" onclick="toggleFAQ(this)" style="padding:24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--navy);background:white;border:none;width:100%;transition:all 0.3s ease;font-size:17px">
+            <span>What is the difference between Medicare Advantage and Medigap?</span>
+            <i class="fas fa-chevron-down faq-icon" style="transition:transform 0.3s ease;font-size:16px"></i>
+          </button>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;padding:0 24px;background:white;transition:max-height 0.4s ease-out,padding 0.3s ease">
+            <p style="margin:0;font-size:15px;color:var(--gray);line-height:1.7">Medicare Advantage (Part C) replaces Original Medicare and often includes dental, vision, and prescriptions. Medigap supplements Original Medicare by covering copays and deductibles. We help you decide which works best for your situation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" style="background:white;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
+          <button class="faq-question" onclick="toggleFAQ(this)" style="padding:24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--navy);background:white;border:none;width:100%;transition:all 0.3s ease;font-size:17px">
+            <span>My parent has Medi-Cal. Does that change things?</span>
+            <i class="fas fa-chevron-down faq-icon" style="transition:transform 0.3s ease;font-size:16px"></i>
+          </button>
+          <div class="faq-answer" style="max-height:0;overflow:hidden;padding:0 24px;background:white;transition:max-height 0.4s ease-out,padding 0.3s ease">
+            <p style="margin:0;font-size:15px;color:var(--gray);line-height:1.7">Yes, and it can actually be a great situation. Many Californians qualify for both Medicare and Medi-Cal (called dual eligible), which can mean very low or zero costs for most services. Alejandra specializes in helping dual-eligible clients get the most out of their coverage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Banner -->
   <section class="cta-banner" style="text-align:center;padding:60px 24px">
     <div class="container">
-      <div class="section-title" style="color:white;margin-bottom:8px">¿Listo para encontrar su plan?</div>
-      <p style="color:rgba(255,255,255,0.9);font-size:18px;margin-bottom:28px">La comparación es gratis y sin compromiso.</p>
-      <a href="index.html#widget-anchor" class="btn" style="background:white;color:var(--navy);font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
-        <i class="fas fa-search"></i> <span>Empieza Su Comparación Gratis</span>
+      <div class="section-title" style="color:white;margin-bottom:8px">Ready to find your plan?</div>
+      <p style="color:rgba(255,255,255,0.9);font-size:18px;margin-bottom:28px">Comparison is free and without obligation.</p>
+      <a href="index-en.html#widget-anchor" class="btn" style="background:white;color:var(--navy);font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
+        <i class="fas fa-search"></i> <span>Start Your Free Comparison</span>
       </a>
     </div>
   </section>
@@ -1156,6 +1224,34 @@ function toggleMobile() {
 }
 function closeMobile() {
   document.getElementById('mobile-nav').classList.remove('open');
+}
+
+// ═══ FAQ ACCORDION ═══════════════════════════════════════
+function toggleFAQ(button) {
+  const answer = button.nextElementSibling;
+  const isActive = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+  // Close all other FAQs
+  document.querySelectorAll('.faq-answer').forEach(a => {
+    a.style.maxHeight = '0px';
+    a.style.padding = '0px 24px';
+  });
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.style.background = 'white';
+    q.style.color = 'var(--navy)';
+  });
+  document.querySelectorAll('.faq-icon').forEach(i => {
+    i.style.transform = 'rotate(0deg)';
+  });
+
+  // Toggle current FAQ
+  if (!isActive) {
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    answer.style.padding = '24px';
+    button.style.background = 'var(--teal)';
+    button.style.color = 'white';
+    button.querySelector('.faq-icon').style.transform = 'rotate(180deg)';
+  }
 }
 
 // ═══ HEADER SCROLL ═══════════════════════════════════════
@@ -1909,21 +2005,31 @@ function submitWidget(flow) {
   const subject = buildEmailSubject();
   const body = buildEmailBody();
   try {
+    const zapPayload = {
+      name: wData.name || '',
+      phone: wData.phone || '',
+      email: wData.email || '',
+      dob: (wData.dob && wData.dob.formatted) ? wData.dob.formatted : (wData.dob || ''),
+      zip: wData.zip || '',
+      state: wData.state || '',
+      subject: subject,
+      site: 'guiamarcos.com',
+      submittedAt: wData.submittedAt,
+      language: wData.callLang || '',
+      prefer: wData.contactMethod || '',
+      topic: {'first-time':'First time enrolling','moving':'Moving / Change of state','better':'Compare or improve plan','parent':'Help a family member'}[wData.flow] || wData.flow || '',
+      notes: wData.notes || '',
+      flow: wData.flow || '',
+      contactMethod: wData.contactMethod || '',
+      callTime: wData.callTime || ''
+    };
+    console.log('[GuiaMarcos-EN] Zapier payload:', JSON.stringify(zapPayload));
+    const params = new URLSearchParams();
+    Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
     fetch('https://hooks.zapier.com/hooks/catch/26596586/u04de3s/', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        ...wData,
-        subject,
-        site: 'guiamarcos.com',
-        submittedAt: wData.submittedAt,
-        language: wData.callLang || '',
-        prefer: wData.contactMethod || '',
-        topic: {'first-time':'First time enrolling in Medicare','moving':'Moving / Change of state','better':'Compare or improve my plan','parent':'Helping a family member'}[wData.flow] || wData.flow || '',
-        dob: (wData.dob && wData.dob.formatted) ? wData.dob.formatted : (wData.dob || ''),
-        email: wData.email || ''
-      })
-    }).catch(()=>{});
+      body: params
+    }).then(r => console.log('[GuiaMarcos-EN] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN] Zapier error:', e));
   } catch(e) {}
   updateWidgetProgress(100); setTimeout(()=>{ showSuccessState('widget-box'); }, 400);
 }
@@ -2026,11 +2132,22 @@ function submitSeminar(e) {
     'Inscrito desde: guiamarcos.com',
   ].join('\n');
   try {
+    const zapPayload = {
+      name: name || '',
+      email: email || '',
+      phone: phone || '',
+      lang: langLabels[lang]||lang || '',
+      subject: subject || '',
+      site: 'guiamarcos.com-seminar',
+      submittedAt: new Date().toISOString()
+    };
+    console.log('[GuiaMarcos-EN-Seminar] Zapier payload:', JSON.stringify(zapPayload));
+    const params = new URLSearchParams();
+    Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
     fetch('https://hooks.zapier.com/hooks/catch/26596586/u04de3s/', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({name, email, phone, lang: langLabels[lang]||lang, subject, site: 'guiamarcos.com-seminar', submittedAt: new Date().toISOString()})
-    }).catch(()=>{});
+      body: params
+    }).then(r => console.log('[GuiaMarcos-EN-Seminar] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN-Seminar] Zapier error:', e));
   } catch(e) {}
   setTimeout(() => { showSuccessState('seminar-widget'); }, 400);
 }

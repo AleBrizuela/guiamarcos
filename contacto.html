@@ -2071,10 +2071,24 @@ async function submitForm(e) {
     
     // Silent Zapier webhook
     try {
+        const params = new URLSearchParams();
+        params.append('name', formData.name);
+        params.append('phone', formData.phone);
+        params.append('email', formData.email);
+        params.append('zip', formData.zip);
+        params.append('state', formData.state);
+        params.append('dob', formData.dob);
+        params.append('prefer', formData.prefer);
+        params.append('topic', formData.topic);
+        params.append('submittedAt', formData.submittedAt);
+        params.append('language', formData.language);
+        params.append('site', formData.site);
+
+        console.log('[GM-Contact-ES] Sending webhook payload:', Object.fromEntries(params));
+
         fetch('https://hooks.zapier.com/hooks/catch/26596586/u04de3s/', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
+            body: params
         }).catch(() => {});
     } catch(err) {}
     
