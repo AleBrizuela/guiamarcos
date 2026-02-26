@@ -1888,7 +1888,17 @@ function submitWidget(flow) {
     fetch('https://hooks.zapier.com/hooks/catch/26596586/u04de3s/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({...wData, subject, site: 'guiamarcos.com', submittedAt: wData.submittedAt})
+      body: JSON.stringify({
+        ...wData,
+        subject,
+        site: 'guiamarcos.com',
+        submittedAt: wData.submittedAt,
+        language: wData.callLang || '',
+        prefer: wData.contactMethod || '',
+        topic: {'first-time':'Primera vez inscribiéndome en Medicare','moving':'Mudanza / Cambio de estado','better':'Comparar o mejorar mi plan','parent':'Ayuda a un familiar'}[wData.flow] || wData.flow || '',
+        dob: (wData.dob && wData.dob.formatted) ? wData.dob.formatted : (wData.dob || ''),
+        email: wData.email || ''
+      })
     }).catch(()=>{});
   } catch(e) {}
   updateWidgetProgress(100); setTimeout(()=>{ showSuccessState('widget-box'); }, 400);
