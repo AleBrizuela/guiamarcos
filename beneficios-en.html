@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>if(localStorage.getItem('guiamarcos_lang')==='es'){window.location.replace('beneficios.html');}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#002147">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Inicio — Medicare Hispano | Medicare Hispano</title>
-<meta name="description" content="Medicare Hispano — Susana Marcos y Alejandra Brizuela Marcos. Comparamos planes de Kaiser, SCAN, Humana, Aetna y UnitedHealthcare en California y la Región Central. Siempre gratis. (877) 647-5260">
-<meta name="keywords" content="medicare en español, medicare los angeles, agente medicare bilingüe, medicare advantage california, planes medicare los angeles, seguro medicare hispano, bilingual medicare agent california, medicare agent Los Angeles, comparar planes medicare, planes de salud para mayores de 65, medicare hispano">
-<link rel="canonical" href="https://medicare-hispano.com/">
+<title>Medicare Benefits | Guia Marcos</title>
+<meta name="description" content="Medicare Benefits Guide: Complete overview of Medicare Parts A, B, C, D — explained in simple terms. We help you compare plans and find the right coverage. Free service.">
+<meta name="keywords" content="medicare benefits, medicare parts a b c d, medicare advantage, medicare supplement, guia marcos, bilingual medicare agent, medicare california">
+<link rel="canonical" href="https://guiamarcos.com/beneficios-en.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Medicare Made Simple | Susana Marcos LLC | Los Angeles">
-<meta property="og:description" content="Susana Marcos y Alejandra Brizuela Marcos — equipo de madre e hija. Comparamos planes de Kaiser, SCAN, Humana, Aetna, UnitedHealthcare. 100% gratuito.">
-<meta property="og:url" content="https://medicare-hispano.com/">
-<meta property="og:locale" content="es_US">
+<meta property="og:description" content="Medicare made simple. We explain all your Medicare options — Parts A, B, C, D — and help you compare and enroll in the right plan. Free, no obligation.">
+<meta property="og:url" content="https://guiamarcos.com/beneficios-en.html">
+<meta property="og:locale" content="en_US">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"InsuranceAgency","name":"Susana Marcos LLC","description":"Bilingual Medicare insurance agency. Independent brokers comparing all carriers at no cost.","url":"https://medicare-hispano.com","telephone":"+18776475260","email":"alejamedicare@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":[{"@type":"State","name":"California"},{"@type":"State","name":"Illinois"},{"@type":"State","name":"Texas"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Florida"},{"@type":"State","name":"Iowa"}],"openingHours":"Mo-Fr 07:00-16:00 PST, Sa 08:00-12:00 PST","priceRange":"Free","knowsLanguage":["Spanish","English"],"founder":[{"@type":"Person","name":"Susana Marcos","jobTitle":"JD, MBA — Founder and Principal Agent"},{"@type":"Person","name":"Alejandra Brizuela Marcos","jobTitle":"Licensed Medicare Insurance Agent — Partner"}]}
+{"@context":"https://schema.org","@type":"InsuranceAgency","name":"Guia Marcos","description":"Bilingual Medicare insurance agency. Independent brokers comparing top carriers at no cost.","url":"https://guiamarcos.com","telephone":"+1-800-MEDICARE","email":"alejamedicare@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":[{"@type":"State","name":"California"},{"@type":"State","name":"Illinois"},{"@type":"State","name":"Texas"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Florida"},{"@type":"State","name":"Iowa"}],"openingHours":"Mo-Fr 07:00-16:00 PST, Sa 08:00-12:00 PST","priceRange":"Free","knowsLanguage":["Spanish","English"],"founder":[{"@type":"Person","name":"Susana Marcos","jobTitle":"JD, MBA — Founder and Principal Agent"},{"@type":"Person","name":"Alejandra Brizuela Marcos","jobTitle":"Licensed Medicare Insurance Agent — Partner"}]}
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="guiamarcos-brand.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root {
@@ -131,7 +134,7 @@ nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
   transition: all 0.2s; display: flex; align-items: center; gap: 6px;
 }
 .lang-toggle:hover { background: var(--lt-blue); }
-.lang-toggle img { width: 20px; height: 14px; border-radius: 2px; object-fit: cover; }
+/* lang-toggle uses emoji flag */
 .mobile-menu-btn {
   display: none; background: none; border: none;
   font-size: 24px; color: var(--navy); cursor: pointer;
@@ -190,7 +193,7 @@ nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
   .hero-grid .hero-widget { order: 1; margin-bottom: 20px; }
 
   /* Hero text sizing */
-  .hero h1 { font-size: 28px !important; }
+  
   .hero p { font-size: 15px !important; }
   .hero-ctas { flex-direction: column; gap: 10px; }
   .hero-ctas .btn { width: 100%; justify-content: center; font-size: 16px; padding: 16px; }
@@ -236,7 +239,7 @@ nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
 
   /* General sections */
   section { padding: 48px 16px !important; }
-  .section-title { font-size: 24px !important; }
+  
 }
 
 /* ── SECTIONS ──────────────────────────────────────────── */
@@ -729,22 +732,42 @@ a[href^="tel"] { white-space: nowrap; }
 @media (max-width: 768px) {
   .phone-header { font-size: 16px !important; padding: 8px 0; }
 }
+
+  /* Comparison cards responsive */
+  .comparison-cards { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 640px) {
+    .comparison-cards { grid-template-columns: 1fr !important; }
+  }
 </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Guide",
+    "name": "Beneficios de Medicare: Guía Completa en Español",
+    "description": "Guía completa en español sobre Medicare, partes A, B, C, D, SNPS y más",
+    "author": {
+      "@type": "Organization",
+      "name": "Guia Marcos"
+    },
+    "url": "https://guiamarcos.com/beneficios-en.html"
+  }
+  </script>
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+  <link rel="shortcut icon" href="favicon-192x192.png">
+  <link rel="apple-touch-icon" href="favicon-192x192.png">
 </head>
 
 
 <body>
 <header class="header" id="header">
   <div class="header-inner">
-    <a href="javascript:void(0)" class="logo" href="index.html">Medicare <span>Hispano</span></a>
+    <a href="index-en.html" class="logo"><img src="favicon-192x192.png" alt="Guia Marcos" class="logo-icon">Guia Marcos <span>Medicare</span></a>
     <nav id="desktop-nav">
-      <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
-      <a href="nosotros.html" data-es="Nosotros" data-en="About" class="active">Nosotros</a>
-      <a href="medicare101.html" data-es="Medicare 101" data-en="Medicare 101">Medicare 101</a>
-      <a href="index.html#widget-anchor" data-es="Encuentra Tu Plan" data-en="Find Your Plan">Encuentra Tu Plan</a>
-      <a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
-      <a href="tel:+18776475260" class="phone-header"><span style="display:flex;flex-direction:column;align-items:center;gap:3px;line-height:1.2"><span><i class="fas fa-phone"></i> (877) MIPLAN-0</span><span style="font-size:11px;font-weight:500;letter-spacing:0.08em;opacity:0.9">1 · 877 · 647 · 5260</span></span></a>
-      <button class="lang-toggle" onclick="toggleLang()" id="lang-btn"><img src="https://flagcdn.com/w40/us.png" alt="US"> English</button>
+      <a href="index-en.html">Home</a>
+      <a href="beneficios-en.html" class="active">Benefits</a>
+      <a href="contacto-en.html">Contact</a>
+    
+      <div class="lang-pill"><button class="" onclick="goLang('es')" aria-label="Español">ES</button><button class="lp-active" onclick="goLang('en')" aria-label="English">EN</button></div>
     </nav>
     <button class="mobile-menu-btn" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
   </div>
@@ -752,248 +775,300 @@ a[href^="tel"] { white-space: nowrap; }
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobile-nav">
-  <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
-  <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
-  <a href="medicare101.html" data-es="Medicare 101" data-en="Medicare 101">Medicare 101</a>
-  <a href="index.html#widget-anchor" data-es="Encuentra Tu Plan" data-en="Find Your Plan">Encuentra Tu Plan</a>
-  <a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
-  <a href="tel:+18776475260" style="display:flex;align-items:center;gap:10px;color:var(--green);font-weight:700;font-size:17px;padding:14px 16px;border-radius:10px;text-decoration:none;background:var(--lt-green);margin-top:4px"><i class="fas fa-phone"></i> (877) 647-5260</a>
-  <button class="lang-toggle" onclick="toggleLang()" style="margin-top:8px"><img src="https://flagcdn.com/w40/us.png" alt="US"> English</button>
-</div>
+  <a href="index-en.html">Home</a>
+  <a href="beneficios-en.html">Benefits</a>
+  <a href="contacto-en.html">Contáctenos</a>
+
+  <div class="lang-pill"><button class="" onclick="goLang('es')" aria-label="Español">ES</button><button class="lp-active" onclick="goLang('en')" aria-label="English">EN</button></div>
+  </div>
 
 <!-- SMS floating button -->
-<a href="sms:+18776475260&body=Hola%2C%20necesito%20ayuda%20con%20Medicare" class="sms-float" title="Text us">
-  <i class="fas fa-comment-dots"></i><span class="float-label">TEXT US</span>
-</a>
+
 <!-- WhatsApp floating button -->
-<a href="https://wa.me/13105979142?text=Hola%2C%20necesito%20ayuda%20con%20Medicare" class="wa-float" target="_blank" title="WhatsApp">
+<a href="https://wa.me/13105979142?text=Hello%2C%20I%20need%20help%20with%20Medicare" class="wa-float" target="_blank" title="WhatsApp">
   <i class="fab fa-whatsapp"></i><span class="float-label">WHATSAPP</span>
 </a>
 
 <main id="main-content">
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- NOSOTROS PAGE -->
+<!-- MEDICARE 101 PAGE -->
 <!-- ═══════════════════════════════════════════════════════ -->
 
-  <!-- Hero -->
-  <section class="about-hero">
+<!-- Hero -->
+  <section style="padding-top:100px;padding-bottom:48px;background:linear-gradient(135deg,var(--lt-blue) 0%,var(--lt-mint) 100%);text-align:center">
     <div class="container">
-      <div class="section-label" data-es="NUESTRA HISTORIA" data-en="OUR STORY">NUESTRA HISTORIA</div>
-      <div class="section-title" data-es="Familia, servicio, y comunidad." data-en="Family, service, and community.">Familia, servicio, y comunidad.</div>
-      <p class="section-subtitle" data-es="En 2012, Susana Marcos comenzó a ayudar a familias hispanas a navegar Medicare en un pueblo de 5,000 personas en Missouri. Hoy, con su hija Alejandra en Los Angeles, la misión continúa en el sur de California." data-en="In 2012, Susana Marcos started helping Hispanic families navigate Medicare in a town of 5,000 people in Missouri. Today, with her daughter Alejandra in Los Angeles, the mission continues in Southern California.">En 2012, Susana Marcos comenzó a ayudar a familias hispanas a navegar Medicare en un pueblo de 5,000 personas en Missouri. Hoy, con su hija Alejandra en Los Angeles, la misión continúa en el sur de California.</p>
+      <div class="section-label">MEDICARE BENEFITS</div>
+      <h1 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:16px">Understand Your Medicare Benefits</h1>
+      <p style="font-size:18px;color:var(--gray);max-width:640px;margin:0 auto 32px">Everything you need to know to get started — in plain English.</p>
+      <a href="index-en.html#widget-anchor" class="btn btn-primary"><i class="fas fa-search"></i> <span>Compare Plans</span></a>
     </div>
   </section>
 
-  <!-- Team Section -->
-  <section style="padding:60px 24px">
-    <div class="container">
-      <div class="team-grid">
+  <!-- What is Medicare -->
+  <section style="padding:60px 24px;background:white">
+    <div class="container" style="max-width:860px">
+      <div class="section-label">¿QUÉ ES MEDICARE?</div>
+      <div class="section-title">Medicare es el seguro médico federal para personas de 65 años o más.</div>
+      <p style="font-size:16px;color:var(--gray);margin-top:16px;line-height:1.8">También cubre a personas menores de 65 años con ciertas discapacidades o enfermedades. Es administrado por el gobierno federal de Estados Unidos (CMS — Centers for Medicare &amp; Medicaid Services) y se divide en partes: A, B, C y D.</p>
+    </div>
+  </section>
 
-        <!-- Susana Marcos -->
-        <div class="team-card">
-          <div class="team-avatar team-photo" id="photo-susana" style="background:var(--navy);width:140px;height:140px;border-radius:50%;margin:0 auto 20px;border:4px solid var(--lt-blue);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:0">
-            <img id="img-susana" src="data:image/jpeg;base64,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" alt="Susana Marcos" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
-          </div>
-          <h3>Susana Marcos</h3>
-          <div class="role" data-es="Fundadora | Agente Principal" data-en="Founder | Principal Agent">Fundadora | Agente Principal</div>
-          <p data-es="Con más de 1,200 clientes activos y 440 inscripciones en el ciclo AEP/OEP 2026, Susana es una de las agentes bilingües más productivas del Medio Oeste. Su secreto: tratar a cada cliente como familia." data-en="With over 1,200 active clients and 440 enrollments in the 2026 AEP/OEP cycle, Susana is one of the most productive bilingual agents in the Midwest. Her secret: treating every client like family.">Con más de 1,200 clientes activos y 440 inscripciones en el ciclo AEP/OEP 2026, Susana es una de las agentes bilingües más productivas del Medio Oeste. Su secreto: tratar a cada cliente como familia.</p>
-          <div class="credentials">
-            <span class="credential-tag">JD, MBA</span>
-            <span class="credential-tag">KS, MO, IL, FL, IA, CA</span>
-          </div>
+  <!-- The 4 Parts -->
+  <section style="padding:60px 24px;background:var(--lt-gray)">
+    <div class="container">
+      <div class="section-label">LAS 4 PARTES</div>
+      <div class="section-title">¿Cuál es la diferencia entre Parte A, B, C y D?</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px">
+
+        <!-- Part A -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--navy)">
+          <div style="width:48px;height:48px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">A</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Part A — Hospital</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Cubre hospitalizaciones, enfermería en centros de cuidado prolongado (skilled nursing), hospicio y algunos servicios de salud en el hogar. La mayoría de las personas no pagan prima mensual si trabajaron 10+ años y pagaron impuestos al Medicare.</p>
         </div>
 
-        <!-- Alejandra Brizuela -->
-        <div class="team-card">
-          <div class="team-avatar team-photo" id="photo-alejandra" style="background:var(--teal);width:140px;height:140px;border-radius:50%;margin:0 auto 20px;border:4px solid var(--lt-green);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:0">
-            <img id="img-alejandra" src="data:image/jpeg;base64,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" alt="Alejandra Brizuela Marcos" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
-          </div>
-          <h3>Alejandra Brizuela Marcos</h3>
-          <div class="role" data-es="Agente Licenciada | California" data-en="Licensed Agent | California">Agente Licenciada | California</div>
-          <p data-es="Basada en Los Angeles, Alejandra lidera la expansión al sur de California. Con licencia en CA y contratos con UHC, Aetna y Kaiser, está lista para servir a <em>toda</em> la comunidad hispana de Los Angeles y el sur de California." data-en="Based in Los Angeles, Alejandra leads the Southern California expansion. Licensed in CA with contracts with UHC, Aetna, and Kaiser, she is ready to serve the entire Hispanic community of Los Angeles and Southern California.">Basada en Los Angeles, Alejandra lidera la expansión al sur de California. Con licencia en CA y contratos con UHC, Aetna y Kaiser, está lista para servir a <em>toda</em> la comunidad hispana de Los Angeles y el sur de California.</p>
-          <div class="credentials">
-            <span class="credential-tag">CA, TX, OK, FL</span>
-            <span class="credential-tag">Los Angeles, CA</span>
-          </div>
+        <!-- Part B -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--blue)">
+          <div style="width:48px;height:48px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">B</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Part B — Doctor</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Cubre visita al médico, especialistas, laboratorios, imágenes (rayos X, resonancias), y equipo médico. La prima estándar en 2025 es de $185/mes, deducida del cheque del Seguro Social. El deducible anual es $257.</p>
+        </div>
+
+        <!-- Part C -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--teal)">
+          <div style="width:48px;height:48px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">C</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Part C — Medicare Advantage</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Planes ofrecidos por aseguradoras privadas que reemplazan su Medicare Original (A + B) y usualmente incluyen beneficios adicionales: dental, visión, audición, gym, y transporte. Muchos tienen prima de $0/mes. Requiere seguir usando doctores de la red del plan.</p>
+        </div>
+
+        <!-- Part D -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--green)">
+          <div style="width:48px;height:48px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">D</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Part D — Prescriptions</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Cubre medicamentos recetados. Se adquiere como plan separado (si tiene Medicare Original) o ya viene incluido en muchos planes Medicare Advantage. Los costos varían según el plan y los medicamentos que toma.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Why Susana Marcos LLC -->
+  <!-- Medigap -->
+  <section style="padding:60px 24px;background:white">
+    <div class="container" style="max-width:860px">
+      <div class="section-label">SUPLEMENTO MEDIGAP</div>
+      <div class="section-title">¿Qué es un plan Medigap o Suplemento?</div>
+      <p style="font-size:16px;color:var(--gray);margin-top:16px;line-height:1.8">Los planes Medigap se añaden al Medicare Original (Partes A y B) para cubrir los gastos que Medicare no paga completamente: deducibles, copagos y coseguros. No reemplazan su Medicare — lo complementan. puede ver a cualquier médico en el país que acepte Medicare, sin red de proveedores. Tienen prima mensual adicional, pero pueden reducir mucho los gastos inesperados.</p>
+    </div>
+  </section>
+
+  <!-- Enrollment Periods -->
   <section style="padding:60px 24px;background:var(--lt-gray)">
     <div class="container" style="max-width:860px">
-      <div class="section-label" data-es="POR QUÉ ELEGIRNOS" data-en="WHY CHOOSE US">POR QUÉ ELEGIRNOS</div>
-      <div class="section-title" data-es="Agentes independientes. Sin favoritismos." data-en="Independent agents. No bias.">Agentes independientes. Sin favoritismos.</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:32px">
-        <div style="background:white;border-radius:16px;padding:28px;box-shadow:var(--shadow)">
-          <div style="font-size:32px;margin-bottom:12px">🆓</div>
-          <h4 style="color:var(--navy);margin-bottom:8px" data-es="Siempre Gratuito" data-en="Always Free">Siempre Gratuito</h4>
-          <p style="font-size:15px;color:var(--gray);line-height:1.7" data-es="Nunca cobraremos ni un centavo. Los agentes de Medicare son pagados por las aseguradoras, no por ti." data-en="We never charge a single cent. Medicare agents are paid by the insurance carriers, not by you.">Nunca cobraremos ni un centavo. Los agentes de Medicare son pagados por las aseguradoras, no por ti.</p>
+      <div class="section-label">PERÍODOS DE INSCRIPCIÓN</div>
+      <div class="section-title">¿Cuándo puedo inscribirme o cambiar mi plan?</div>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:32px">
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-birthday-cake"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Initial Enrollment Period (IEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">7 meses alrededor de su cumpleaños número 65: los 3 meses antes, el mes de su cumpleaños y los 3 meses después. Es su ventana principal para inscribirse sin penalidades.</p>
+          </div>
         </div>
-        <div style="background:white;border-radius:16px;padding:28px;box-shadow:var(--shadow)">
-          <div style="font-size:32px;margin-bottom:12px">⚖️</div>
-          <h4 style="color:var(--navy);margin-bottom:8px" data-es="Independientes" data-en="Independent">Independientes</h4>
-          <p style="font-size:15px;color:var(--gray);line-height:1.7" data-es="Comparamos planes de <em>todas</em> las compañías. No somos empleados de ninguna aseguradora — trabajamos para ti." data-en="We compare plans from all carriers. We are not employed by any insurance company — we work for you.">Comparamos planes de <em>todas</em> las compañías. No somos empleados de ninguna aseguradora — trabajamos para ti.</p>
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-calendar-alt"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Período Anual de Elección (AEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">Del 15 de octubre al 7 de diciembre. puede cambiar su plan de Medicare Advantage o su plan de medicamentos (Parte D). Los cambios entran en vigor el 1 de enero.</p>
+          </div>
         </div>
-        <div style="background:white;border-radius:16px;padding:28px;box-shadow:var(--shadow)">
-          <div style="font-size:32px;margin-bottom:12px">🇲🇽</div>
-          <h4 style="color:var(--navy);margin-bottom:8px" data-es="100% en Español" data-en="100% in Spanish">100% en Español</h4>
-          <p style="font-size:15px;color:var(--gray);line-height:1.7" data-es="Toda nuestra atención es en español. Medicare puede ser complicado — nosotros lo explicamos claro y simple." data-en="All our service is in Spanish. Medicare can be complicated — we explain it clearly and simply.">Toda nuestra atención es en español. Medicare puede ser complicado — nosotros lo explicamos claro y simple.</p>
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-redo"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Annual Enrollment Period (OEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">Del 1 de enero al 31 de marzo. Si ya tiene un plan de Medicare Advantage, puede cambiarlo una vez o regresar a Medicare Original.</p>
+          </div>
         </div>
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-truck-moving"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Special Enrollment Period (SEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">Certain life events give you a special enrollment window: moving to a new area, losing employer coverage, changes in Medicaid, or your plan leaving your area. Generally lasts 60 days from the event.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- USA Coverage Map -->
-  
-  <!-- ══ COVERAGE MAP ══ -->
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Have questions? Let's talk.</h2>
+    <p>Our service is free. No obligation. Always bilingual.</p>
+    <div class="cta-buttons">
+      
+    </div>
+  </section>
+
+  <!-- Official Sources -->
   <section style="padding:60px 24px;background:var(--lt-gray)">
     <div class="container">
-      <div class="section-label" data-es="DÓNDE TRABAJAMOS" data-en="WHERE WE WORK">DÓNDE TRABAJAMOS</div>
-      <div class="section-title" style="margin-bottom:8px" data-es="Nuestra Área de Cobertura" data-en="Our Coverage Area">Nuestra Área de Cobertura</div>
-      <p class="section-subtitle" style="margin-bottom:36px" data-es="Servimos a comunidades hispanas en 8 estados. Si te mudaste recientemente, es posible que también podamos ayudarte." data-en="We serve Hispanic communities across 8 states. If you recently moved, we may be able to help you too.">Servimos a comunidades hispanas en 8 estados. Si te mudaste recientemente, es posible que también podamos ayudarte.</p>
+      <div class="section-label">FUENTES OFICIALES</div>
+      <div class="section-title">Recursos confiables del gobierno</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px">
+        <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-globe" style="font-size:24px;color:var(--blue)"></i>
+          <div><strong style="color:var(--navy)">Medicare.gov</strong><br><small style="color:var(--gray)">Portal oficial de Medicare</small></div>
+        </a>
+        <a href="https://www.ssa.gov/espanol/" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-id-card" style="font-size:24px;color:var(--green)"></i>
+          <div><strong style="color:var(--navy)">SSA.gov</strong><br><small style="color:var(--gray)">Seguro Social en español</small></div>
+        </a>
+        <a href="https://www.medicare.gov/find-a-plan/questions/home.aspx" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-search-dollar" style="font-size:24px;color:var(--teal)"></i>
+          <div><strong style="color:var(--navy)">Plan Finder</strong><br><small style="color:var(--gray)">Comparador de planes oficial</small></div>
+        </a>
+        <a href="https://www.cms.gov" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-landmark" style="font-size:24px;color:var(--navy)"></i>
+          <div><strong style="color:var(--navy)">CMS.gov</strong><br><small style="color:var(--gray)">Centros de Servicios Medicare</small></div>
+        </a>
+      </div>
+    </div>
+  </section
 
-      <!-- SVG Tile Map -->
-      <div style="background:white;border-radius:16px;padding:24px;box-shadow:var(--shadow);overflow:hidden">
-        <svg viewBox="0 0 700 440" style="width:100%;max-width:780px;display:block;margin:0 auto" role="img" aria-label="Mapa de estados donde operamos">
-          <rect x="14" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="37" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">AK</text>
-            <rect x="114" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="137" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">WA</text>
-            <rect x="114" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="137" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">OR</text>
-            <rect x="114" y="214" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="137" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">CA</text>
-            <rect x="114" y="314" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="137" y="337" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">HI</text>
-            <rect x="164" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="187" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">MT</text>
-            <rect x="164" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="187" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">ID</text>
-            <rect x="164" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="187" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">NV</text>
-            <rect x="164" y="264" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="187" y="287" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">AZ</text>
-            <rect x="214" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="237" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">ND</text>
-            <rect x="214" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="237" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">WY</text>
-            <rect x="214" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="237" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">CO</text>
-            <rect x="214" y="264" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="237" y="287" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">NM</text>
-            <rect x="264" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="287" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">MN</text>
-            <rect x="264" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="287" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">SD</text>
-            <rect x="264" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="287" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">NE</text>
-            <rect x="264" y="264" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="287" y="287" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">KS</text>
-            <rect x="264" y="314" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="287" y="337" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">OK</text>
-            <rect x="264" y="364" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="287" y="387" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">TX</text>
-            <rect x="314" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="337" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">WI</text>
-            <rect x="314" y="164" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="337" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">IA</text>
-            <rect x="314" y="214" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="337" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">MO</text>
-            <rect x="314" y="264" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="337" y="287" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">AR</text>
-            <rect x="314" y="314" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="337" y="337" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">LA</text>
-            <rect x="364" y="164" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="387" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">IL</text>
-            <rect x="364" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="387" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">KY</text>
-            <rect x="364" y="264" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="387" y="287" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">TN</text>
-            <rect x="364" y="314" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="387" y="337" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">MS</text>
-            <rect x="414" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="437" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">MI</text>
-            <rect x="414" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="437" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">IN</text>
-            <rect x="414" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="437" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">WV</text>
-            <rect x="414" y="264" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="437" y="287" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">NC</text>
-            <rect x="414" y="314" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="437" y="337" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">AL</text>
-            <rect x="464" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="487" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">NY</text>
-            <rect x="464" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="487" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">OH</text>
-            <rect x="464" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="487" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">VA</text>
-            <rect x="464" y="264" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="487" y="287" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">SC</text>
-            <rect x="464" y="314" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="487" y="337" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">GA</text>
-            <rect x="464" y="364" width="46" height="46" rx="7" fill="#002147"/>
-            <text x="487" y="387" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="white" font-family="Inter,sans-serif">FL</text>
-            <rect x="514" y="114" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="537" y="137" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">MA</text>
-            <rect x="514" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="537" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">PA</text>
-            <rect x="514" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="537" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">MD</text>
-            <rect x="564" y="64" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="587" y="87" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">VT</text>
-            <rect x="564" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="587" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">CT</text>
-            <rect x="564" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="587" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">NJ</text>
-            <rect x="614" y="14" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="637" y="37" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">ME</text>
-            <rect x="614" y="64" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="637" y="87" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">NH</text>
-            <rect x="614" y="164" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="637" y="187" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">RI</text>
-            <rect x="614" y="214" width="46" height="46" rx="7" fill="#D1DBE6"/>
-            <text x="637" y="237" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="#6B7280" font-family="Inter,sans-serif">DE</text>
-        </svg>
 
-        <!-- Legend -->
-        <div style="display:flex;align-items:center;justify-content:center;gap:28px;margin-top:16px;flex-wrap:wrap">
-          <div style="display:flex;align-items:center;gap:8px">
-            <div style="width:18px;height:18px;background:#002147;border-radius:4px;flex-shrink:0"></div>
-            <span style="font-size:13px;font-weight:600;color:var(--navy)" data-es="Área de servicio activa" data-en="Active service area">Área de servicio activa</span>
+  <!-- ══ COMPARISON: MA vs MEDIGAP ══ -->
+  <section style="padding:60px 24px;background:white">
+    <div class="container" style="max-width:980px">
+      <div class="section-label">COMPARACIÓN CLAVE</div>
+      <div class="section-title" style="margin-bottom:12px">Medicare Advantage vs. Medigap</div>
+      <p class="section-subtitle">¿Cuál es mejor para usted? Depende de su salud, doctores y presupuesto.</p>
+
+      <!-- Cards comparison -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px" class="comparison-cards">
+
+        <!-- Medicare Advantage card -->
+        <div style="border:2px solid #1B4F72;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(27,79,114,0.12)">
+          <div style="background:#1B4F72;color:white;padding:20px 24px;text-align:center">
+            <div style="font-size:28px;margin-bottom:4px">🏥</div>
+            <div style="font-size:19px;font-weight:700">Medicare Advantage</div>
+            <div style="font-size:13px;opacity:0.85;margin-top:2px">(Parte C)</div>
           </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <div style="width:18px;height:18px;background:#D1DBE6;border-radius:4px;flex-shrink:0"></div>
-            <span style="font-size:13px;color:var(--gray)" data-es="No disponible actualmente" data-en="Not currently available">No disponible actualmente</span>
+          <div style="background:#EBF5FB;padding:20px 24px">
+            <div style="margin-bottom:12px"><span style="background:#1B4F72;color:white;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600">MEJOR PARA</span></div>
+            <p style="font-size:15px;color:var(--dark);margin-bottom:16px">Personas que prefieren prima baja y no tienen muchos doctores o medicamentos.</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Prima mensual:</strong> $0 en muchos planes</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Extras:</strong> <span>Incluye Parte D (medicamentos) en muchos casos</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E67E22;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Doctores:</strong> <span>Red limitada (HMO/PPO)</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E67E22;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Gastos de bolsillo:</strong> <span>Hasta $5,000–$8,000/año</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Extras:</strong> <span>Dental, visión, audición disponible</span></p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- State chips -->
-        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px">
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">California</span>
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">Florida</span>
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">Illinois</span>
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">Iowa</span>
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">Kansas</span>
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">Missouri</span>
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">Oklahoma</span>
-          <span style="background:#002147;color:white;padding:5px 14px;border-radius:20px;font-size:13px;font-weight:700">Texas</span>
+        <!-- Medigap card -->
+        <div style="border:2px solid #196F3D;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(25,111,61,0.12)">
+          <div style="background:#196F3D;color:white;padding:20px 24px;text-align:center">
+            <div style="font-size:28px;margin-bottom:4px">🛡️</div>
+            <div style="font-size:19px;font-weight:700">Medigap (Suplemento)</div>
+            <div style="font-size:13px;opacity:0.85;margin-top:2px">Medicare Suplementario</div>
+          </div>
+          <div style="background:#EAFAF1;padding:20px 24px">
+            <div style="margin-bottom:12px"><span style="background:#196F3D;color:white;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600">MEJOR PARA</span></div>
+            <p style="font-size:15px;color:var(--dark);margin-bottom:16px">Personas con condiciones crónicas o que visitan muchos médicos especialistas.</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E74C3C;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Prima mensual:</strong> <span>$100–$300/mes típico</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Doctores:</strong> <span>Cualquier doctor que acepte Medicare</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Gastos de bolsillo:</strong> <span>Muy predecibles y bajos</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E74C3C;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Medicamentos:</strong> <span>Requiere Parte D por separado</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E74C3C;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Extras:</strong> <span>No incluye dental ni visión</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA -->
+      <div style="text-align:center;margin-top:40px;padding:28px;background:var(--lt-blue);border-radius:16px">
+        <p style="font-size:17px;color:var(--navy);font-weight:600;margin-bottom:12px">Not sure which plan is right for you? We help you find out — free.</p>
+        <a href="index-en.html#widget-anchor" class="btn btn-primary"><i class="fas fa-search"></i> <span>Compare Plans</span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- NUESTROS SERVICIOS -->
+  <section style="padding:60px 24px;background:var(--lt-gray)">
+    <div class="container">
+<!-- SERVICES OVERVIEW -->
+  <section class="services-overview">
+    <div class="container">
+      <div class="section-label">OUR SERVICES</div>
+      <div class="section-title">Everything You Need for Medicare</div>
+      <div class="section-subtitle">Personalized service, 100% free. By law, Medicare agents cannot charge you.</div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-icon" style="background:var(--navy)"><i class="fas fa-file-medical"></i></div>
+          <h3>Medicare Advantage (Parte C)</h3>
+          <p>All-in-one plans that include hospital, doctor, and sometimes vision, dental and medications. Many with $0 premium.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon" style="background:var(--green)"><i class="fas fa-pills"></i></div>
+          <h3>Parte D (Medicinas)</h3>
+          <p>Prescription drug coverage. We help you find the plan that covers YOUR medications at the lowest cost.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon" style="background:var(--teal)"><i class="fas fa-shield-alt"></i></div>
+          <h3>Medigap (Suplementario)</h3>
+          <p>Seguros que cubren lo que Medicare Original no paga: copagos, deducibles, y emergencias fuera del pais.</p>
         </div>
       </div>
     </div>
   </section>
-  <!-- ══ END COVERAGE MAP ══ -->
-
+    </div>
+  </section>
 
   <!-- CTA Banner -->
   <section class="cta-banner" style="text-align:center;padding:60px 24px">
     <div class="container">
-      <div class="section-title" style="color:white;margin-bottom:8px" data-es="¿Listo para encontrar tu plan?" data-en="Ready to find your plan?">¿Listo para encontrar tu plan?</div>
-      <p style="color:rgba(255,255,255,0.9);font-size:18px;margin-bottom:28px" data-es="La comparación es gratis y sin compromiso." data-en="The comparison is free and without obligation.">La comparación es gratis y sin compromiso.</p>
+      <div class="section-title" style="color:white;margin-bottom:8px">¿Listo para empezar?</div>
+      <p style="color:rgba(255,255,255,0.9);font-size:18px;margin-bottom:28px">The consultation is 100% free and without obligation.</p>
       <a href="index.html#widget-anchor" class="btn" style="background:white;color:var(--navy);font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
-        <i class="fas fa-search"></i> <span data-es="Empieza Tu Comparación Gratis" data-en="Start Your Free Comparison">Empieza Tu Comparación Gratis</span>
+        <i class="fas fa-search"></i> <span>Compare Plans</span>
       </a>
     </div>
   </section>
@@ -1004,80 +1079,53 @@ a[href^="tel"] { white-space: nowrap; }
   <div class="footer-grid">
     <div>
       <div style="font-family:'Playfair Display',serif;font-size:22px;color:white;margin-bottom:12px">Susana Marcos <span style="color:var(--mint)">LLC</span></div>
-      <p data-es="Agentes de Medicare bilingües con licencia en California, Illinois, Texas, Oklahoma, Florida e Iowa. Nuestro servicio es siempre 100% gratuito." data-en="Bilingual Medicare agents licensed in California, Illinois, Texas, Oklahoma, Florida, and Iowa. Our service is always 100% free.">Agentes de Medicare bilingües con licencia en California, Illinois, Texas, Oklahoma, Florida e Iowa. Nuestro servicio es siempre 100% gratuito.</p>
+      <p>Bilingual Medicare agents licensed in California, Illinois, Texas, Oklahoma, Florida and Iowa. Our service is always 100% free.</p>
     </div>
     <div>
-      <h4 data-es="Páginas" data-en="Pages">Páginas</h4>
-      <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
-      <a href="nosotros.html" data-es="Nosotros" data-en="About">Nosotros</a>
-      <a href="medicare101.html">Medicare 101</a>
-      <a href="index.html#widget-anchor" data-es="Encuentra Tu Plan" data-en="Find Your Plan">Encuentra Tu Plan</a>
-      <a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
+      <h4>Pages</h4>
+      <a href="index-en.html">Home</a>
+      <a href="beneficios-en.html">Benefits</a>
+      <a href="contacto-en.html">Contact Us</a>
     </div>
     <div>
-      <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
-      <a href="tel:+18776475260">(877) MIPLAN-0</a><br><small style="color:rgba(255,255,255,0.6);font-size:12px;letter-spacing:0.08em;font-weight:500">1 · 877 · 647 · 5260</small>
+      <h4>Contact Us</h4>
+      <br><small style="color:rgba(255,255,255,0.6);font-size:12px;letter-spacing:0.08em;font-weight:500"></small>
       <a href="mailto:alejamedicare@gmail.com">alejamedicare@gmail.com</a>
       <a href="https://wa.me/13105979142" target="_blank">WhatsApp</a>
     </div>
     <div>
-      <h4 data-es="Horario" data-en="Hours">Horario</h4>
-      <p data-es="Lunes a Viernes: 7am–4pm PT<br>Sábado: 8am–12pm PT<br>Domingo: Solo con cita" data-en="Monday to Friday: 7am–4pm PT<br>Saturday: 8am–12pm PT<br>Sunday: By appointment only">Lunes a Viernes: 7am–4pm PT<br>Sábado: 8am–12pm PT<br>Domingo: Solo con cita</p>
+      <h4>Hours</h4>
+      <p>Mon–Fri: 7am–4pm PT<br>Saturday: 8am–12pm PT<br>Sunday: By appointment</p>
     </div>
   </div>
   <div style="text-align:center;padding:20px 24px 0;border-top:1px solid rgba(255,255,255,0.1)">
-    <p style="font-size:15px;color:var(--mint);font-weight:600;margin-bottom:4px" data-es="Alejandra Brizuela Marcos" data-en="Alejandra Brizuela Marcos">Alejandra Brizuela Marcos</p>
-    <p style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:4px" data-es="Agente Licenciada de Medicare — Susana Marcos LLC" data-en="Licensed Medicare Insurance Agent | Susana Marcos LLC">Agente Licenciada de Medicare — Susana Marcos LLC</p>
-    <p style="font-size:14px;color:white;font-weight:600;margin-bottom:4px">(877) MIPLAN-0 | alejamedicare@gmail.com</p>
-    <p style="font-size:13px;color:rgba(255,255,255,0.7);font-style:italic;margin-bottom:4px" data-es="Agente Licenciada en CA | Hablo Español" data-en="CA Licensed Agent | Hablo Español">Agente Licenciada en CA | Hablo Español</p>
+    <p style="font-size:15px;color:var(--mint);font-weight:600;margin-bottom:4px">Alejandra Brizuela Marcos</p>
+    <p style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:4px">Susana Marcos LLC</p>
+    <p style="font-size:14px;color:white;font-weight:600;margin-bottom:4px">alejamedicare@gmail.com | I Speak Spanish</p>
   </div>
-  <div class="footer-bottom" data-es="Not connected with or endorsed by the U.S. government or the federal Medicare program. There is no cost or obligation to you for my services." data-en="Not connected with or endorsed by the U.S. government or the federal Medicare program. There is no cost or obligation to you for my services.">Not connected with or endorsed by the U.S. government or the federal Medicare program. There is no cost or obligation to you for my services.</div>
+  <div class="footer-bottom">
+    <p style="margin-bottom:6px">We do not offer every plan available in your area. Any information we provide is limited to the plans we offer in your area. Please contact <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7)">Medicare.gov</a> or call 1-800-MEDICARE for information on all of your options. Our advice is free and without obligation to you.</p>
+    <p>Not connected with or endorsed by the U.S. government or the federal Medicare program. — <a href="https://guiamarcos.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none">guiamarcos.com</a> — our site in Spanish</p>
+  </div>
 </footer>
 
 <!-- ── MOBILE STICKY CTA ─────────────────────────────── -->
 <div class="mobile-sticky-cta" id="mobile-sticky-cta">
   <button onclick="smoothScrollToWidget()">
     <i class="fas fa-search"></i>
-    <span data-es="¡Empiece Su Comparación Gratis!" data-en="Start Your Free Comparison!">¡Empiece Su Comparación Gratis!</span>
+    <span>Compare Plans</span>
   </button>
 </div>
 
 <script>
 // ═══ STATE ════════════════════════════════════════════════
-let currentLang = 'es';
-let currentPage = 'about';
+let currentLang = 'en';
+let currentPage = 'beneficios';
 let widgetState = { situation: null, zip: null };
 
 // ═══ PAGE NAVIGATION ═════════════════════════════════════
 // Navigation handled by href links
 // ═══ LANGUAGE TOGGLE ═════════════════════════════════════
-function toggleLang() {
-  currentLang = currentLang === 'es' ? 'en' : 'es';
-  updateLang();
-}
-
-function updateLang() {
-  const opposite = currentLang === 'es' ? 'en' : 'es';
-  document.querySelectorAll('.lang-toggle').forEach(b => {
-    if (currentLang === 'es') {
-      b.innerHTML = '<img src="https://flagcdn.com/w40/us.png" alt="US" style="width:20px;height:14px;border-radius:2px;object-fit:cover"> English';
-    } else {
-      b.innerHTML = '<img src="https://flagcdn.com/w40/mx.png" alt="MX" style="width:20px;height:14px;border-radius:2px;object-fit:cover"> Español';
-    }
-  });
-  document.documentElement.lang = currentLang;
-
-  document.querySelectorAll('[data-es][data-en]').forEach(el => {
-    const text = el.dataset[currentLang];
-    if (text) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = text;
-      } else {
-        el.innerHTML = text;
-      }
-    }
-  });
-}
 
 // ═══ MOBILE MENU ═════════════════════════════════════════
 function toggleMobile() {
@@ -1164,7 +1212,7 @@ function startFlow(type) { updateWidgetProgress(10);
 function shell(containerId, backId, iconCls, bgColor, q_es, q_en, sub_es, sub_en, body) {
   const es = currentLang === 'es';
   document.getElementById(containerId).innerHTML = `
-    <button class="widget-back" onclick="wBack('${backId}')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack('${backId}')"><i class="fas fa-arrow-left"></i> Back</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:${bgColor};display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="${iconCls}"></i></div>
       <div class="widget-q" style="margin:0">${es?q_es:q_en}</div>
@@ -1253,15 +1301,15 @@ function carrierSel(id) {
   const opts = carriers.map(c => `<option value="${c}">${c}</option>`).join('');
   return `<div style="margin-bottom:14px">
     <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">
-      ${es?'¿Con qué aseguradora tienes tu plan?':'What is your current insurance carrier?'}
+      ${es?'¿Con qué aseguradora tiene su plan?':'What is your current insurance carrier?'}
     </label>
-    <select id="${id}" onchange="toggleOtherCarrier('${id}')" style="width:100%;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:15px;font-family:inherit;color:var(--dark);outline:none">
-      <option value="">${es?'Selecciona tu aseguradora':'Select your carrier'}</option>
+    <select id="${id}" onchange="toggleOtherCarrier('${id}')" style="width:100%;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit;color:var(--dark);outline:none">
+      <option value="">${es?'Seleccione su aseguradora':'Select your carrier'}</option>
       ${opts}
       <option value="other">${es?'Otra aseguradora':'Other carrier'}</option>
     </select>
     <input id="${id}-other" type="text" placeholder="${es?'Escribe el nombre de la aseguradora':'Type the carrier name'}"
-      style="display:none;width:100%;margin-top:8px;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:15px;font-family:inherit;outline:none">
+      style="display:none;width:100%;margin-top:8px;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit;outline:none">
   </div>`;
 }
 function toggleOtherCarrier(id) {
@@ -1275,7 +1323,7 @@ function chronicPanel() {
   const es = currentLang === 'es';
   let html = `<div style="margin-bottom:20px">
     <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px">
-      ${es?'¿Tu familiar o tú tiene alguna de estas condiciones crónicas? (Selecciona todas las que apliquen)':'Do you (or your family member) have any of these chronic conditions? (Select all that apply)'}
+      ${es?'¿Su familiar o usted tiene alguna de estas condiciones crónicas? (Seleccione todas las que apliquen)':'Do you (or your family member) have any of these chronic conditions? (Select all that apply)'}
     </label>
     <div style="border:2px solid var(--lt-blue);border-radius:10px;padding:16px;background:white;max-height:280px;overflow-y:auto">`;
   CHRONIC_CONDITIONS.forEach(group => {
@@ -1300,7 +1348,7 @@ function chronicPanel() {
 function partABQuestion() {
   const es = currentLang === 'es';
   return sel('partab',
-    '¿Ya tienes Medicare Parte A y Parte B?',
+    '¿Ya tiene Medicare Parte A y Parte B?',
     'Do you already have Medicare Part A and Part B?',
     `<option value="both">${es?'Sí, tengo ambas (Parte A y B)':'Yes, I have both (Part A and B)'}</option>
      <option value="a_only">${es?'Solo Parte A':'Part A only'}</option>
@@ -1325,17 +1373,17 @@ function renderFT_Step1(es) {
     <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-birthday-cake"></i></div>
-      <div class="widget-q" style="margin:0">${es?'¿Cuándo cumples 65?':'When do you turn 65?'}</div>
+      <div class="widget-q" style="margin:0">${es?'¿Cuándo cumple 65?':'When do you turn 65?'}</div>
     </div>
-    <div class="widget-qsub">${es?'Esto determina exactamente cuánto tiempo tienes para inscribirte sin penalidades permanentes.':'This determines exactly how much time you have to enroll without permanent penalties.'}</div>
+    <div class="widget-qsub">${es?'Esto determina exactamente cuánto tiempo tiene para inscribirse sin penalidades permanentes.':'This determines exactly how much time you have to enroll without permanent penalties.'}</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
       <div>
         <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">${es?'Mes*':'Month*'}</label>
-        <select id="ft-month" style="width:100%;padding:13px 12px;border:2px solid var(--lt-gray);border-radius:10px;font-size:15px;font-family:inherit">${monthOpts}</select>
+        <select id="ft-month" style="width:100%;padding:13px 12px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit">${monthOpts}</select>
       </div>
       <div>
         <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">${es?'Año*':'Year*'}</label>
-        <select id="ft-year" style="width:100%;padding:13px 12px;border:2px solid var(--lt-gray);border-radius:10px;font-size:15px;font-family:inherit">${yearOpts}</select>
+        <select id="ft-year" style="width:100%;padding:13px 12px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit">${yearOpts}</select>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">${inp('ft-zip', 'Código postal*', 'Zip code*', 'text', 'Ej: 90028', 'E.g. 90028', true)}${inp('ft-state', 'Estado', 'State', 'text', 'CA', 'CA', false)}</div>
@@ -1366,8 +1414,8 @@ function ft_step2() { updateWidgetProgress(30);
   wData.birthday = { month, year }; wData.zip = zip; wData.state = state;
   const es = currentLang === 'es';
   shell('flow-first-time','flow-first-time','fas fa-briefcase','var(--navy)',
-    '¿Sigues trabajando actualmente?', 'Are you currently still working?',
-    'Si tienes seguro de empleador activo, hay reglas importantes sobre cuándo inscribirse.', 'If you have active employer coverage, there are important rules about when to enroll.',
+    '¿Sigue trabajando actualmente?', 'Are you currently still working?',
+    'Si tiene seguro de empleador activo, hay reglas importantes sobre cuándo inscribirse.', 'If you have active employer coverage, there are important rules about when to enroll.',
     opt('Sí, trabajo y tengo seguro de mi empleador','Yes, I work and have employer insurance',"ft_work('yes-employer')",
         'Puede haber una excepción para retrasar Medicare','You may qualify to delay Medicare') +
     opt('Sí trabajo, pero SIN seguro de empleador','Yes I work, but with NO employer insurance',"ft_work('yes-noinsurance')") +
@@ -1380,8 +1428,8 @@ function ft_work(w) {
   wData.workStatus = w;
   const es = currentLang === 'es';
   shell('flow-first-time','flow-first-time','fas fa-id-card','var(--navy)',
-    '¿Ya tienes Medicare Parte A y Parte B?', 'Do you already have Medicare Part A and Part B?',
-    'Esto cambia mucho el proceso. Si ya los tienes, nos enfocamos en elegir el plan correcto.', 'This changes the process significantly. If you already have them, we focus on choosing the right plan.',
+    'Do you already have Medicare Part A and Part B?', 'Do you already have Medicare Part A and Part B?',
+    'Esto cambia mucho el proceso. Si ya los tiene, nos enfocamos en elegir el plan correcto.', 'This changes the process significantly. If you already have them, we focus on choosing the right plan.',
     partABQuestion() +
     nextBtn('Continuar','Continue','ft_step3()')
   );
@@ -1391,8 +1439,8 @@ function ft_step3() { updateWidgetProgress(55);
   wData.partAB = getVal('partab');
   const es = currentLang === 'es';
   shell('flow-first-time','flow-first-time','fas fa-pills','var(--navy)',
-    '¿Tomás medicamentos recetados regularmente?', 'Do you take prescription medications regularly?',
-    'El tipo y cantidad de medicinas afecta cuál plan de Parte D o Medicare Advantage es el mejor para ti.', 'The type and quantity of medications affects which Part D or Medicare Advantage plan is best for you.',
+    '¿Toma medicamentos recetados regularmente?', 'Do you take prescription medications regularly?',
+    'El tipo y cantidad de medicinas afecta cuál plan de Parte D o Medicare Advantage es el mejor para usted.', 'The type and quantity of medications affects which Part D or Medicare Advantage plan is best for you.',
     opt('No tomo ningún medicamento recetado','I take no prescription medications',"ft_meds('none')") +
     opt('Tomo 1–3 medicamentos','I take 1–3 medications',"ft_meds('few')") +
     opt('Tomo 4 o más medicamentos','I take 4 or more medications',"ft_meds('many')") +
@@ -1409,7 +1457,7 @@ function ft_meds(m) {
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-heartbeat"></i></div>
       <div class="widget-q" style="margin:0">${es?'Condiciones de salud':'Health Conditions'}</div>
     </div>
-    <div class="widget-qsub">${es?'Si tienes condiciones crónicas, puede haber planes especiales (C-SNP) diseñados exactamente para tu situación.':'If you have chronic conditions, there may be special plans (C-SNPs) designed exactly for your situation.'}</div>
+    <div class="widget-qsub">${es?'Si tiene condiciones crónicas, puede haber planes especiales (C-SNP) diseñados exactamente para su situación.':'If you have chronic conditions, there may be special plans (C-SNPs) designed exactly for your situation.'}</div>
     ${chronicPanel()}
     ${nextBtn('Continuar','Continue','ft_step4()')}
   `;
@@ -1428,9 +1476,9 @@ function renderMV_Step1(es) {
     <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-truck-moving"></i></div>
-      <div class="widget-q" style="margin:0">${es?'Cuéntame de tu mudanza':'Tell me about your move'}</div>
+      <div class="widget-q" style="margin:0">${es?'Cuéntame de su mudanza':'Tell me about your move'}</div>
     </div>
-    <div class="widget-qsub">${es?'Al mudarte calificas para un Período Especial de Inscripción (SEP). El tiempo importa.':'When you move, you qualify for a Special Enrollment Period (SEP). Timing matters.'}</div>
+    <div class="widget-qsub">${es?'Al mudarte calificas para un Special Enrollment Period (SEP). El tiempo importa.':'When you move, you qualify for a Special Enrollment Period (SEP). Timing matters.'}</div>
     <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">${inp('mv-zip-from', 'ZIP de origen*', 'Origin zip*', 'text', 'Ej: 60601', 'E.g. 60601', true)}${inp('mv-state-from', 'Estado', 'State', 'text', 'IL', 'IL', false)}</div>
     <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">${inp('mv-zip-to', 'ZIP de destino*', 'Destination zip*', 'text', 'Ej: 90028', 'E.g. 90028', true)}${inp('mv-state-to', 'Estado nuevo', 'New state', 'text', 'CA', 'CA', false)}</div>
     ${sel('mv-when', '¿Cuándo es la mudanza?', 'When is the move?',
@@ -1464,8 +1512,8 @@ function mv_step2() { updateWidgetProgress(40);
   wData.zipTo=zt; wData.stateTo=getVal('mv-state-to'); wData.moveWhen=getVal('mv-when');
   const es = currentLang === 'es';
   shell('flow-moving','flow-moving','fas fa-file-medical','var(--blue)',
-    '¿Qué tipo de plan de Medicare tienes ahora?', 'What type of Medicare plan do you have now?',
-    'Los planes de Medicare Advantage son locales. Al cruzar de condado o estado, tu plan puede quedar inválido.', 'Medicare Advantage plans are local. Crossing county or state lines may invalidate your current plan.',
+    '¿Qué tipo de plan de Medicare tiene ahora?', 'What type of Medicare plan do you have now?',
+    'Los planes de Medicare Advantage son locales. Al cruzar de condado o estado, su plan puede quedar inválido.', 'Medicare Advantage plans are local. Crossing county or state lines may invalidate your current plan.',
     opt('Medicare Advantage (Parte C) — plan todo-en-uno','Medicare Advantage (Part C) — all-in-one plan',"mv_plan('advantage')") +
     opt('Medicare Original + Suplemento (Medigap)','Original Medicare + Supplement (Medigap)',"mv_plan('medigap')") +
     opt('Medicare Original solamente (sin suplemento)','Original Medicare only (no supplement)',"mv_plan('original')") +
@@ -1477,8 +1525,8 @@ function mv_plan(p) {
   wData.plantype = p;
   const es = currentLang === 'es';
   shell('flow-moving','flow-moving','fas fa-id-card','var(--blue)',
-    '¿Ya tienes Medicare Parte A y Parte B?', 'Do you already have Medicare Part A and Part B?',
-    'Necesitamos saber esto para asegurarnos de que haya continuidad de cobertura al mudarte.', 'We need to know this to ensure coverage continuity during your move.',
+    'Do you already have Medicare Part A and Part B?', 'Do you already have Medicare Part A and Part B?',
+    'We need to know this to ensure coverage continuity during your move.', 'We need to know this to ensure coverage continuity during your move.',
     partABQuestion() +
     nextBtn('Continuar','Continue','mv_step3()')
   );
@@ -1514,7 +1562,7 @@ function renderBT_Step1(es) {
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-user-friends"></i></div>
       <div class="widget-q" style="margin:0">${es?'¿Para quién buscas opciones?':'Who are you looking for options for?'}</div>
     </div>
-    <div class="widget-qsub">${es?'Las preguntas serán ligeramente diferentes según tu respuesta.':'The questions will be slightly different based on your answer.'}</div>
+    <div class="widget-qsub">${es?'Las preguntas serán ligeramente diferentes según su respuesta.':'The questions will be slightly different based on your answer.'}</div>
     ${opt('Para mí — yo quiero comparar mi plan actual','For me — I want to compare my current plan',"bt_who('self')")}
     ${opt('Para un familiar (padre, madre, abuelo/a...)','For a family member (parent, grandparent...)',"bt_who('family')")}
   `;
@@ -1526,14 +1574,14 @@ function bt_who(who) {
   const es = currentLang === 'es';
   if (who === 'self') {
     shell('flow-better','flow-better','fas fa-balance-scale','var(--teal)',
-      '¿Cuál es tu seguro actual?', 'Tell me about your current insurance',
+      '¿Cuál es su seguro actual?', 'Tell me about your current insurance',
       'Necesito saber el punto de partida para encontrar algo mejor.', 'I need your starting point to find something better.',
       carrierSel('bt-carrier') +
       '<div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">' +
-      inp('bt-zip','Tu código postal*','Your zip code*','text','Ej: 90028','E.g. 90028',true) +
-      inp('bt-state','Tu estado','Your state','text','CA','CA',false) +
+      inp('bt-zip','su código postal*','Your zip code*','text','Ej: 90028','E.g. 90028',true) +
+      inp('bt-state','su estado','Your state','text','CA','CA',false) +
       '</div>' +
-      sel('bt-plantype','¿Qué tipo de plan tienes?','What type of plan do you have?',
+      sel('bt-plantype','¿Qué tipo de plan tiene?','What type of plan do you have?',
         `<option value="advantage">${es?'Medicare Advantage (Parte C)':'Medicare Advantage (Part C)'}</option>
          <option value="medigap">${es?'Medicare Original + Suplemento Medigap':'Original Medicare + Medigap Supplement'}</option>
          <option value="original">${es?'Medicare Original solamente':'Original Medicare only'}</option>
@@ -1554,19 +1602,19 @@ function bt_who(who) {
     }, 0);
   } else {
     shell('flow-better','flow-better','fas fa-hands-helping','var(--green)',
-      '¿Dónde vive tu familiar?', 'Where does your family member live?',
+      '¿Dónde vive su familiar?', 'Where does your family member live?',
       'Los planes disponibles dependen del área donde viven. También necesito saber un poco sobre ellos.', 'Available plans depend on where they live. I also need to know a little about them.',
       '<div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">' +
       inp('pr-zip','Código postal del familiar*','Family member\'s zip*','text','Ej: 90028','E.g. 90028',true) +
       inp('pr-state','Estado','State','text','CA','CA',false) +
       '</div>' +
-      sel('pr-age','¿Qué edad tiene tu familiar?','How old is your family member?',
+      sel('pr-age','¿Qué edad tiene su familiar?','How old is your family member?',
         `<option value="almost64">${es?'64 años — cumple 65 pronto':'64 years old — turning 65 soon'}</option>
          <option value="65plus_has">${es?'65+ y YA tiene Medicare':'65+ and ALREADY has Medicare'}</option>
          <option value="65plus_no">${es?'65+ pero NO tiene Medicare todavía':'65+ but does NOT have Medicare yet'}</option>
          <option value="disability">${es?'Menos de 65 — califica por discapacidad':'Under 65 — qualifies due to disability'}</option>`
       ) +
-      sel('pr-lang','¿Tu familiar habla inglés?','Does your family member speak English?',
+      sel('pr-lang','¿su familiar habla inglés?','Does your family member speak English?',
         `<option value="es">${es?'Prefiere español':'Prefers Spanish'}</option>
          <option value="en">${es?'Habla inglés bien':'Speaks English well'}</option>
          <option value="both">${es?'Habla los dos idiomas':'Speaks both languages'}</option>`
@@ -1596,7 +1644,7 @@ function bt_step2_self() {
   wData.carrier = carrier; wData.zip = zip; wData.state = getVal('bt-state'); wData.plantype = getVal('bt-plantype');
   const es = currentLang === 'es';
   shell('flow-better','flow-better','fas fa-exclamation-circle','var(--teal)',
-    '¿Cuál es tu principal queja con tu plan actual?', 'What is your main complaint about your current plan?',
+    '¿Cuál es su principal queja con su plan actual?', 'What is your main complaint about your current plan?',
     'Sé específico/a — esto nos ayuda a saber exactamente en qué enfocarnos.', 'Be specific — this helps us know exactly what to focus on.',
     opt('Los costos son muy altos (prima, copagos, deducibles)','Costs are too high (premium, copays, deductibles)',"bt_issue('cost')") +
     opt('Mis médicos ya no están en la red del plan','My doctors are no longer in the plan network',"bt_issue('doctors')") +
@@ -1613,7 +1661,7 @@ function bt_step2_fam() {
   wData.parentAge = getVal('pr-age'); wData.parentLang = getVal('pr-lang');
   const es = currentLang === 'es';
   shell('flow-better','flow-better','fas fa-id-card','var(--green)',
-    '¿Tu familiar ya tiene Medicare Parte A y Parte B?', 'Does your family member already have Medicare Part A and Part B?',
+    '¿su familiar ya tiene Medicare Parte A y Parte B?', 'Does your family member already have Medicare Part A and Part B?',
     'Esto determina si necesitamos inscribirlos o simplemente mejorar su cobertura actual.', 'This determines whether we need to enroll them or just improve their current coverage.',
     partABQuestion() + nextBtn('Continuar','Continue','bt_step3_fam()')
   );
@@ -1623,8 +1671,8 @@ function bt_issue(i) {
   wData.issue = i;
   const es = currentLang === 'es';
   shell('flow-better','flow-better','fas fa-id-card','var(--teal)',
-    '¿Ya tienes Medicare Parte A y Parte B?', 'Do you already have Medicare Part A and Part B?',
-    'Necesitamos confirmarlo para comparar las opciones correctas disponibles en tu área.', 'We need to confirm this to compare the right options available in your area.',
+    'Do you already have Medicare Part A and Part B?', 'Do you already have Medicare Part A and Part B?',
+    'Necesitamos confirmarlo para comparar las opciones correctas disponibles en su área.', 'We need to confirm this to compare the right options available in your area.',
     partABQuestion() + nextBtn('Continuar','Continue','bt_step3_self()')
   );
 }
@@ -1638,7 +1686,7 @@ function bt_step3_fam() {
   wData.partAB = getVal('partab');
   const es = currentLang === 'es';
   shell('flow-better','flow-better','fas fa-question-circle','var(--green)',
-    '¿Cuál es la situación de tu familiar ahora mismo?', "What is your family member's situation right now?",
+    '¿Cuál es la situación de su familiar ahora mismo?', "What is your family member's situation right now?",
     'Sé específico/a — así sabemos exactamente cómo ayudar.', "Be specific — that's how we know exactly how to help.",
     opt('No tiene Medicare y necesita inscribirse','They do not have Medicare and need to enroll',"bt_sit('enroll')") +
     opt('Tiene Medicare pero el plan es muy caro o cubre mal','They have Medicare but it is too expensive or covers poorly',"bt_sit('change')") +
@@ -1684,7 +1732,7 @@ function renderUrgencyStep(containerId, flow) {
   document.getElementById(containerId).innerHTML = `
     <button class="widget-back" onclick="history.go(-1)" style="display:none"></button>
     <div class="widget-q" style="margin-bottom:8px">${es?'Una pregunta más…':'One more question…'}</div>
-    <div class="widget-qsub" style="margin-bottom:18px">${es?'Esto nos ayuda a priorizar tu caso correctamente.':'This helps us prioritize your case correctly.'}</div>
+    <div class="widget-qsub" style="margin-bottom:18px">${es?'Esto nos ayuda a priorizar su caso correctamente.':'This helps us prioritize your case correctly.'}</div>
     <div style="display:flex;flex-direction:column;gap:10px">
       <button onclick="setUrgency('asap','${containerId}','${flow}')" style="padding:14px 18px;border:2px solid var(--lt-blue);border-radius:10px;background:white;font-size:15px;font-family:inherit;cursor:pointer;color:var(--dark);text-align:left;transition:all 0.15s" onmouseover="this.style.borderColor='var(--green)';this.style.background='var(--lt-mint)'" onmouseout="this.style.borderColor='var(--lt-blue)';this.style.background='white'">
         <strong>${es?'Lo antes posible':'As soon as possible'}</strong><br>
@@ -1721,33 +1769,33 @@ function renderContactForm(containerId, flow) {
       <i class="fas fa-check-circle" style="color:var(--green);font-size:24px;flex-shrink:0"></i>
       <div>
         <strong style="color:var(--navy);font-size:15px">${b.icon} ${es?b.lbl_es:b.lbl_en}</strong><br>
-        <span style="font-size:13px;color:var(--gray)">${es?'Respuestas recibidas. Ahora necesito tus datos para llamarte.':'Answers received. Now I need your info to call you.'}</span>
+        <span style="font-size:13px;color:var(--gray)">Answers received. Now I need your info to reach you.</span>
       </div>
     </div>
-    <div class="widget-q" style="margin-bottom:8px">${es?'¿Cómo te llamamos?':'How do we reach you?'}</div>
-    <div class="widget-qsub">${es?'Alejandra te llama en español o inglés, como prefieras. Gratis, sin obligación.':'Alejandra will call you in English or Spanish. Free, no obligation.'}</div>
-    ${inp('cf-name','Tu nombre completo*','Your full name*','text','Ej: María García','E.g. Maria Garcia',true)}
-    ${inp('cf-phone','Tu teléfono*','Your phone number*','tel','Ej: (310) 555-1234','E.g. (310) 555-1234',true)}
-    ${sel('cf-contact','¿Cómo prefieres que te contactemos?','How would you like us to reach you?',
+    <div class="widget-q" style="margin-bottom:8px">${es?'¿Cómo le llamamos?':'How do we reach you?'}</div>
+    <div class="widget-qsub">${es?'Alejandra le llama en español o inglés, como prefiera. Gratis, sin obligación.':'Alejandra will call you in English or Spanish. Free, no obligation.'}</div>
+    ${inp('cf-name','Su nombre completo*','Your full name*','text','Ej: María García','E.g. Maria Garcia',true)}
+    ${inp('cf-phone','Su teléfono*','Your phone number*','tel','Ej:','E.g.',true)}
+    ${sel('cf-contact','¿Cómo prefiere que le contactemos?','How would you like us to reach you?',
       `<option value='sms' selected>${es?'Mensaje de texto (SMS)':'Text message (SMS)'}</option>
        <option value='whatsapp'>${es?'WhatsApp':'WhatsApp'}</option>
        <option value='email'>${es?'Email':'Email'}</option>
-       <option value='call'>${es?'Teléfono':'Phone call'}</option>`
+       <option value='call'>Phone call</option>`
     )}
-    ${sel('cf-time','Mejor momento para contactarte','Best time to reach you',
-      `<option value="morning">${es?'Mañana (9am–12pm)':'Morning (9am–12pm)'}</option>
-       <option value="afternoon">${es?'Mediodía (12pm–3pm)':'Afternoon (12pm–3pm)'}</option>
-       <option value="evening">${es?'Tarde (3pm–6pm)':'Evening (3pm–6pm)'}</option>
-       <option value="anytime">${es?'Cualquier hora':'Any time'}</option>`
+    ${sel('cf-time','Mejor momento para contactarle','Best time to reach you',
+      `<option value="morning">Morning (9am–12pm)</option>
+       <option value="afternoon">Midday (12pm–3pm)</option>
+       <option value="evening">Afternoon (3pm–6pm)</option>
+       <option value="anytime">Anytime</option>`
     )}
-    ${sel('cf-lang','¿Prefieres que te llamemos en...?','Preferred language for the call?',
+    ${sel('cf-lang','¿Prefiere que le llamemos en...?','Preferred language for the call?',
       `<option value="es">${es?'Español':'Spanish'}</option>
        <option value="en">${es?'Inglés':'English'}</option>
        <option value="both">${es?'Cualquiera está bien':'Either is fine'}</option>`
     )}
     <div style="margin-bottom:20px">
-      <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">${es?'¿Algo más que quieras que sepamos? (opciónal)':'Anything else? (optional)'}</label>
-      <textarea id="cf-notes" rows="3" placeholder="${es?'Ej: Tengo Kaiser, quiero mantener a mi doctor. Tomo metformina y lisinopril.':'E.g. I have Kaiser, want to keep my doctor. I take metformin and lisinopril.'}" style="width:100%;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:15px;font-family:inherit;resize:vertical;outline:none" onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--lt-gray)'"></textarea>
+      <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">Anything else we should know? (optional)</label>
+      <textarea id="cf-notes" rows="3" placeholder="${es?'Ej: Tengo Kaiser, quiero mantener a mi doctor. Tomo metformina y lisinopril.':'E.g. I have Kaiser, want to keep my doctor. I take metformin and lisinopril.'}" style="width:100%;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit;resize:vertical;outline:none" onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--lt-gray)'"></textarea>
     </div>
     <button onclick="submitWidget('${flow}')" class="btn btn-primary" style="width:100%;justify-content:center;font-size:17px;padding:18px">
       <i class="fas fa-paper-plane"></i> ${es?'Enviar — Alejandra me Llamará':'Submit — Alejandra Will Call Me'}
@@ -1774,7 +1822,7 @@ function showSuccessState(containerId) {
           : 'Your email app has opened. Please click <b>"Send"</b> so Alejandra Brizuela Marcos receives your message.'}
       </p>
       <p style="background:#F0F7F0;padding:14px 18px;border-radius:10px;font-size:15px;color:var(--gray);margin-bottom:24px;line-height:1.6">
-        <b>TIP:</b> Agregue <b>alejamedicare@gmail.com</b> a sus contactos para que nuestra respuesta no caiga en SPAM.
+        <b>TIP:</b> Add <b>alejamedicare@gmail.com</b> to your contacts so our reply doesn't go to spam.
       </p>
       <button onclick="location.reload()" class="btn btn-primary" style="justify-content:center">
         ${isEs ? '← Volver al inicio' : '← Back to home'}
@@ -1863,7 +1911,7 @@ function buildEmailBody() {
 
   lines.push('');
   lines.push('═══════════════════════════════════════════════════');
-  lines.push('Enviado desde medicare-hispano.com');
+  lines.push('Enviado desde guiamarcos.com');
   return lines.join('\n');
 }
 
@@ -1887,11 +1935,18 @@ function submitSeminar(e) {
     `▸ IDIOMA PREFERIDO: ${langLabels[lang]||lang}`,
     `▸ FECHA/HORA: ${new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'})}`,
     '',
-    'Inscrito desde: medicare-hispano.com',
+    'Inscrito desde: guiamarcos.com',
   ].join('\n');
   window.location.href = `mailto:alejamedicare@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   setTimeout(() => { showSuccessState('seminar-widget'); }, 400);
 }
+
+function goLang(lang) {
+  localStorage.setItem('guiamarcos_lang', lang);
+  if (lang !== 'en') window.location.href = 'beneficios.html';
+}
+function toggleLang() { goLang('es'); }
+
 
 // Init
 updateLang();
@@ -1939,8 +1994,10 @@ function updateWidgetProgress(pct) {
     var hero = document.querySelector('.hero');
     if (!hero) return;
     var heroBottom = hero.getBoundingClientRect().bottom;
-    // Only show on home page, after hero scrolls out of view
-    if (currentPage === 'home' && heroBottom < 0) {
+    var footer = document.querySelector('footer');
+    var footerVisible = footer && footer.getBoundingClientRect().top < window.innerHeight;
+    // Show after hero scrolls out, hide when footer becomes visible
+    if (currentPage === 'home' && heroBottom < 0 && !footerVisible) {
       sticky.style.display = 'flex';
     } else {
       sticky.style.display = 'none';

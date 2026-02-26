@@ -2,22 +2,22 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<script>if(localStorage.getItem('guiamarcos_lang')==='en'){window.location.replace('contacto-en.html');}</script>
+<script>if(localStorage.getItem('guiamarcos_lang')==='en'){window.location.replace('beneficios-en.html');}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#002147">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Contacto — Medicare en Español | Guia Marcos</title>
-<meta name="description" content="Contacto Guia Marcos — Comparamos planes de Medicare de Kaiser, SCAN, Humana, Aetna y UnitedHealthcare en California y la Región Central. Siempre gratuito.">
-<meta name="keywords" content="medicare en español, contacto guia marcos, asesor medicare, agente medicare español, seguros medicare california">
-<link rel="canonical" href="https://guiamarcos.com/contacto.html">
+<title>Beneficios de Medicare | Guia Marcos</title>
+<meta name="description" content="Beneficios de Medicare: Guía completa en español sobre Medicare, partes A, B, C, D, Medigap. Educación para mis padres, mis abuelos y adultos mayores.">
+<meta name="keywords" content="agente medicare, guia marcos, medicare en español, medicare 101, guía medicare, medicare parte a, parte b, parte c, parte d, medigap, medicare advantage, medicare para mis padres, medicare para mis abuelos, educación medicare, seguros salud mayores">
+<link rel="canonical" href="https://guiamarcos.com/beneficios.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contacto — Medicare en Español | Guia Marcos">
+<meta property="og:title" content="Medicare Made Simple | Susana Marcos LLC | Los Angeles">
 <meta property="og:description" content="Susana Marcos y Alejandra Brizuela Marcos — equipo de madre e hija. Comparamos planes de Kaiser, SCAN, Humana, Aetna, UnitedHealthcare. 100% gratuito.">
-<meta property="og:url" content="https://guiamarcos.com/contacto.html">
+<meta property="og:url" content="https://guiamarcos.com/beneficios.html">
 <meta property="og:locale" content="es_US">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"InsuranceAgency","name":"Susana Marcos LLC","description":"Bilingual Medicare insurance agency. Independent brokers comparing top carriers at no cost.","url":"https://guiamarcos.com","email":"alejamedicare@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":[{"@type":"State","name":"California"},{"@type":"State","name":"Illinois"},{"@type":"State","name":"Texas"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Florida"},{"@type":"State","name":"Iowa"}],"openingHours":"Mo-Fr 07:00-16:00 PST, Sa 08:00-12:00 PST","priceRange":"Free","knowsLanguage":["Spanish","English"],"founder":[{"@type":"Person","name":"Susana Marcos","jobTitle":"JD, MBA — Founder and Principal Agent"},{"@type":"Person","name":"Alejandra Brizuela Marcos","jobTitle":"Licensed Medicare Insurance Agent — Partner"}]}
+{"@context":"https://schema.org","@type":"InsuranceAgency","name":"Guia Marcos","description":"Bilingual Medicare insurance agency. Independent brokers comparing top carriers at no cost.","url":"https://guiamarcos.com","telephone":"+1-800-MEDICARE","email":"alejamedicare@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":[{"@type":"State","name":"California"},{"@type":"State","name":"Illinois"},{"@type":"State","name":"Texas"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Florida"},{"@type":"State","name":"Iowa"}],"openingHours":"Mo-Fr 07:00-16:00 PST, Sa 08:00-12:00 PST","priceRange":"Free","knowsLanguage":["Spanish","English"],"founder":[{"@type":"Person","name":"Susana Marcos","jobTitle":"JD, MBA — Founder and Principal Agent"},{"@type":"Person","name":"Alejandra Brizuela Marcos","jobTitle":"Licensed Medicare Insurance Agent — Partner"}]}
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="guiamarcos-brand.css">
@@ -46,6 +46,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', -apple-system, sans-serif; color: var(--dark); font-size: 19px; line-height: 1.8; background: var(--white); }
+
 
 /* ── CARRIER TRUST BAR ─────────────────────────────────────── */
 .carrier-trust-bar {
@@ -126,6 +127,14 @@ nav a {
   transition: all 0.2s;
 }
 nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
+.lang-toggle {
+  background: none; border: 2px solid var(--navy); color: var(--navy);
+  padding: 6px 14px; border-radius: 20px; font-size: 14px;
+  font-weight: 600; cursor: pointer; margin-left: 8px;
+  transition: all 0.2s; display: flex; align-items: center; gap: 6px;
+}
+.lang-toggle:hover { background: var(--lt-blue); }
+/* lang-toggle uses emoji flag */
 .mobile-menu-btn {
   display: none; background: none; border: none;
   font-size: 24px; color: var(--navy); cursor: pointer;
@@ -136,22 +145,6 @@ nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
   text-decoration: none;
 }
 .phone-header i { font-size: 16px; }
-
-/* ── LANGUAGE TOGGLE ────────────────────────────────────── */
-.lang-toggle {
-  display: flex; align-items: center; gap: 6px;
-  padding: 8px 14px; border-radius: 8px;
-  border: 2px solid var(--lt-gray);
-  background: white;
-  color: var(--gray); font-weight: 600; font-size: 14px;
-  cursor: pointer; transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
-}
-.lang-toggle:hover { border-color: var(--green); color: var(--green); background: var(--lt-mint); }
-/* lang-toggle uses emoji flag */
-@media (max-width: 768px) {
-  .lang-toggle { width: 100%; justify-content: center; margin-top: 12px; padding: 12px; }
-}
 
 /* ── WHATSAPP FLOATING ─────────────────────────────────── */
 .wa-float {
@@ -355,33 +348,6 @@ section { padding: 80px 24px; }
 .badge-explore { background: var(--lt-blue); color: var(--blue); }
 .badge-help { background: var(--lt-green); color: var(--green); }
 
-
-
-/* Contact page alignment defined below */
-.contact-form { background: white; }
-.contact-methods { background: white; }
-.contact-method {
-  display: flex; align-items: flex-start; gap: 16px;
-  padding: 20px; border-radius: var(--radius);
-  border: 2px solid transparent; transition: all 0.3s;
-  text-decoration: none; color: inherit;
-  margin-bottom: 16px;
-}
-.contact-method:hover {
-  border-color: var(--green); background: var(--lt-mint);
-  transform: translateX(4px);
-}
-.contact-method-icon {
-  width: 48px; height: 48px; border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 20px; flex-shrink: 0;
-}
-.contact-method h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
-.contact-method p { font-size: 14px; color: var(--gray); margin: 0; }
-@media (max-width: 768px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-}
-
 /* ── STATS BAR ─────────────────────────────────────────── */
 .stats-bar {
   background: var(--navy); padding: 40px 24px;
@@ -519,7 +485,7 @@ section { padding: 80px 24px; }
 /* ── CONTACT PAGE ──────────────────────────────────────── */
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-  align-items: start; margin-top: 40px;
+  margin-top: 40px;
 }
 .contact-form { background: var(--lt-gray); border-radius: var(--radius); padding: 36px; }
 .contact-form h3 { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
@@ -529,10 +495,9 @@ section { padding: 80px 24px; }
   color: var(--gray); margin-bottom: 6px;
 }
 .form-group input, .form-group select, .form-group textarea {
-  width: 100%; padding: 14px 16px; border: 2px solid #E2E8F0;
-  border-radius: 8px; font-size: 16px; font-family: 'Inter', sans-serif;
-  transition: border-color 0.2s; min-height: 52px;
-  -webkit-appearance: none; appearance: none;
+  width: 100%; padding: 12px 16px; border: 2px solid #E2E8F0;
+  border-radius: 8px; font-size: 15px; font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s;
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
   outline: none; border-color: var(--green);
@@ -644,6 +609,7 @@ footer {
   display: flex; align-items: center; justify-content: center; gap: 10px;
 }
 .mobile-sticky-cta button:active { filter: brightness(0.9); }
+
 
 /* ━━━ MOBILE + SENIOR UX OPTIMIZATIONS ━━━━━━━━━━━━━━━ */
 
@@ -766,20 +732,41 @@ a[href^="tel"] { white-space: nowrap; }
 @media (max-width: 768px) {
   .phone-header { font-size: 16px !important; padding: 8px 0; }
 }
+
+  /* Comparison cards responsive */
+  .comparison-cards { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 640px) {
+    .comparison-cards { grid-template-columns: 1fr !important; }
+  }
 </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Guide",
+    "name": "Beneficios de Medicare: Guía Completa en Español",
+    "description": "Guía completa en español sobre Medicare, partes A, B, C, D, SNPS y más",
+    "author": {
+      "@type": "Organization",
+      "name": "Guia Marcos"
+    },
+    "url": "https://guiamarcos.com/beneficios.html"
+  }
+  </script>
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
   <link rel="shortcut icon" href="favicon-192x192.png">
   <link rel="apple-touch-icon" href="favicon-192x192.png">
 </head>
 
+
 <body>
 <header class="header" id="header">
   <div class="header-inner">
-    <a href="index.html" class="logo"><img src="favicon-192x192.png" alt="Guia Marcos" class="logo-icon">Medicare <span>en Español</span></a>
+    <a href="javascript:void(0)" class="logo" href="index.html"><img src="favicon-192x192.png" alt="Guia Marcos" class="logo-icon">Medicare <span>en Español</span></a>
     <nav id="desktop-nav">
       <a href="index.html">Inicio</a>
-      <a href="beneficios.html">Beneficios</a>
-      <a href="contacto.html" class="active">Contáctenos</a>
+      <a href="beneficios.html" class="active">Beneficios</a>
+      <a href="contacto.html">Contáctenos</a>
+    
       <div class="lang-pill"><button class="lp-active" onclick="goLang('es')" aria-label="Español">ES</button><button class="" onclick="goLang('en')" aria-label="English">EN</button></div>
     </nav>
     <button class="mobile-menu-btn" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
@@ -791,10 +778,12 @@ a[href^="tel"] { white-space: nowrap; }
   <a href="index.html">Inicio</a>
   <a href="beneficios.html">Beneficios</a>
   <a href="contacto.html">Contáctenos</a>
+
   <div class="lang-pill"><button class="lp-active" onclick="goLang('es')" aria-label="Español">ES</button><button class="" onclick="goLang('en')" aria-label="English">EN</button></div>
-</div>
+  </div>
 
 <!-- SMS floating button -->
+
 <!-- WhatsApp floating button -->
 <a href="https://wa.me/13105979142?text=Hola%2C%20necesito%20ayuda%20con%20Medicare" class="wa-float" target="_blank" title="WhatsApp">
   <i class="fab fa-whatsapp"></i><span class="float-label">WHATSAPP</span>
@@ -802,258 +791,112 @@ a[href^="tel"] { white-space: nowrap; }
 
 <main id="main-content">
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- CONTACTO PAGE -->
+<!-- MEDICARE 101 PAGE -->
 <!-- ═══════════════════════════════════════════════════════ -->
 
-  <!-- Hero -->
-  <section style="padding-top:140px;padding-bottom:60px;background:linear-gradient(135deg,var(--lt-green) 0%,var(--lt-mint) 100%)">
-    <div class="container" style="text-align:center">
-      <div class="section-label">HABLEMOS</div>
-      <div class="section-title">Contáctenos</div>
-      <p class="section-subtitle" style="max-width:600px;margin:0 auto">Elija la forma que prefiera. Toda atención es en español y 100% gratuita.</p>
+<!-- Hero -->
+  <section style="padding-top:100px;padding-bottom:48px;background:linear-gradient(135deg,var(--lt-blue) 0%,var(--lt-mint) 100%);text-align:center">
+    <div class="container">
+      <div class="section-label">BENEFICIOS DE MEDICARE</div>
+      <h1 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:16px">Entienda sus Beneficios de Medicare</h1>
+      <p style="font-size:18px;color:var(--gray);max-width:640px;margin:0 auto 32px">Todo lo que necesita saber para empezar — en español, sin rodeos.</p>
+      <a href="index.html#widget-anchor" class="btn btn-primary"><i class="fas fa-search"></i> <span>Compare Planes</span></a>
     </div>
   </section>
 
-  <!-- Contact Grid -->
+  <!-- What is Medicare -->
   <section style="padding:60px 24px;background:white">
-    <div class="container">
-      <div class="contact-grid">
+    <div class="container" style="max-width:860px">
+      <div class="section-label">¿QUÉ ES MEDICARE?</div>
+      <div class="section-title">Medicare es el seguro médico federal para personas de 65 años o más.</div>
+      <p style="font-size:16px;color:var(--gray);margin-top:16px;line-height:1.8">También cubre a personas menores de 65 años con ciertas discapacidades o enfermedades. Es administrado por el gobierno federal de Estados Unidos (CMS — Centers for Medicare &amp; Medicaid Services) y se divide en partes: A, B, C y D.</p>
+    </div>
+  </section>
 
-        <!-- Left: Contact Form -->
-        <div class="contact-form">
-          <h3 style="color:var(--navy);margin-bottom:8px">Cuéntenos su situación</h3>
-          <p style="font-size:15px;color:var(--gray);margin-bottom:24px">Le contactaremos en el horario que prefiera.</p>
-          <form id="contact-form" onsubmit="submitForm(event)">
-  <input type="hidden" name="subject" value="Nueva Consulta de Medicare — guiamarcos.com">
-  <input type="hidden" name="from_name" value="Guia Marcos Website">
-  <input type="hidden" name="redirect" value="false">
-            <div class="form-group">
-              <label>Nombre completo *</label>
-              <input type="text" name="name" id="cf2-name" required autocomplete="name" inputmode="text" placeholder="Ej: María García" style="font-size:16px;min-height:52px">
-            </div>
-            <div class="form-group">
-              <label>Teléfono *</label>
-              <input type="tel" name="phone" id="cf2-phone" required autocomplete="tel" inputmode="tel" placeholder="(310) 555-1234" style="font-size:16px;min-height:52px">
-            </div>
-            <div class="form-group">
-              <label>Fecha de Nacimiento *</label>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
-                <select id="dob-month" name="dob_month" required style="font-size:16px;min-height:52px;padding:12px 8px;border:1px solid var(--border);border-radius:4px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.5rem center;padding-right:1.5rem">
-                  <option value="">Mes</option>
-<option value="01">Enero</option><option value="02">Febrero</option>
-<option value="03">Marzo</option><option value="04">Abril</option>
-<option value="05">Mayo</option><option value="06">Junio</option>
-<option value="07">Julio</option><option value="08">Agosto</option>
-<option value="09">Septiembre</option><option value="10">Octubre</option>
-<option value="11">Noviembre</option><option value="12">Diciembre</option>
-                </select>
-                <select id="dob-day" name="dob_day" required style="font-size:16px;min-height:52px;padding:12px 8px;border:1px solid var(--border);border-radius:4px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.5rem center;padding-right:1.5rem">
-                  <option value="">Día</option>
-<option value="01">1</option>
-<option value="02">2</option>
-<option value="03">3</option>
-<option value="04">4</option>
-<option value="05">5</option>
-<option value="06">6</option>
-<option value="07">7</option>
-<option value="08">8</option>
-<option value="09">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option>
-                </select>
-                <select id="dob-year" name="dob_year" required style="font-size:16px;min-height:52px;padding:12px 8px;border:1px solid var(--border);border-radius:4px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.5rem center;padding-right:1.5rem">
-                  <option value="">Año</option>
-<option value="1962">1962</option>
-<option value="1961">1961</option>
-<option value="1960">1960</option>
-<option value="1959">1959</option>
-<option value="1958">1958</option>
-<option value="1957">1957</option>
-<option value="1956">1956</option>
-<option value="1955">1955</option>
-<option value="1954">1954</option>
-<option value="1953">1953</option>
-<option value="1952">1952</option>
-<option value="1951">1951</option>
-<option value="1950">1950</option>
-<option value="1949">1949</option>
-<option value="1948">1948</option>
-<option value="1947">1947</option>
-<option value="1946">1946</option>
-<option value="1945">1945</option>
-<option value="1944">1944</option>
-<option value="1943">1943</option>
-<option value="1942">1942</option>
-<option value="1941">1941</option>
-<option value="1940">1940</option>
-<option value="1939">1939</option>
-<option value="1938">1938</option>
-<option value="1937">1937</option>
-<option value="1936">1936</option>
-<option value="1935">1935</option>
-<option value="1934">1934</option>
-<option value="1933">1933</option>
-<option value="1932">1932</option>
-<option value="1931">1931</option>
-<option value="1930">1930</option>
-<option value="1929">1929</option>
-<option value="1928">1928</option>
-<option value="1927">1927</option>
-<option value="1926">1926</option>
-                </select>
-              </div>
-              <span id="dob-error" style="display:none;color:#EF4444;font-size:0.82rem;margin-top:4px"></span>
-            </div>
-            <div class="form-group">
-              <label>Email (opcional)</label>
-              <input type="email" name="email" id="cf2-email" autocomplete="email" inputmode="email" style="font-size:16px;min-height:52px">
-            </div>
-            <div class="form-group">
-              <div>
-                <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">Código postal</label>
-                <input type="text" id="cf2-zip" name="zip" maxlength="5" placeholder="Ej: 90028" autocomplete="postal-code" inputmode="numeric" style="width:100%;font-size:16px;min-height:52px;padding:12px 16px;border:1px solid var(--border);border-radius:4px;box-sizing:border-box;margin-bottom:10px"
-                  oninput="const st=zipToState(this.value);if(st){document.getElementById('cf2-state').value=st;}">
-                <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">Estado</label>
-                <select id="cf2-state" name="state" style="width:100%;font-size:16px;min-height:52px;padding:12px 16px;border:1px solid var(--border);border-radius:4px;background:white">
-                  <option value="">Seleccionar estado...</option>
-                  <option value="AL">AL — Alabama</option>
-                  <option value="AK">AK — Alaska</option>
-                  <option value="AZ">AZ — Arizona</option>
-                  <option value="AR">AR — Arkansas</option>
-                  <option value="CA">CA — California</option>
-                  <option value="CO">CO — Colorado</option>
-                  <option value="CT">CT — Connecticut</option>
-                  <option value="DE">DE — Delaware</option>
-                  <option value="FL">FL — Florida</option>
-                  <option value="GA">GA — Georgia</option>
-                  <option value="HI">HI — Hawaii</option>
-                  <option value="ID">ID — Idaho</option>
-                  <option value="IL">IL — Illinois</option>
-                  <option value="IN">IN — Indiana</option>
-                  <option value="IA">IA — Iowa</option>
-                  <option value="KS">KS — Kansas</option>
-                  <option value="KY">KY — Kentucky</option>
-                  <option value="LA">LA — Louisiana</option>
-                  <option value="ME">ME — Maine</option>
-                  <option value="MD">MD — Maryland</option>
-                  <option value="MA">MA — Massachusetts</option>
-                  <option value="MI">MI — Michigan</option>
-                  <option value="MN">MN — Minnesota</option>
-                  <option value="MS">MS — Mississippi</option>
-                  <option value="MO">MO — Missouri</option>
-                  <option value="MT">MT — Montana</option>
-                  <option value="NE">NE — Nebraska</option>
-                  <option value="NV">NV — Nevada</option>
-                  <option value="NH">NH — New Hampshire</option>
-                  <option value="NJ">NJ — New Jersey</option>
-                  <option value="NM">NM — New Mexico</option>
-                  <option value="NY">NY — New York</option>
-                  <option value="NC">NC — North Carolina</option>
-                  <option value="ND">ND — North Dakota</option>
-                  <option value="OH">OH — Ohio</option>
-                  <option value="OK">OK — Oklahoma</option>
-                  <option value="OR">OR — Oregon</option>
-                  <option value="PA">PA — Pennsylvania</option>
-                  <option value="RI">RI — Rhode Island</option>
-                  <option value="SC">SC — South Carolina</option>
-                  <option value="SD">SD — South Dakota</option>
-                  <option value="TN">TN — Tennessee</option>
-                  <option value="TX">TX — Texas</option>
-                  <option value="UT">UT — Utah</option>
-                  <option value="VT">VT — Vermont</option>
-                  <option value="VA">VA — Virginia</option>
-                  <option value="WA">WA — Washington</option>
-                  <option value="WV">WV — West Virginia</option>
-                  <option value="WI">WI — Wisconsin</option>
-                  <option value="WY">WY — Wyoming</option>
-                  <option value="DC">DC — Washington D.C.</option>
-                </select>
-              </div>
-              <span style="font-size:0.78rem;color:var(--slate);margin-top:4px;display:block">Ingrese ZIP o estado — al menos uno requerido</span>
-            </div>
-            <div class="form-group">
-              <label>¿Cómo prefiere que lo contactemos?</label>
-              <select name="prefer" id="cf2-prefer" style="font-size:16px;min-height:52px">
-                <option value="sms" selected>Mensaje de texto (SMS)</option>
-                <option value="whatsapp">WhatsApp</option>
-                <option value="email">Email</option>
-                <option value="call">Teléfono</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>¿En qué le podemos ayudar?</label>
-              <select name="topic" id="cf2-topic" style="font-size:16px;min-height:52px">
-                <option value="new">Me voy a inscribir por primera vez</option>
-                <option value="change">Quiero cambiar mi plan actual</option>
-                <option value="info">Solo quiero información</option>
-                <option value="other">Otro</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;font-size:17px;padding:16px">
-              <i class="fas fa-paper-plane"></i> <span>Enviar Mensaje</span>
-            </button>
-            <p style="font-size:13px;color:var(--gray);text-align:center;margin-top:12px">Respondemos en 24 - 48 horas (normalmente mucho más rápido).</p>
-            <p style="font-size:0.82rem;color:var(--slate);margin-top:6px;text-align:center">🔒 Su información es segura y nunca será vendida.</p>
-          </form>
-<div id="form-success" style="display:none; text-align:center; padding:2.5rem 1.5rem; background:#f0faf4; border-radius:12px; border:2px solid #1a3a5c; margin-top:1rem;">
-  <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
-  <h3 style="color:#1a3a5c; font-size:1.5rem; margin-bottom:0.75rem;">¡Gracias!</h3>
-  <p style="color:#444; font-size:1.1rem; margin-bottom:0.5rem;">Recibimos su mensaje y nos pondremos en contacto pronto.</p>
-</div>
+  <!-- The 4 Parts -->
+  <section style="padding:60px 24px;background:var(--lt-gray)">
+    <div class="container">
+      <div class="section-label">LAS 4 PARTES</div>
+      <div class="section-title">¿Cuál es la diferencia entre Parte A, B, C y D?</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px">
+
+        <!-- Part A -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--navy)">
+          <div style="width:48px;height:48px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">A</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Parte A — Hospital</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Cubre hospitalizaciones, enfermería en centros de cuidado prolongado (skilled nursing), hospicio y algunos servicios de salud en el hogar. La mayoría de las personas no pagan prima mensual si trabajaron 10+ años y pagaron impuestos al Medicare.</p>
         </div>
 
-        <!-- Right: Contact Methods + Hours -->
-        <div class="contact-methods">
-          <a href="https://wa.me/13105979142?text=Hola%2C%20necesito%20ayuda%20con%20Medicare" target="_blank" class="contact-method">
-            <div class="contact-method-icon" style="background:#25D366"><i class="fab fa-whatsapp"></i></div>
-            <div>
-              <h4>WhatsApp</h4>
-              <p>Escríbanos un mensaje ahora mismo.</p>
-            </div>
-          </a>
-          <a href="https://calendar.app.google/6D4obxzxERQXBpaf7" target="_blank" class="contact-method">
-            <div class="contact-method-icon" style="background:var(--green)"><i class="fas fa-calendar-check"></i></div>
-            <div>
-              <h4>Agenda una Cita</h4>
-              <p>15 minutos, gratuita. Sin obligación.</p>
-            </div>
-          </a>
-          <a href="mailto:alejamedicare@gmail.com" class="contact-method">
-            <div class="contact-method-icon" style="background:var(--blue)"><i class="fas fa-envelope"></i></div>
-            <div>
-              <h4>alejamedicare@gmail.com</h4>
-              <p>Respondemos en 24 horas.</p>
-            </div>
-          </a>
+        <!-- Part B -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--blue)">
+          <div style="width:48px;height:48px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">B</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Parte B — Médico</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Cubre visita al médico, especialistas, laboratorios, imágenes (rayos X, resonancias), y equipo médico. La prima estándar en 2025 es de $185/mes, deducida del cheque del Seguro Social. El deducible anual es $257.</p>
+        </div>
 
-          <!-- Hours -->
-          <div style="background:var(--lt-mint);border-radius:var(--radius);padding:24px;margin-top:8px">
-            <p style="font-size:14px;color:var(--teal);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px"><i class="fas fa-clock"></i> <span>Horario de Atención</span></p>
-            <div style="display:flex;flex-direction:column;gap:4px">
-              <p style="font-size:14px;color:var(--dark);margin:0">Lun a Vie: 7am – 4pm PT</p>
-              <p style="font-size:14px;color:var(--dark);margin:0">Sábado: 8am – 12pm PT</p>
-            </div>
-            <p style="font-size:13px;color:var(--teal);margin-top:10px;margin-bottom:0">También disponibles por WhatsApp fuera de horario.</p>
+        <!-- Part C -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--teal)">
+          <div style="width:48px;height:48px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">C</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Parte C — Medicare Advantage</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Planes ofrecidos por aseguradoras privadas que reemplazan su Medicare Original (A + B) y usualmente incluyen beneficios adicionales: dental, visión, audición, gym, y transporte. Muchos tienen prima de $0/mes. Requiere seguir usando doctores de la red del plan.</p>
+        </div>
+
+        <!-- Part D -->
+        <div style="background:white;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--green)">
+          <div style="width:48px;height:48px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px;margin-bottom:16px">D</div>
+          <h3 style="font-size:18px;color:var(--navy);margin-bottom:8px">Parte D — Medicamentos</h3>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7">Cubre medicamentos recetados. Se adquiere como plan separado (si tiene Medicare Original) o ya viene incluido en muchos planes Medicare Advantage. Los costos varían según el plan y los medicamentos que toma.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Medigap -->
+  <section style="padding:60px 24px;background:white">
+    <div class="container" style="max-width:860px">
+      <div class="section-label">SUPLEMENTO MEDIGAP</div>
+      <div class="section-title">¿Qué es un plan Medigap o Suplemento?</div>
+      <p style="font-size:16px;color:var(--gray);margin-top:16px;line-height:1.8">Los planes Medigap se añaden al Medicare Original (Partes A y B) para cubrir los gastos que Medicare no paga completamente: deducibles, copagos y coseguros. No reemplazan su Medicare — lo complementan. puede ver a cualquier médico en el país que acepte Medicare, sin red de proveedores. Tienen prima mensual adicional, pero pueden reducir mucho los gastos inesperados.</p>
+    </div>
+  </section>
+
+  <!-- Enrollment Periods -->
+  <section style="padding:60px 24px;background:var(--lt-gray)">
+    <div class="container" style="max-width:860px">
+      <div class="section-label">PERÍODOS DE INSCRIPCIÓN</div>
+      <div class="section-title">¿Cuándo puedo inscribirme o cambiar mi plan?</div>
+      <div style="display:flex;flex-direction:column;gap:16px;margin-top:32px">
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-birthday-cake"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Período Inicial de Inscripción (IEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">7 meses alrededor de su cumpleaños número 65: los 3 meses antes, el mes de su cumpleaños y los 3 meses después. Es su ventana principal para inscribirse sin penalidades.</p>
+          </div>
+        </div>
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-calendar-alt"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Período Anual de Elección (AEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">Del 15 de octubre al 7 de diciembre. puede cambiar su plan de Medicare Advantage o su plan de medicamentos (Parte D). Los cambios entran en vigor el 1 de enero.</p>
+          </div>
+        </div>
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-redo"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Período Abierto de Inscripción (OEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">Del 1 de enero al 31 de marzo. Si ya tiene un plan de Medicare Advantage, puede cambiarlo una vez o regresar a Medicare Original.</p>
+          </div>
+        </div>
+
+        <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);display:flex;gap:16px;align-items:flex-start">
+          <div style="min-width:44px;height:44px;background:var(--green);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-size:16px"><i class="fas fa-truck-moving"></i></div>
+          <div>
+            <h4 style="color:var(--navy);margin-bottom:4px">Período Especial de Inscripción (SEP)</h4>
+            <p style="font-size:14px;color:var(--gray);line-height:1.6">Ciertos eventos de vida le dan una ventana especial: mudanza a nueva área, pérdida de cobertura laboral, cambio en Medicaid, o vivir en un área donde su plan ya no opera. Dura generalmente 60 días desde el evento.</p>
           </div>
         </div>
 
@@ -1061,13 +904,171 @@ a[href^="tel"] { white-space: nowrap; }
     </div>
   </section>
 
-  <!-- Seminar CTA Banner -->
-  <section class="cta-banner" style="text-align:center;padding:50px 24px">
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>¿Tiene preguntas? Hablemos.</h2>
+    <p>Nuestro servicio es gratuito. Sin compromiso. Siempre en español.</p>
+    <div class="cta-buttons">
+      
+    </div>
+  </section>
+
+  <!-- Official Sources -->
+  <section style="padding:60px 24px;background:var(--lt-gray)">
     <div class="container">
-      <div class="section-title" style="color:white;margin-bottom:8px">¿Prefiere una consulta virtual?</div>
-      <p style="color:rgba(255,255,255,0.9);font-size:17px;margin-bottom:24px">Ofrecemos consultas virtuales y visitas a domicilio para adultos mayores dentro del área de Los Angeles.</p>
-      <a href="https://calendar.app.google/6D4obxzxERQXBpaf7" target="_blank" class="btn" style="background:white;color:var(--navy);font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
-        <i class="fas fa-calendar-check"></i> <span>Agenda Su Cita Gratis</span>
+      <div class="section-label">FUENTES OFICIALES</div>
+      <div class="section-title">Recursos confiables del gobierno</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px">
+        <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-globe" style="font-size:24px;color:var(--blue)"></i>
+          <div><strong style="color:var(--navy)">Medicare.gov</strong><br><small style="color:var(--gray)">Portal oficial de Medicare</small></div>
+        </a>
+        <a href="https://www.ssa.gov/espanol/" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-id-card" style="font-size:24px;color:var(--green)"></i>
+          <div><strong style="color:var(--navy)">SSA.gov</strong><br><small style="color:var(--gray)">Seguro Social en español</small></div>
+        </a>
+        <a href="https://www.medicare.gov/find-a-plan/questions/home.aspx" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-search-dollar" style="font-size:24px;color:var(--teal)"></i>
+          <div><strong style="color:var(--navy)">Plan Finder</strong><br><small style="color:var(--gray)">Comparador de planes oficial</small></div>
+        </a>
+        <a href="https://www.cms.gov" target="_blank" rel="noopener" style="background:white;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;transition:transform 0.2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+          <i class="fas fa-landmark" style="font-size:24px;color:var(--navy)"></i>
+          <div><strong style="color:var(--navy)">CMS.gov</strong><br><small style="color:var(--gray)">Centros de Servicios Medicare</small></div>
+        </a>
+      </div>
+    </div>
+  </section
+
+
+  <!-- ══ COMPARISON: MA vs MEDIGAP ══ -->
+  <section style="padding:60px 24px;background:white">
+    <div class="container" style="max-width:980px">
+      <div class="section-label">COMPARACIÓN CLAVE</div>
+      <div class="section-title" style="margin-bottom:12px">Medicare Advantage vs. Medigap</div>
+      <p class="section-subtitle">¿Cuál es mejor para usted? Depende de su salud, doctores y presupuesto.</p>
+
+      <!-- Cards comparison -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px" class="comparison-cards">
+
+        <!-- Medicare Advantage card -->
+        <div style="border:2px solid #1B4F72;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(27,79,114,0.12)">
+          <div style="background:#1B4F72;color:white;padding:20px 24px;text-align:center">
+            <div style="font-size:28px;margin-bottom:4px">🏥</div>
+            <div style="font-size:19px;font-weight:700">Medicare Advantage</div>
+            <div style="font-size:13px;opacity:0.85;margin-top:2px">(Parte C)</div>
+          </div>
+          <div style="background:#EBF5FB;padding:20px 24px">
+            <div style="margin-bottom:12px"><span style="background:#1B4F72;color:white;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600">MEJOR PARA</span></div>
+            <p style="font-size:15px;color:var(--dark);margin-bottom:16px">Personas que prefieren prima baja y no tienen muchos doctores o medicamentos.</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Prima mensual:</strong> $0 en muchos planes</p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Extras:</strong> <span>Incluye Parte D (medicamentos) en muchos casos</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E67E22;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Doctores:</strong> <span>Red limitada (HMO/PPO)</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E67E22;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Gastos de bolsillo:</strong> <span>Hasta $5,000–$8,000/año</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Extras:</strong> <span>Dental, visión, audición disponible</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medigap card -->
+        <div style="border:2px solid #196F3D;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(25,111,61,0.12)">
+          <div style="background:#196F3D;color:white;padding:20px 24px;text-align:center">
+            <div style="font-size:28px;margin-bottom:4px">🛡️</div>
+            <div style="font-size:19px;font-weight:700">Medigap (Suplemento)</div>
+            <div style="font-size:13px;opacity:0.85;margin-top:2px">Medicare Suplementario</div>
+          </div>
+          <div style="background:#EAFAF1;padding:20px 24px">
+            <div style="margin-bottom:12px"><span style="background:#196F3D;color:white;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600">MEJOR PARA</span></div>
+            <p style="font-size:15px;color:var(--dark);margin-bottom:16px">Personas con condiciones crónicas o que visitan muchos médicos especialistas.</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E74C3C;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Prima mensual:</strong> <span>$100–$300/mes típico</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Doctores:</strong> <span>Cualquier doctor que acepte Medicare</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#27AE60;font-size:18px;flex-shrink:0">✓</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Gastos de bolsillo:</strong> <span>Muy predecibles y bajos</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E74C3C;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Medicamentos:</strong> <span>Requiere Parte D por separado</span></p>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px">
+                <span style="color:#E74C3C;font-size:18px;flex-shrink:0">△</span>
+                <p style="font-size:14px;color:var(--dark);margin:0"><strong>Extras:</strong> <span>No incluye dental ni visión</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA -->
+      <div style="text-align:center;margin-top:40px;padding:28px;background:var(--lt-blue);border-radius:16px">
+        <p style="font-size:17px;color:var(--navy);font-weight:600;margin-bottom:12px">¿No sabe cuál es mejor para usted? Nosotros le ayudamos — gratis.</p>
+        <a href="index.html#widget-anchor" class="btn btn-primary"><i class="fas fa-search"></i> <span>Compare Planes</span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- NUESTROS SERVICIOS -->
+  <section style="padding:60px 24px;background:var(--lt-gray)">
+    <div class="container">
+<!-- SERVICES OVERVIEW -->
+  <section class="services-overview">
+    <div class="container">
+      <div class="section-label">NUESTROS SERVICIOS</div>
+      <div class="section-title">Todo lo que necesita para su Medicare</div>
+      <div class="section-subtitle">Servicio personalizado, 100% gratuito. Por ley, los agentes de Medicare no pueden cobrarte.</div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-icon" style="background:var(--navy)"><i class="fas fa-file-medical"></i></div>
+          <h3>Medicare Advantage (Parte C)</h3>
+          <p>Planes todo-en-uno que incluyen hospital, doctor, y a veces vision, dental y medicinas. Muchos con prima de $0.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon" style="background:var(--green)"><i class="fas fa-pills"></i></div>
+          <h3>Parte D (Medicinas)</h3>
+          <p>Cobertura de medicinas recetadas. le ayudamos a encontrar el plan que cubra TUS medicinas al menor costo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-icon" style="background:var(--teal)"><i class="fas fa-shield-alt"></i></div>
+          <h3>Medigap (Suplementario)</h3>
+          <p>Seguros que cubren lo que Medicare Original no paga: copagos, deducibles, y emergencias fuera del pais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner" style="text-align:center;padding:60px 24px">
+    <div class="container">
+      <div class="section-title" style="color:white;margin-bottom:8px">¿Listo para empezar?</div>
+      <p style="color:rgba(255,255,255,0.9);font-size:18px;margin-bottom:28px">La consulta es 100% gratuita y sin compromiso.</p>
+      <a href="index.html#widget-anchor" class="btn" style="background:white;color:var(--navy);font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
+        <i class="fas fa-search"></i> <span>Compare Planes</span>
       </a>
     </div>
   </section>
@@ -1088,7 +1089,7 @@ a[href^="tel"] { white-space: nowrap; }
     </div>
     <div>
       <h4>Contáctenos</h4>
-      
+      <br><small style="color:rgba(255,255,255,0.6);font-size:12px;letter-spacing:0.08em;font-weight:500"></small>
       <a href="mailto:alejamedicare@gmail.com">alejamedicare@gmail.com</a>
       <a href="https://wa.me/13105979142" target="_blank">WhatsApp</a>
     </div>
@@ -1119,21 +1120,12 @@ a[href^="tel"] { white-space: nowrap; }
 <script>
 // ═══ STATE ════════════════════════════════════════════════
 let currentLang = 'es';
-let currentPage = 'contact';
+let currentPage = 'beneficios';
 let widgetState = { situation: null, zip: null };
 
 // ═══ PAGE NAVIGATION ═════════════════════════════════════
 // Navigation handled by href links
 // ═══ LANGUAGE TOGGLE ═════════════════════════════════════
-
-
-
-function goLang(lang) {
-  localStorage.setItem('guiamarcos_lang', lang);
-  if (lang !== 'es') window.location.href = 'contacto-en.html';
-}
-function toggleLang() { goLang('en'); }
-
 
 // ═══ MOBILE MENU ═════════════════════════════════════════
 function toggleMobile() {
@@ -1220,7 +1212,7 @@ function startFlow(type) { updateWidgetProgress(10);
 function shell(containerId, backId, iconCls, bgColor, q_es, q_en, sub_es, sub_en, body) {
   const es = currentLang === 'es';
   document.getElementById(containerId).innerHTML = `
-    <button class="widget-back" onclick="wBack('${backId}')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('${backId}')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:${bgColor};display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="${iconCls}"></i></div>
       <div class="widget-q" style="margin:0">${es?q_es:q_en}</div>
@@ -1309,14 +1301,14 @@ function carrierSel(id) {
   const opts = carriers.map(c => `<option value="${c}">${c}</option>`).join('');
   return `<div style="margin-bottom:14px">
     <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">
-      '¿Con qué aseguradora tiene su plan?'
+      ${es?'¿Con qué aseguradora tiene su plan?':'What is your current insurance carrier?'}
     </label>
     <select id="${id}" onchange="toggleOtherCarrier('${id}')" style="width:100%;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit;color:var(--dark);outline:none">
-      <option value="">'Selecciona su aseguradora'</option>
+      <option value="">${es?'Seleccione su aseguradora':'Select your carrier'}</option>
       ${opts}
-      <option value="other">'Otra aseguradora'</option>
+      <option value="other">${es?'Otra aseguradora':'Other carrier'}</option>
     </select>
-    <input id="${id}-other" type="text" placeholder="'Escribe el nombre de la aseguradora'"
+    <input id="${id}-other" type="text" placeholder="${es?'Escribe el nombre de la aseguradora':'Type the carrier name'}"
       style="display:none;width:100%;margin-top:8px;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit;outline:none">
   </div>`;
 }
@@ -1331,7 +1323,7 @@ function chronicPanel() {
   const es = currentLang === 'es';
   let html = `<div style="margin-bottom:20px">
     <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px">
-      '¿Su familiar o usted tiene alguna de estas condiciones crónicas? (Selecciona todas las que apliquen)'
+      ${es?'¿Su familiar o usted tiene alguna de estas condiciones crónicas? (Seleccione todas las que apliquen)':'Do you (or your family member) have any of these chronic conditions? (Select all that apply)'}
     </label>
     <div style="border:2px solid var(--lt-blue);border-radius:10px;padding:16px;background:white;max-height:280px;overflow-y:auto">`;
   CHRONIC_CONDITIONS.forEach(group => {
@@ -1347,7 +1339,7 @@ function chronicPanel() {
   html += `</div>
     <label style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--gray);margin-top:8px;cursor:pointer">
       <input type="checkbox" name="chronic" value="none" id="chronic-none" style="width:16px;height:16px;accent-color:var(--green)">
-      <em>'Ninguna de las anteriores'</em>
+      <em>${es?'Ninguna de las anteriores':'None of the above'}</em>
     </label>
   </div>`;
   return html;
@@ -1358,10 +1350,10 @@ function partABQuestion() {
   return sel('partab',
     '¿Ya tiene Medicare Parte A y Parte B?',
     'Do you already have Medicare Part A and Part B?',
-    `<option value="both">'Sí, tengo ambas (Parte A y B)'</option>
-     <option value="a_only">'Solo Parte A'</option>
+    `<option value="both">${es?'Sí, tengo ambas (Parte A y B)':'Yes, I have both (Part A and B)'}</option>
+     <option value="a_only">${es?'Solo Parte A':'Part A only'}</option>
      <option value="neither">${es?'No, todavía no tengo ninguna':'No, I don\'t have either yet'}</option>
-     <option value="unsure">'No estoy seguro/a'</option>`
+     <option value="unsure">${es?'No estoy seguro/a':'Not sure'}</option>`
   );
 }
 
@@ -1373,24 +1365,24 @@ function renderFT_Step1(es) {
   const months_en = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const months = es ? months_es : months_en;
   const currentYear = new Date().getFullYear();
-  let monthOpts = `<option value="">'Mes'</option>` + months.map((m,i)=>`<option value="${i+1}">${m}</option>`).join('');
-  let yearOpts  = `<option value="">'Año'</option>`;
+  let monthOpts = `<option value="">${es?'Mes':'Month'}</option>` + months.map((m,i)=>`<option value="${i+1}">${m}</option>`).join('');
+  let yearOpts  = `<option value="">${es?'Año':'Year'}</option>`;
   for(let y=currentYear; y<=currentYear+2; y++) yearOpts += `<option value="${y}">${y}</option>`;
 
   document.getElementById('flow-first-time').innerHTML = `
-    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-birthday-cake"></i></div>
-      <div class="widget-q" style="margin:0">'¿Cuándo cumple 65?'</div>
+      <div class="widget-q" style="margin:0">${es?'¿Cuándo cumple 65?':'When do you turn 65?'}</div>
     </div>
-    <div class="widget-qsub">'Esto determina exactamente cuánto tiempo tiene para inscribirse sin penalidades permanentes.'</div>
+    <div class="widget-qsub">${es?'Esto determina exactamente cuánto tiempo tiene para inscribirse sin penalidades permanentes.':'This determines exactly how much time you have to enroll without permanent penalties.'}</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
       <div>
-        <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">'Mes*'</label>
+        <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">${es?'Mes*':'Month*'}</label>
         <select id="ft-month" style="width:100%;padding:13px 12px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit">${monthOpts}</select>
       </div>
       <div>
-        <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">'Año*'</label>
+        <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">${es?'Año*':'Year*'}</label>
         <select id="ft-year" style="width:100%;padding:13px 12px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit">${yearOpts}</select>
       </div>
     </div>
@@ -1448,7 +1440,7 @@ function ft_step3() { updateWidgetProgress(55);
   const es = currentLang === 'es';
   shell('flow-first-time','flow-first-time','fas fa-pills','var(--navy)',
     '¿Toma medicamentos recetados regularmente?', 'Do you take prescription medications regularly?',
-    'El tipo y cantidad de medicinas afecta cuál plan de Parte D o Medicare Advantage es el mejor para ti.', 'The type and quantity of medications affects which Part D or Medicare Advantage plan is best for you.',
+    'El tipo y cantidad de medicinas afecta cuál plan de Parte D o Medicare Advantage es el mejor para usted.', 'The type and quantity of medications affects which Part D or Medicare Advantage plan is best for you.',
     opt('No tomo ningún medicamento recetado','I take no prescription medications',"ft_meds('none')") +
     opt('Tomo 1–3 medicamentos','I take 1–3 medications',"ft_meds('few')") +
     opt('Tomo 4 o más medicamentos','I take 4 or more medications',"ft_meds('many')") +
@@ -1460,12 +1452,12 @@ function ft_meds(m) {
   wData.meds = m;
   const es = currentLang === 'es';
   document.getElementById('flow-first-time').innerHTML = `
-    <button class="widget-back" onclick="wBack('flow-first-time')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('flow-first-time')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-heartbeat"></i></div>
-      <div class="widget-q" style="margin:0">'Condiciones de salud'</div>
+      <div class="widget-q" style="margin:0">${es?'Condiciones de salud':'Health Conditions'}</div>
     </div>
-    <div class="widget-qsub">'Si tiene condiciones crónicas, puede haber planes especiales (C-SNP) diseñados exactamente para su situación.'</div>
+    <div class="widget-qsub">${es?'Si tiene condiciones crónicas, puede haber planes especiales (C-SNP) diseñados exactamente para su situación.':'If you have chronic conditions, there may be special plans (C-SNPs) designed exactly for your situation.'}</div>
     ${chronicPanel()}
     ${nextBtn('Continuar','Continue','ft_step4()')}
   `;
@@ -1481,19 +1473,19 @@ function ft_step4() { updateWidgetProgress(75);
 // ══════════════════════════════════════════════════
 function renderMV_Step1(es) {
   document.getElementById('flow-moving').innerHTML = `
-    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-truck-moving"></i></div>
-      <div class="widget-q" style="margin:0">'Cuéntenos de su mudanza'</div>
+      <div class="widget-q" style="margin:0">${es?'Cuéntame de su mudanza':'Tell me about your move'}</div>
     </div>
-    <div class="widget-qsub">'Al mudarte calificas para un Período Especial de Inscripción (SEP). El tiempo importa.'</div>
+    <div class="widget-qsub">${es?'Al mudarte calificas para un Período Especial de Inscripción (SEP). El tiempo importa.':'When you move, you qualify for a Special Enrollment Period (SEP). Timing matters.'}</div>
     <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">${inp('mv-zip-from', 'ZIP de origen*', 'Origin zip*', 'text', 'Ej: 60601', 'E.g. 60601', true)}${inp('mv-state-from', 'Estado', 'State', 'text', 'IL', 'IL', false)}</div>
     <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">${inp('mv-zip-to', 'ZIP de destino*', 'Destination zip*', 'text', 'Ej: 90028', 'E.g. 90028', true)}${inp('mv-state-to', 'Estado nuevo', 'New state', 'text', 'CA', 'CA', false)}</div>
     ${sel('mv-when', '¿Cuándo es la mudanza?', 'When is the move?',
-      `<option value="moved">'Ya me mudé (últimos 60 días)'</option>
-       <option value="30d">'Me mudo en los próximos 30 días'</option>
-       <option value="90d">'Me mudo en 1–3 meses'</option>
-       <option value="planning">'Solo estoy planeando'</option>`
+      `<option value="moved">${es?'Ya me mudé (últimos 60 días)':'I already moved (within last 60 days)'}</option>
+       <option value="30d">${es?'Me mudo en los próximos 30 días':'Moving within the next 30 days'}</option>
+       <option value="90d">${es?'Me mudo en 1–3 meses':'Moving in 1–3 months'}</option>
+       <option value="planning">${es?'Solo estoy planeando':'Just planning ahead'}</option>`
     )}
     ${nextBtn('Continuar','Continue','mv_step2()')}
   `;
@@ -1534,7 +1526,7 @@ function mv_plan(p) {
   const es = currentLang === 'es';
   shell('flow-moving','flow-moving','fas fa-id-card','var(--blue)',
     '¿Ya tiene Medicare Parte A y Parte B?', 'Do you already have Medicare Part A and Part B?',
-    'Necesitamos saber esto para asegurarnos de que haya continuidad de cobertura al mudarse.', 'We need to know this to ensure coverage continuity during your move.',
+    'Necesitamos saber esto para asegurarnos de que haya continuidad de cobertura al mudarte.', 'We need to know this to ensure coverage continuity during your move.',
     partABQuestion() +
     nextBtn('Continuar','Continue','mv_step3()')
   );
@@ -1544,10 +1536,10 @@ function mv_step3() { updateWidgetProgress(70);
   wData.partAB = getVal('partab');
   const es = currentLang === 'es';
   document.getElementById('flow-moving').innerHTML = `
-    <button class="widget-back" onclick="wBack('flow-moving')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('flow-moving')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-heartbeat"></i></div>
-      <div class="widget-q" style="margin:0">'Condiciones de salud'</div>
+      <div class="widget-q" style="margin:0">${es?'Condiciones de salud':'Health Conditions'}</div>
     </div>
     <div class="widget-qsub">${es?'Al cambiar de plan, es clave asegurarnos de que tus condiciones y medicamentos estén cubiertos.':'When changing plans, it\'s key to ensure your conditions and medications are covered.'}</div>
     ${chronicPanel()}
@@ -1565,12 +1557,12 @@ function mv_step4() { updateWidgetProgress(85);
 // ══════════════════════════════════════════════════
 function renderBT_Step1(es) {
   document.getElementById('flow-better').innerHTML = `
-    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-user-friends"></i></div>
-      <div class="widget-q" style="margin:0">'¿Para quién busca opciones?'</div>
+      <div class="widget-q" style="margin:0">${es?'¿Para quién buscas opciones?':'Who are you looking for options for?'}</div>
     </div>
-    <div class="widget-qsub">'Las preguntas serán ligeramente diferentes según su respuesta.'</div>
+    <div class="widget-qsub">${es?'Las preguntas serán ligeramente diferentes según su respuesta.':'The questions will be slightly different based on your answer.'}</div>
     ${opt('Para mí — yo quiero comparar mi plan actual','For me — I want to compare my current plan',"bt_who('self')")}
     ${opt('Para un familiar (padre, madre, abuelo/a...)','For a family member (parent, grandparent...)',"bt_who('family')")}
   `;
@@ -1586,14 +1578,14 @@ function bt_who(who) {
       'Necesito saber el punto de partida para encontrar algo mejor.', 'I need your starting point to find something better.',
       carrierSel('bt-carrier') +
       '<div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;align-items:start">' +
-      inp('bt-zip','Su código postal*','Your zip code*','text','Ej: 90028','E.g. 90028',true) +
-      inp('bt-state','Su estado','Your state','text','CA','CA',false) +
+      inp('bt-zip','su código postal*','Your zip code*','text','Ej: 90028','E.g. 90028',true) +
+      inp('bt-state','su estado','Your state','text','CA','CA',false) +
       '</div>' +
       sel('bt-plantype','¿Qué tipo de plan tiene?','What type of plan do you have?',
-        `<option value="advantage">'Medicare Advantage (Parte C)'</option>
-         <option value="medigap">'Medicare Original + Suplemento Medigap'</option>
-         <option value="original">'Medicare Original solamente'</option>
-         <option value="unknown">'No estoy seguro/a'</option>`
+        `<option value="advantage">${es?'Medicare Advantage (Parte C)':'Medicare Advantage (Part C)'}</option>
+         <option value="medigap">${es?'Medicare Original + Suplemento Medigap':'Original Medicare + Medigap Supplement'}</option>
+         <option value="original">${es?'Medicare Original solamente':'Original Medicare only'}</option>
+         <option value="unknown">${es?'No estoy seguro/a':'Not sure'}</option>`
       ) +
       nextBtn('Continuar','Continue','bt_step2_self()')
     );
@@ -1617,15 +1609,15 @@ function bt_who(who) {
       inp('pr-state','Estado','State','text','CA','CA',false) +
       '</div>' +
       sel('pr-age','¿Qué edad tiene su familiar?','How old is your family member?',
-        `<option value="almost64">'64 años — cumple 65 pronto'</option>
-         <option value="65plus_has">'65+ y YA tiene Medicare'</option>
-         <option value="65plus_no">'65+ pero NO tiene Medicare todavía'</option>
-         <option value="disability">'Menos de 65 — califica por discapacidad'</option>`
+        `<option value="almost64">${es?'64 años — cumple 65 pronto':'64 years old — turning 65 soon'}</option>
+         <option value="65plus_has">${es?'65+ y YA tiene Medicare':'65+ and ALREADY has Medicare'}</option>
+         <option value="65plus_no">${es?'65+ pero NO tiene Medicare todavía':'65+ but does NOT have Medicare yet'}</option>
+         <option value="disability">${es?'Menos de 65 — califica por discapacidad':'Under 65 — qualifies due to disability'}</option>`
       ) +
-      sel('pr-lang','¿Su familiar habla inglés?',
-        `<option value="es">'Prefiere español'</option>
-         <option value="en">'Habla inglés bien'</option>
-         <option value="both">'Habla los dos idiomas'</option>`
+      sel('pr-lang','¿su familiar habla inglés?','Does your family member speak English?',
+        `<option value="es">${es?'Prefiere español':'Prefers Spanish'}</option>
+         <option value="en">${es?'Habla inglés bien':'Speaks English well'}</option>
+         <option value="both">${es?'Habla los dos idiomas':'Speaks both languages'}</option>`
       ) +
       nextBtn('Continuar','Continue','bt_step2_fam()')
     );
@@ -1669,7 +1661,7 @@ function bt_step2_fam() {
   wData.parentAge = getVal('pr-age'); wData.parentLang = getVal('pr-lang');
   const es = currentLang === 'es';
   shell('flow-better','flow-better','fas fa-id-card','var(--green)',
-    '¿Su familiar ya tiene Medicare Parte A y Parte B?', 'Does your family member already have Medicare Part A and Part B?',
+    '¿su familiar ya tiene Medicare Parte A y Parte B?', 'Does your family member already have Medicare Part A and Part B?',
     'Esto determina si necesitamos inscribirlos o simplemente mejorar su cobertura actual.', 'This determines whether we need to enroll them or just improve their current coverage.',
     partABQuestion() + nextBtn('Continuar','Continue','bt_step3_fam()')
   );
@@ -1714,12 +1706,12 @@ function bt_showChronic(nextFn) {
   const isFam = wData.forWhom === 'family';
   const label = isFam ? (es?'Condiciones de salud del familiar':"Family member's health conditions") : (es?'Condiciones de salud':'Health Conditions');
   document.getElementById('flow-better').innerHTML = `
-    <button class="widget-back" onclick="wBack('flow-better')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('flow-better')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-heartbeat"></i></div>
       <div class="widget-q" style="margin:0">${label}</div>
     </div>
-    <div class="widget-qsub">'Si hay condiciones crónicas, existen planes C-SNP con beneficios adicionales diseñados exactamente para esa situación.'</div>
+    <div class="widget-qsub">${es?'Si hay condiciones crónicas, existen planes C-SNP con beneficios adicionales diseñados exactamente para esa situación.':'If there are chronic conditions, there are C-SNP plans with extra benefits designed exactly for that situation.'}</div>
     ${chronicPanel()}
     ${nextBtn('Continuar','Continue',nextFn)}
   `;
@@ -1739,20 +1731,20 @@ function renderUrgencyStep(containerId, flow) {
   const es = currentLang === 'es';
   document.getElementById(containerId).innerHTML = `
     <button class="widget-back" onclick="history.go(-1)" style="display:none"></button>
-    <div class="widget-q" style="margin-bottom:8px">'Una pregunta más…'</div>
-    <div class="widget-qsub" style="margin-bottom:18px">'Esto nos ayuda a priorizar su caso correctamente.'</div>
+    <div class="widget-q" style="margin-bottom:8px">${es?'Una pregunta más…':'One more question…'}</div>
+    <div class="widget-qsub" style="margin-bottom:18px">${es?'Esto nos ayuda a priorizar su caso correctamente.':'This helps us prioritize your case correctly.'}</div>
     <div style="display:flex;flex-direction:column;gap:10px">
       <button onclick="setUrgency('asap','${containerId}','${flow}')" style="padding:14px 18px;border:2px solid var(--lt-blue);border-radius:10px;background:white;font-size:15px;font-family:inherit;cursor:pointer;color:var(--dark);text-align:left;transition:all 0.15s" onmouseover="this.style.borderColor='var(--green)';this.style.background='var(--lt-mint)'" onmouseout="this.style.borderColor='var(--lt-blue)';this.style.background='white'">
-        <strong>'Lo antes posible'</strong><br>
-        <span style="font-size:13px;color:var(--gray)">'Necesito inscribirme o cambiar de plan pronto.'</span>
+        <strong>${es?'Lo antes posible':'As soon as possible'}</strong><br>
+        <span style="font-size:13px;color:var(--gray)">${es?'Necesito inscribirme o cambiar de plan pronto.':'I need to enroll or switch plans soon.'}</span>
       </button>
       <button onclick="setUrgency('3months','${containerId}','${flow}')" style="padding:14px 18px;border:2px solid var(--lt-blue);border-radius:10px;background:white;font-size:15px;font-family:inherit;cursor:pointer;color:var(--dark);text-align:left;transition:all 0.15s" onmouseover="this.style.borderColor='var(--blue)';this.style.background='var(--lt-blue)'" onmouseout="this.style.borderColor='var(--lt-blue)';this.style.background='white'">
-        <strong>'En los próximos 1–3 meses'</strong><br>
-        <span style="font-size:13px;color:var(--gray)">'Estoy evaluando mis opciones con tiempo.'</span>
+        <strong>${es?'En los próximos 1–3 meses':'Within the next 1–3 months'}</strong><br>
+        <span style="font-size:13px;color:var(--gray)">${es?'Estoy evaluando mis opciones con tiempo.':'I am evaluating my options with time to spare.'}</span>
       </button>
       <button onclick="setUrgency('exploring','${containerId}','${flow}')" style="padding:14px 18px;border:2px solid var(--lt-blue);border-radius:10px;background:white;font-size:15px;font-family:inherit;cursor:pointer;color:var(--dark);text-align:left;transition:all 0.15s" onmouseover="this.style.borderColor='var(--gray)';this.style.background='var(--lt-gray)'" onmouseout="this.style.borderColor='var(--lt-blue)';this.style.background='white'">
-        <strong>'Solo estoy explorando por ahora'</strong><br>
-        <span style="font-size:13px;color:var(--gray)">'No hay prisa. Quiero entender mis opciones primero.'</span>
+        <strong>${es?'Solo estoy explorando por ahora':'Just exploring for now'}</strong><br>
+        <span style="font-size:13px;color:var(--gray)">${es?'No hay prisa. Quiero entender mis opciones primero.':'No rush — I want to understand my options first.'}</span>
       </button>
     </div>
   `;
@@ -1772,43 +1764,43 @@ function renderContactForm(containerId, flow) {
   };
   const b = badges[flow] || { icon:'📋', lbl_es:'Consulta', lbl_en:'Consultation' };
   document.getElementById(containerId).innerHTML = `
-    <button class="widget-back" onclick="wBack('${containerId}')"><i class="fas fa-arrow-left"></i> 'Atrás'</button>
+    <button class="widget-back" onclick="wBack('${containerId}')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="background:var(--lt-green);border-radius:var(--radius);padding:16px;margin-bottom:24px;display:flex;align-items:center;gap:12px">
       <i class="fas fa-check-circle" style="color:var(--green);font-size:24px;flex-shrink:0"></i>
       <div>
         <strong style="color:var(--navy);font-size:15px">${b.icon} ${es?b.lbl_es:b.lbl_en}</strong><br>
-        <span style="font-size:13px;color:var(--gray)">'Respuestas recibidas. Ahora necesito tus datos para llamarte.'</span>
+        <span style="font-size:13px;color:var(--gray)">${es?'Respuestas recibidas. Ahora necesito sus datos para llamarle.':'Answers received. Now I need your info to call you.'}</span>
       </div>
     </div>
-    <div class="widget-q" style="margin-bottom:8px">'¿Cómo te llamamos?'</div>
-    <div class="widget-qsub">${es?'Alejandra le llama en español o inglés, como prefiera. Gratis, sin obligación.'}</div>
+    <div class="widget-q" style="margin-bottom:8px">${es?'¿Cómo le llamamos?':'How do we reach you?'}</div>
+    <div class="widget-qsub">${es?'Alejandra le llama en español o inglés, como prefiera. Gratis, sin obligación.':'Alejandra will call you in English or Spanish. Free, no obligation.'}</div>
     ${inp('cf-name','Su nombre completo*','Your full name*','text','Ej: María García','E.g. Maria Garcia',true)}
-    ${inp('cf-phone','Su teléfono*','Your phone number*','tel','Ej: (310) 555-1234','E.g. (310) 555-1234',true)}
-    ${sel('cf-contact','¿Cómo prefiere que lo contactemos?','How would you like us to reach you?',
-      `<option value='sms' selected>'Mensaje de texto (SMS)'</option>
-       <option value='whatsapp'>'WhatsApp'</option>
-       <option value='email'>'Email'</option>
-       <option value='call'>'Teléfono'</option>`
+    ${inp('cf-phone','Su teléfono*','Your phone number*','tel','Ej:','E.g.',true)}
+    ${sel('cf-contact','¿Cómo prefiere que le contactemos?','How would you like us to reach you?',
+      `<option value='sms' selected>${es?'Mensaje de texto (SMS)':'Text message (SMS)'}</option>
+       <option value='whatsapp'>${es?'WhatsApp':'WhatsApp'}</option>
+       <option value='email'>${es?'Email':'Email'}</option>
+       <option value='call'>${es?'Teléfono':'Phone call'}</option>`
     )}
-    ${sel('cf-time','Mejor momento para contactarte','Best time to reach you',
-      `<option value="morning">'Mañana (9am–12pm)'</option>
-       <option value="afternoon">'Mediodía (12pm–3pm)'</option>
-       <option value="evening">'Tarde (3pm–6pm)'</option>
-       <option value="anytime">'Cualquier hora'</option>`
+    ${sel('cf-time','Mejor momento para contactarle','Best time to reach you',
+      `<option value="morning">${es?'Mañana (9am–12pm)':'Morning (9am–12pm)'}</option>
+       <option value="afternoon">${es?'Mediodía (12pm–3pm)':'Afternoon (12pm–3pm)'}</option>
+       <option value="evening">${es?'Tarde (3pm–6pm)':'Evening (3pm–6pm)'}</option>
+       <option value="anytime">${es?'Cualquier hora':'Any time'}</option>`
     )}
-    ${sel('cf-lang','¿Prefiere que lo llamemos en...?','Preferred language for the call?',
-      `<option value="es">'Español'</option>
-       <option value="en">${es?'Inglés'}</option>
-       <option value="both">'Cualquiera está bien'</option>`
+    ${sel('cf-lang','¿Prefiere que le llamemos en...?','Preferred language for the call?',
+      `<option value="es">${es?'Español':'Spanish'}</option>
+       <option value="en">${es?'Inglés':'English'}</option>
+       <option value="both">${es?'Cualquiera está bien':'Either is fine'}</option>`
     )}
     <div style="margin-bottom:20px">
-      <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">'¿Algo más que quiera que sepamos? (opcional)'</label>
-      <textarea id="cf-notes" rows="3" placeholder="'Ej: Tengo Kaiser, quiero mantener a mi doctor. Tomo metformina y lisinopril.'" style="width:100%;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit;resize:vertical;outline:none" onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--lt-gray)'"></textarea>
+      <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px">${es?'¿Algo más que quiera que sepamos? (opcional)':'Anything else? (optional)'}</label>
+      <textarea id="cf-notes" rows="3" placeholder="${es?'Ej: Tengo Kaiser, quiero mantener a mi doctor. Tomo metformina y lisinopril.':'E.g. I have Kaiser, want to keep my doctor. I take metformin and lisinopril.'}" style="width:100%;padding:13px 16px;border:2px solid var(--lt-gray);border-radius:10px;font-size:16px;font-family:inherit;resize:vertical;outline:none" onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor='var(--lt-gray)'"></textarea>
     </div>
     <button onclick="submitWidget('${flow}')" class="btn btn-primary" style="width:100%;justify-content:center;font-size:17px;padding:18px">
-      <i class="fas fa-paper-plane"></i> 'Enviar — Alejandra me Llamará'
+      <i class="fas fa-paper-plane"></i> ${es?'Enviar — Alejandra me Llamará':'Submit — Alejandra Will Call Me'}
     </button>
-    <p style="text-align:center;font-size:13px;color:var(--gray);margin-top:12px">'✓ Gratis &nbsp; ✓ Sin compromiso &nbsp; ✓ Nos llamamos'</p>
+    <p style="text-align:center;font-size:13px;color:var(--gray);margin-top:12px">${es?'✓ Gratis &nbsp; ✓ Sin compromiso &nbsp; ✓ Nos llamamos':'✓ Free &nbsp; ✓ No obligation &nbsp; ✓ We call you'}</p>
   `;
 }
 
@@ -1949,6 +1941,13 @@ function submitSeminar(e) {
   setTimeout(() => { showSuccessState('seminar-widget'); }, 400);
 }
 
+function goLang(lang) {
+  localStorage.setItem('guiamarcos_lang', lang);
+  if (lang !== 'es') window.location.href = 'beneficios-en.html';
+}
+function toggleLang() { goLang('en'); }
+
+
 // Init
 updateLang();
 
@@ -2009,155 +2008,5 @@ function updateWidgetProgress(pct) {
 
 </script>
 
-<script>
-async function submitForm(e) {
-    e.preventDefault();
-    const form = document.getElementById('contact-form');
-    
-    // Clear previous errors
-    form.querySelectorAll('.field-error').forEach(el => el.remove());
-    form.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-    
-    let isValid = true;
-    
-    // Required fields
-    const nameEl = document.getElementById('cf2-name');
-    const phoneEl = document.getElementById('cf2-phone');
-    if (!nameEl.value.trim()) { nameEl.classList.add('error'); isValid = false; }
-    if (!phoneEl.value.trim()) { phoneEl.classList.add('error'); isValid = false; }
-    
-    // Phone: 10 digits minimum
-    const phoneDigits = phoneEl.value.replace(/\D/g, '');
-    if (phoneEl.value.trim() && phoneDigits.length < 10) {
-        phoneEl.classList.add('error');
-        const msg = document.createElement('span');
-        msg.className = 'field-error';
-        msg.style.cssText = 'color:#e53e3e;font-size:0.82rem;display:block;margin-top:4px';
-        msg.textContent = 'Por favor ingrese un teléfono de 10 dígitos.';
-        phoneEl.parentNode.appendChild(msg);
-        isValid = false;
-    }
-    
-    // Email: validate if provided
-    const emailEl = document.getElementById('cf2-email');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    if (emailEl && emailEl.value.trim() && !emailRegex.test(emailEl.value.trim())) {
-        emailEl.classList.add('error');
-        const msg = document.createElement('span');
-        msg.className = 'field-error';
-        msg.style.cssText = 'color:#e53e3e;font-size:0.82rem;display:block;margin-top:4px';
-        msg.textContent = 'Por favor ingrese un correo electrónico válido.';
-        emailEl.parentNode.appendChild(msg);
-        isValid = false;
-    }
-    
-
-    // Validate DOB
-    const dobMonthEl = document.getElementById('dob-month');
-    const dobDayEl   = document.getElementById('dob-day');
-    const dobYearEl  = document.getElementById('dob-year');
-    const dobErrEl   = document.getElementById('dob-error');
-    if (dobMonthEl && dobDayEl && dobYearEl) {
-        if (!dobMonthEl.value || !dobDayEl.value || !dobYearEl.value) {
-            if(!dobMonthEl.value) dobMonthEl.classList.add('error');
-            if(!dobDayEl.value)   dobDayEl.classList.add('error');
-            if(!dobYearEl.value)  dobYearEl.classList.add('error');
-            if(dobErrEl){ dobErrEl.textContent='Por favor complete todos los campos de fecha de nacimiento.'; dobErrEl.style.display='block'; }
-            isValid = false;
-        } else {
-            const testDate = new Date(dobYearEl.value, dobMonthEl.value-1, dobDayEl.value);
-            if(testDate.getMonth() !== parseInt(dobMonthEl.value)-1){
-                dobDayEl.classList.add('error');
-                if(dobErrEl){ dobErrEl.textContent='Fecha inválida.'; dobErrEl.style.display='block'; }
-                isValid = false;
-            } else {
-                [dobMonthEl,dobDayEl,dobYearEl].forEach(el=>el.classList.remove('error'));
-                if(dobErrEl) dobErrEl.style.display='none';
-            }
-        }
-    }
-
-    if (!isValid) {
-        const firstError = form.querySelector('.error');
-        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
-    }
-    
-    // Zip / state — at least one required
-    const zipVal = document.getElementById('cf2-zip') ? document.getElementById('cf2-zip').value.trim() : '';
-    const stateVal = document.getElementById('cf2-state') ? document.getElementById('cf2-state').value.trim() : '';
-    if (!zipVal && !stateVal) {
-      const zipEl = document.getElementById('cf2-zip');
-      if (zipEl) { zipEl.classList.add('error'); zipEl.scrollIntoView({behavior:'smooth',block:'center'}); }
-      isValid = false;
-    }
-    if (!isValid) {
-      const firstError = form.querySelector('.error');
-      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
-
-    // Collect data
-    const preferEl = document.getElementById('cf2-prefer');
-    const topicEl = document.getElementById('cf2-topic');
-    const formData = {
-        name: nameEl.value,
-        phone: phoneEl.value,
-        email: emailEl ? emailEl.value : '',
-        zip: zipVal,
-        state: stateVal,
-        dob: dobMonthEl && dobDayEl && dobYearEl ? `${String(dobMonthEl.value).padStart(2,'0')}/${String(dobDayEl.value).padStart(2,'0')}/${dobYearEl.value}` : '',
-        prefer: preferEl ? preferEl.options[preferEl.selectedIndex].text : '',
-        topic: topicEl ? topicEl.options[topicEl.selectedIndex].text : '',
-        submittedAt: new Date().toISOString(),
-        language: 'es',
-        site: 'guiamarcos.com'
-    };
-    
-    // Silent Zapier webhook
-    try {
-        fetch('https://hooks.zapier.com/hooks/catch/26596586/u04de3s/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        }).catch(() => {});
-    } catch(err) {}
-    
-    // Show confirmation
-    form.style.display = 'none';
-    document.getElementById('form-success').style.display = 'block';
-}
-
-document.getElementById('contact-form').querySelectorAll('input, select').forEach(el => {
-    el.addEventListener('input', function() { 
-        this.classList.remove('error');
-        const next = this.nextElementSibling;
-        if (next && next.classList.contains('field-error')) next.remove();
-    });
-});
-
-// ZIP → state auto-select
-(function() {
-  function wireZip() {
-    const zipEl = document.getElementById('cf2-zip');
-    const stateEl = document.getElementById('cf2-state');
-    if (!zipEl || !stateEl) return;
-    function autoState() {
-      const st = typeof zipToState === 'function' ? zipToState(zipEl.value) : '';
-      if (st) {
-        stateEl.value = st;
-        stateEl.style.borderColor = 'var(--teal, #0D9488)';
-      }
-    }
-    zipEl.addEventListener('input', autoState);
-    zipEl.addEventListener('change', autoState);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', wireZip);
-  } else {
-    wireZip();
-  }
-})();
-</script>
 </body>
 </html>
