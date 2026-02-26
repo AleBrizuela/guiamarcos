@@ -2026,7 +2026,7 @@ function submitWidget(flow) {
     console.log('[GuiaMarcos-EN] Zapier payload:', JSON.stringify(zapPayload));
     const params = new URLSearchParams();
     Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
-    fetch('https://hooks.zapier.com/hooks/catch/26596586/u04de3s/', {
+    fetch('https://hooks.zapier.com/hooks/catch/26596586/u0mtjhu/', {
       method: 'POST',
       body: params
     }).then(r => console.log('[GuiaMarcos-EN] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN] Zapier error:', e));
@@ -2144,7 +2144,7 @@ function submitSeminar(e) {
     console.log('[GuiaMarcos-EN-Seminar] Zapier payload:', JSON.stringify(zapPayload));
     const params = new URLSearchParams();
     Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
-    fetch('https://hooks.zapier.com/hooks/catch/26596586/u04de3s/', {
+    fetch('https://hooks.zapier.com/hooks/catch/26596586/u0mtjhu/', {
       method: 'POST',
       body: params
     }).then(r => console.log('[GuiaMarcos-EN-Seminar] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN-Seminar] Zapier error:', e));
