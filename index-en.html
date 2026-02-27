@@ -746,7 +746,14 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--green); }
 
 /* 3-step process: stack on mobile */
 @media (max-width: 768px) {
-  .steps-grid { grid-template-columns: 1fr !important; }
+  .steps-grid { display: flex !important; flex-direction: column !important; gap: 0 !important; }
+  .how-it-works { padding: 2.5rem 1rem !important; }
+  .how-it-works [style*="border-left:1px dashed"] {
+    border-left: none !important; border-right: none !important;
+    border-top: 1px dashed #e2e8f0; border-bottom: 1px dashed #e2e8f0;
+  }
+  .how-it-works [style*="width:88px"] { width: 64px !important; height: 64px !important; }
+  .how-it-works [style*="font-size:2.2rem"] { font-size: 1.6rem !important; }
 }
 
 /* Smooth scroll offset for fixed header */
@@ -882,25 +889,37 @@ a[href^="tel"] { white-space: nowrap; }
 </section>
 
   <!-- 3-STEP PROCESS -->
-  <section style="padding:60px 24px;background:white">
-    <div class="container" style="text-align:center">
-      <div class="section-label">HOW IT WORKS</div>
-      <div class="section-title">How We Help You in 3 Simple Steps</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;max-width:900px;margin-left:auto;margin-right:auto">
-        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 24px;background:var(--lt-mint);border-radius:16px">
-          <div style="width:56px;height:56px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:white;margin-bottom:16px">1</div>
-          <h3 style="font-size:20px;font-weight:700;color:var(--navy);margin-bottom:10px">We Analyze</h3>
-          <p style="font-size:15px;color:var(--gray);line-height:1.6;margin:0">We review your current doctors and medications.</p>
+  <section class="how-it-works" style="padding:80px 24px;background:white">
+    <div style="max-width:960px;margin:0 auto;padding:0 1.5rem">
+      <div style="text-align:center;margin-bottom:64px">
+        <div class="section-label" style="color:var(--teal)">HOW IT WORKS</div>
+        <h2 class="section-title">Simple as 1 — 2 — 3</h2>
+        <p style="color:var(--gray);font-size:1.05rem;max-width:500px;margin:12px auto 0">No forms. No confusion. No pressure.</p>
+      </div>
+      <div class="steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative">
+        <div style="text-align:center;padding:2.5rem 2rem">
+          <div style="width:88px;height:88px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 4px 20px rgba(34,197,94,.3)">
+            <span style="font-size:2.2rem;font-weight:800;color:white;line-height:1">1</span>
+          </div>
+          <div style="font-size:2.4rem;margin-bottom:1rem">🗣️</div>
+          <h3 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.75rem">We Analyze</h3>
+          <p style="color:var(--gray);line-height:1.7;font-size:1rem;margin:0">Your doctors, medications, and budget. Three minutes. No paperwork.</p>
         </div>
-        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 24px;background:var(--lt-blue);border-radius:16px">
-          <div style="width:56px;height:56px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:white;margin-bottom:16px">2</div>
-          <h3 style="font-size:20px;font-weight:700;color:var(--navy);margin-bottom:10px">We Compare</h3>
-          <p style="font-size:15px;color:var(--gray);line-height:1.6;margin:0">We find the plan with the lowest cost for you.</p>
+        <div style="text-align:center;padding:2.5rem 2rem;border-left:1px dashed #e2e8f0;border-right:1px dashed #e2e8f0">
+          <div style="width:88px;height:88px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 4px 20px rgba(13,148,136,.3)">
+            <span style="font-size:2.2rem;font-weight:800;color:white;line-height:1">2</span>
+          </div>
+          <div style="font-size:2.4rem;margin-bottom:1rem">🔬</div>
+          <h3 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.75rem">We Compare</h3>
+          <p style="color:var(--gray);line-height:1.7;font-size:1rem;margin:0">Carriers, networks, drug costs — we dig through it all for you.</p>
         </div>
-        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 24px;background:var(--lt-green);border-radius:16px">
-          <div style="width:56px;height:56px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:white;margin-bottom:16px">3</div>
-          <h3 style="font-size:20px;font-weight:700;color:var(--navy);margin-bottom:10px">We Enroll</h3>
-          <p style="font-size:15px;color:var(--gray);line-height:1.6;margin:0">We handle your entire enrollment and paperwork.</p>
+        <div style="text-align:center;padding:2.5rem 2rem">
+          <div style="width:88px;height:88px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 4px 20px rgba(15,23,42,.2)">
+            <span style="font-size:2.2rem;font-weight:800;color:white;line-height:1">3</span>
+          </div>
+          <div style="font-size:2.4rem;margin-bottom:1rem">📋</div>
+          <h3 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.75rem">We Enroll</h3>
+          <p style="color:var(--gray);line-height:1.7;font-size:1rem;margin:0">Paperwork, forms, follow-ups — our service doesn't end at signup.</p>
         </div>
       </div>
     </div>
@@ -934,21 +953,7 @@ a[href^="tel"] { white-space: nowrap; }
     </div>
   </section>
 
-  <!-- BROKER / FREE HIGHLIGHT -->
-  <section style="padding:60px 24px;background:var(--lt-mint)">
-    <div class="container" style="max-width:900px;text-align:center">
-      <div style="font-size:40px;margin-bottom:16px"><i class="fas fa-hand-holding-heart" style="color:var(--green)"></i></div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:32px;color:var(--navy);margin-bottom:12px">Your Medicare advisor. Always free.</h2>
-      <p style="font-size:18px;color:var(--gray);margin-bottom:16px;line-height:1.7">We are independent agents. We work for you, not for any insurance company. As brokers, we compare plans from <em>all</em> carriers to find the one that truly fits your needs, your doctors, and your budget — at no cost or obligation.</p>
-      <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
-        <div style="background:white;border-radius:var(--radius);padding:20px 28px;box-shadow:var(--shadow);text-align:center"><i class="fas fa-dollar-sign" style="font-size:24px;color:var(--green);margin-bottom:8px;display:block"></i><strong>$0 for Our Service</strong></div>
-        <div style="background:white;border-radius:var(--radius);padding:20px 28px;box-shadow:var(--shadow);text-align:center"><i class="fas fa-building" style="font-size:24px;color:var(--navy);margin-bottom:8px;display:block"></i><strong>Top Carriers</strong></div>
-        <div style="background:white;border-radius:var(--radius);padding:20px 28px;box-shadow:var(--shadow);text-align:center"><i class="fas fa-user-shield" style="font-size:24px;color:var(--teal);margin-bottom:8px;display:block"></i><strong>We Work for You</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AREAS QUE SERVIMOS -->
+  <!-- AREAS WE SERVE -->
   <section style="background:var(--lt-mint);padding:60px 24px">
     <div class="container" style="text-align:center">
       <div class="section-label">AREAS WE SERVE</div>
@@ -963,32 +968,6 @@ a[href^="tel"] { white-space: nowrap; }
         <span class="credential-tag" style="background:var(--green);color:white;font-weight:700">Missouri</span>
         <span class="credential-tag" style="background:var(--green);color:white;font-weight:700">Oklahoma</span>
         <span class="credential-tag" style="background:var(--green);color:white;font-weight:700">Texas</span>
-      </div>
-      
-      <div style="background:white;border-radius:16px;padding:32px;max-width:800px;margin:0 auto;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-        <h3 style="font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px">Southern California — Our Primary Area</h3>
-        <p style="font-size:15px;color:var(--gray);margin-bottom:20px">We offer virtual consultations and home visits in the Los Angeles area.</p>
-        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-          <span class="credential-tag">Los Angeles</span>
-          <span class="credential-tag">Inglewood</span>
-          <span class="credential-tag">Compton</span>
-          <span class="credential-tag">East LA</span>
-          <span class="credential-tag">Boyle Heights</span>
-          <span class="credential-tag">Huntington Park</span>
-          <span class="credential-tag">South Gate</span>
-          <span class="credential-tag">Downey</span>
-          <span class="credential-tag">Santa Ana</span>
-          <span class="credential-tag">Anaheim</span>
-          <span class="credential-tag">Riverside</span>
-          <span class="credential-tag">San Bernardino</span>
-          <span class="credential-tag">Ontario</span>
-          <span class="credential-tag">Pomona</span>
-          <span class="credential-tag">Oxnard</span>
-          <span class="credential-tag">Ventura</span>
-          <span class="credential-tag">San Diego</span>
-          <span class="credential-tag">Orange County</span>
-          <span class="credential-tag">Inland Empire</span>
-        </div>
       </div>
     </div>
   </section>
@@ -1059,32 +1038,6 @@ a[href^="tel"] { white-space: nowrap; }
     </div>
   </section>
 
-  <!-- Why Guia Marcos -->
-  <section style="padding:60px 24px;background:var(--lt-gray)">
-    <div class="container" style="max-width:900px;text-align:center">
-      <div class="section-label">WHY CHOOSE US</div>
-      <div class="section-title">Independent agents. No favoritism.</div>
-      <p style="font-size:18px;color:var(--gray);line-height:1.8;margin:24px auto 40px;max-width:700px">We do not work for the insurance companies — we work for you. We compare plans from Kaiser, SCAN, Humana, Aetna and more to find the one that truly fits your doctors, medications, and budget. No cost. No obligation.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-        <div style="background:white;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);text-align:center">
-          <div style="font-size:32px;margin-bottom:12px">🆓</div>
-          <h4 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px">100% Free</h4>
-          <p style="font-size:14px;color:var(--gray);margin:0;line-height:1.6">Insurance carriers compensate us. You never pay a cent.</p>
-        </div>
-        <div style="background:white;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);text-align:center">
-          <div style="font-size:32px;margin-bottom:12px">⚖️</div>
-          <h4 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px">Independent</h4>
-          <p style="font-size:14px;color:var(--gray);margin:0;line-height:1.6">No favoritism. We compare all options available in your area.</p>
-        </div>
-        <div style="background:white;border-radius:16px;padding:28px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);text-align:center">
-          <div style="font-size:32px;margin-bottom:12px">🤝</div>
-          <h4 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px">Ongoing Support</h4>
-          <p style="font-size:14px;color:var(--gray);margin:0;line-height:1.6">We are with you every step — enrollment, questions, and future changes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ Section -->
   <section style="padding:60px 24px;background:var(--lt-gray)">
     <div class="container" style="max-width:900px">
@@ -1094,16 +1047,6 @@ a[href^="tel"] { white-space: nowrap; }
       </div>
 
       <div style="max-width:800px;margin:0 auto">
-        <div class="faq-item" style="background:white;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
-          <button class="faq-question" onclick="toggleFAQ(this)" style="padding:24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--navy);background:white;border:none;width:100%;transition:all 0.3s ease;font-size:17px">
-            <span>How much does this service cost?</span>
-            <i class="fas fa-chevron-down faq-icon" style="transition:transform 0.3s ease;font-size:16px"></i>
-          </button>
-          <div class="faq-answer" style="max-height:0;overflow:hidden;padding:0 24px;background:white;transition:max-height 0.4s ease-out,padding 0.3s ease">
-            <p style="margin:0;font-size:15px;color:var(--gray);line-height:1.7">Nothing. Our service is 100% free for you. Insurance carriers compensate us directly, so you get expert guidance at no cost.</p>
-          </div>
-        </div>
-
         <div class="faq-item" style="background:white;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
           <button class="faq-question" onclick="toggleFAQ(this)" style="padding:24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--navy);background:white;border:none;width:100%;transition:all 0.3s ease;font-size:17px">
             <span>Can my parent keep their current doctor?</span>
@@ -2026,7 +1969,7 @@ function submitWidget(flow) {
     console.log('[GuiaMarcos-EN] Zapier payload:', JSON.stringify(zapPayload));
     const params = new URLSearchParams();
     Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
-    fetch('https://hooks.zapier.com/hooks/catch/26596586/u0mtjhu/', {
+    fetch('https://hooks.zapier.com/hooks/catch/26596586/u0m5tqb/', {
       method: 'POST',
       body: params
     }).then(r => console.log('[GuiaMarcos-EN] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN] Zapier error:', e));
@@ -2144,7 +2087,7 @@ function submitSeminar(e) {
     console.log('[GuiaMarcos-EN-Seminar] Zapier payload:', JSON.stringify(zapPayload));
     const params = new URLSearchParams();
     Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
-    fetch('https://hooks.zapier.com/hooks/catch/26596586/u0mtjhu/', {
+    fetch('https://hooks.zapier.com/hooks/catch/26596586/u0m5tqb/', {
       method: 'POST',
       body: params
     }).then(r => console.log('[GuiaMarcos-EN-Seminar] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN-Seminar] Zapier error:', e));
