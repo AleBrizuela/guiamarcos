@@ -368,7 +368,9 @@ section { padding: 80px 24px; }
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background: white;
 }
-.widget-opt-text { display: flex; flex-direction: column; justify-content: flex-start; }
+.widget-opt-text { display: flex; flex-direction: column; justify-content: flex-start; flex: 1; min-width: 0; }
+.widget-opt-row { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+.widget-opt-row p { flex: 1; margin: 0; }
 .widget-opt:hover { transform: translateX(8px); border-color: var(--green); background: var(--lt-mint); }
 .widget-opt.selected { border-color: var(--green); background: var(--lt-mint); }
 .widget-opt-icon {
@@ -380,9 +382,9 @@ section { padding: 80px 24px; }
 .widget-opt-text h4 { font-size: 16px; font-weight: 700; color: var(--navy); line-height: 1.2; }
 .widget-opt-text p { font-size: 15px; color: var(--gray); margin-top: 4px; }
 .widget-opt-badge {
-  margin-left: auto; padding: 5px 14px; border-radius: 20px;
+  padding: 5px 14px; border-radius: 20px;
   font-size: 13px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.5px; flex-shrink: 0;
+  letter-spacing: 0.5px; flex-shrink: 0; white-space: nowrap;
 }
 .badge-urgent { background: #FEE2E2; color: #DC2626; }
 .badge-soon { background: #FEF3C7; color: #D97706; }
@@ -840,10 +842,6 @@ a[href^="tel"] { white-space: nowrap; }
               <i class="fas fa-calendar-check"></i> <span>Free Consultation</span>
             </a>
           </div>
-          <div class="trust-badges" style="border-top:none;padding-top:16px;display:flex;flex-direction:row;justify-content:center;gap:20px;flex-wrap:nowrap">
-            <div class="trust-badge"><i class="fas fa-check-circle"></i> <span>100% Free</span></div>
-            <div class="trust-badge"><i class="fas fa-check-circle"></i> <span>Bilingual Support</span></div>
-          </div>
         </div>
 
         <!-- FULL WIDGET embedded on home page -->
@@ -858,25 +856,31 @@ a[href^="tel"] { white-space: nowrap; }
                   <div class="widget-opt-icon" style="background:var(--navy)"><i class="fas fa-birthday-cake"></i></div>
                   <div class="widget-opt-text">
                     <h4>Turning 65</h4>
-                    <p>Step-by-step guide for getting started.</p>
+                    <div class="widget-opt-row">
+                      <p>Step-by-step guide for getting started.</p>
+                      <span class="widget-opt-badge badge-urgent">START</span>
+                    </div>
                   </div>
-                  <span class="widget-opt-badge badge-urgent">START</span>
                 </div>
                 <div class="widget-opt" onclick="startFlow('moving')">
                   <div class="widget-opt-icon" style="background:var(--blue)"><i class="fas fa-truck-moving"></i></div>
                   <div class="widget-opt-text">
                     <h4>I Recently Moved</h4>
-                    <p>Keep your coverage after moving.</p>
+                    <div class="widget-opt-row">
+                      <p>Keep your coverage after moving.</p>
+                      <span class="widget-opt-badge badge-soon">CHANGE</span>
+                    </div>
                   </div>
-                  <span class="widget-opt-badge badge-soon">CHANGE</span>
                 </div>
                 <div class="widget-opt" onclick="startFlow('better')">
                   <div class="widget-opt-icon" style="background:var(--teal)"><i class="fas fa-balance-scale"></i></div>
                   <div class="widget-opt-text">
                     <h4>Better Benefits</h4>
-                    <p>More savings and better benefits.</p>
+                    <div class="widget-opt-row">
+                      <p>More savings and better benefits.</p>
+                      <span class="widget-opt-badge badge-explore">COMPARE</span>
+                    </div>
                   </div>
-                  <span class="widget-opt-badge badge-explore">COMPARE</span>
                 </div>
               </div>
             </div>
