@@ -183,6 +183,11 @@ nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
   0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
   50%      { box-shadow: 0 6px 30px rgba(37,211,102,0.65); }
 }
+body.widget-active .wa-float,
+body.widget-active .sms-float {
+  opacity: 0; pointer-events: none; transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
 /* ── MOBILE FIRST ────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -253,11 +258,10 @@ nav a:hover, nav a.active { color: var(--navy); background: var(--lt-blue); }
   .cta-buttons { flex-direction: column; align-items: center; }
   .cta-buttons .btn { width: 100%; max-width: 320px; justify-content: center; }
 
-  /* Floating buttons: icon-only on mobile to prevent overlap with content */
-  .wa-float, .sms-float { right: 12px; padding: 0 !important; width: 48px !important; height: 48px !important; border-radius: 50% !important; justify-content: center !important; }
-  .wa-float .float-label, .sms-float .float-label { display: none !important; }
-  .wa-float { bottom: 72px !important; }
-  .sms-float { bottom: 128px !important; }
+  /* Floating buttons: WA only on mobile (SMS hidden to reduce clutter) */
+  .wa-float { right: 12px; padding: 0 !important; width: 48px !important; height: 48px !important; border-radius: 50% !important; justify-content: center !important; bottom: 20px !important; }
+  .wa-float .float-label { display: none !important; }
+  .sms-float { display: none !important; }
 
   /* Contact page */
   .contact-methods-grid { grid-template-columns: 1fr !important; }
@@ -1275,7 +1279,7 @@ function showWidgetStep(id) {
 }
 function wBack(id) { showWidgetStep(id); }
 
-function startFlow(type) { updateWidgetProgress(10);
+function startFlow(type) { document.body.classList.add('widget-active'); updateWidgetProgress(10);
   const es = currentLang === 'es';
   if (type === 'first-time') { wData = { flow: type }; renderFT_Step1(es); }
   else if (type === 'moving') { wData = { flow: type }; renderMV_Step1(es); }
@@ -2005,6 +2009,7 @@ function submitWidget(flow) {
     }).then(r => console.log('[GuiaMarcos-EN] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN] Zapier error:', e));
   } catch(e) {}
   updateWidgetProgress(100); setTimeout(()=>{ showSuccessState('widget-box'); }, 400);
+  setTimeout(()=>{ document.body.classList.remove('widget-active'); }, 2000);
 }
 
 function buildEmailSubject() {
@@ -2123,6 +2128,7 @@ function submitSeminar(e) {
     }).then(r => console.log('[GuiaMarcos-EN-Seminar] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN-Seminar] Zapier error:', e));
   } catch(e) {}
   setTimeout(() => { showSuccessState('seminar-widget'); }, 400);
+  setTimeout(()=>{ document.body.classList.remove('widget-active'); }, 2000);
 }
 
 // Init
