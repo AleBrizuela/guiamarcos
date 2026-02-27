@@ -1948,7 +1948,7 @@ function submitWidget(flow) {
   const name=getVal('cf-name'), phone=getVal('cf-phone');
   if(!name||!phone){ if(!name)document.getElementById('cf-name').style.borderColor='#DC2626'; if(!phone)document.getElementById('cf-phone').style.borderColor='#DC2626'; return; }
   wData.name=name; wData.phone=phone; wData.contactMethod=getVal('cf-contact'); wData.callTime=getVal('cf-time'); wData.callLang=getVal('cf-lang'); wData.notes=getVal('cf-notes'); wData.flow=flow;
-  wData.submittedAt=new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'});
+  wData.submittedAt=new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'2-digit',day:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
   const subject = buildEmailSubject();
   const body = buildEmailBody();
   try {
@@ -1960,6 +1960,7 @@ function submitWidget(flow) {
       zip: wData.zip || '',
       state: wData.state || '',
       subject: subject,
+      body: body,
       site: 'guiamarcos.com',
       submittedAt: wData.submittedAt,
       language: wData.callLang || '',
@@ -1968,7 +1969,28 @@ function submitWidget(flow) {
       notes: wData.notes || '',
       flow: wData.flow || '',
       contactMethod: wData.contactMethod || '',
-      callTime: wData.callTime || ''
+      callTime: wData.callTime || '',
+      forWhom: wData.forWhom || '',
+      partAB: wData.partAB || '',
+      workStatus: wData.workStatus || '',
+      currentPlan: wData.plantype || '',
+      carrier: wData.carrier || '',
+      issue: wData.issue || '',
+      medications: wData.meds || '',
+      chronic: (wData.chronic && wData.chronic.length) ? wData.chronic.join(', ') : '',
+      ageGroup: wData.ageGroup || '',
+      primaryNeed: wData.primaryNeed || '',
+      zipFrom: wData.zipFrom || '',
+      stateFrom: wData.stateFrom || '',
+      zipTo: wData.zipTo || '',
+      stateTo: wData.stateTo || '',
+      moveWhen: wData.moveWhen || '',
+      parentZip: wData.parentZip || '',
+      parentState: wData.parentState || '',
+      parentDob: (wData.parentDob && wData.parentDob.formatted) ? wData.parentDob.formatted : '',
+      parentMedicare: wData.parentMedicare || '',
+      parentLang: wData.parentLang || '',
+      parentSituation: wData.parentSituation || ''
     };
     console.log('[GuiaMarcos] Zapier payload:', JSON.stringify(zapPayload));
     const params = new URLSearchParams();
@@ -2079,7 +2101,7 @@ function submitSeminar(e) {
     'Inscrito desde: guiamarcos.com',
   ].join('\n');
   try {
-    const semParams = new URLSearchParams({name, email, phone, lang: langLabels[lang]||lang, subject, site: 'guiamarcos.com-seminar', submittedAt: new Date().toISOString()});
+    const semParams = new URLSearchParams({name, email, phone, lang: langLabels[lang]||lang, subject, site: 'guiamarcos.com-seminar', submittedAt: new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'2-digit',day:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})});
     console.log('[GuiaMarcos-Seminar] Zapier payload:', Object.fromEntries(semParams));
     fetch('https://hooks.zapier.com/hooks/catch/26596586/u0m5tqb/', {
       method: 'POST',

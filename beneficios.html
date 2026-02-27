@@ -1811,7 +1811,7 @@ function submitWidget(flow) {
   const name=getVal('cf-name'), phone=getVal('cf-phone');
   if(!name||!phone){ if(!name)document.getElementById('cf-name').style.borderColor='#DC2626'; if(!phone)document.getElementById('cf-phone').style.borderColor='#DC2626'; return; }
   wData.name=name; wData.phone=phone; wData.contactMethod=getVal('cf-contact'); wData.callTime=getVal('cf-time'); wData.callLang=getVal('cf-lang'); wData.notes=getVal('cf-notes'); wData.flow=flow;
-  wData.submittedAt=new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'});
+  wData.submittedAt=new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'2-digit',day:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
   const subject = buildEmailSubject();
   const body = buildEmailBody();
   window.location.href = `mailto:alejamedicare@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
