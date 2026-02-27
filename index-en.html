@@ -196,7 +196,7 @@ body.widget-active .sms-float {
 
   /* Hero: give enough room above the headline so it clears the fixed header */
   .hero { padding-top: 100px !important; padding-bottom: 40px !important; }
-  .hero h1 { font-size: 28px !important; line-height: 1.25 !important; }
+  .hero h1 { font-size: 28px !important; line-height: 1.25 !important; white-space: normal !important; }
   .hero h1 em { text-underline-offset: 4px !important; }
 
   /* Hero: header text on top, widget below on mobile */
@@ -316,14 +316,14 @@ section { padding: 80px 24px; }
 .hero h1 {
   font-family: 'Playfair Display', serif; font-size: 52px;
   font-weight: 700; color: var(--navy); line-height: 1.15;
-  margin-bottom: 20px;
+  margin-bottom: 20px; white-space: nowrap;
 }
 .hero h1 em {
   font-style: normal; color: var(--green);
   text-decoration: underline; text-decoration-color: var(--mint);
   text-underline-offset: 6px;
 }
-.hero p { font-size: 19px; color: var(--gray); margin-bottom: 32px; line-height: 1.7; }
+.hero p { font-size: 19px; color: var(--navy); opacity: 0.6; margin-bottom: 32px; line-height: 1.7; }
 .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
