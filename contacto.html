@@ -772,7 +772,7 @@ a[href^="tel"] { white-space: nowrap; }
   <section style="padding-top:140px;padding-bottom:60px;background:linear-gradient(135deg,var(--lt-green) 0%,var(--lt-mint) 100%)">
     <div class="container" style="text-align:center">
       <div class="section-label">HABLEMOS</div>
-      <div class="section-title">Contáctenos</div>
+      <h1 class="section-title">Contáctenos</h1>
       <p class="section-subtitle" style="max-width:600px;margin:0 auto">Elija la forma que prefiera. Toda atención es en español y 100% gratuita.</p>
     </div>
   </section>
@@ -791,15 +791,15 @@ a[href^="tel"] { white-space: nowrap; }
   <input type="hidden" name="from_name" value="Guia Marcos Website">
   <input type="hidden" name="redirect" value="false">
             <div class="form-group">
-              <label>Nombre completo *</label>
+              <label for="cf2-name">Nombre completo *</label>
               <input type="text" name="name" id="cf2-name" required autocomplete="name" inputmode="text" placeholder="Ej: María García" style="font-size:16px;min-height:52px">
             </div>
             <div class="form-group">
-              <label>Teléfono *</label>
+              <label for="cf2-phone">Teléfono *</label>
               <input type="tel" name="phone" id="cf2-phone" required autocomplete="tel" inputmode="tel" placeholder="(310) 555-1234" style="font-size:16px;min-height:52px">
             </div>
             <div class="form-group">
-              <label>Fecha de Nacimiento *</label>
+              <label id="dob-label">Fecha de Nacimiento *</label>
               <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
                 <select id="dob-month" name="dob_month" required style="font-size:16px;min-height:52px;padding:12px 8px;border:1px solid var(--border);border-radius:4px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23475569' d='M6 9L1 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.5rem center;padding-right:1.5rem">
                   <option value="">Mes</option>
@@ -888,7 +888,7 @@ a[href^="tel"] { white-space: nowrap; }
               <span id="dob-error" style="display:none;color:#EF4444;font-size:0.82rem;margin-top:4px"></span>
             </div>
             <div class="form-group">
-              <label>Email (opcional)</label>
+              <label for="cf2-email">Email (opcional)</label>
               <input type="email" name="email" id="cf2-email" autocomplete="email" inputmode="email" style="font-size:16px;min-height:52px">
             </div>
             <div class="form-group">
@@ -955,7 +955,7 @@ a[href^="tel"] { white-space: nowrap; }
               <span style="font-size:0.78rem;color:var(--slate);margin-top:4px;display:block">Ingrese ZIP o estado — al menos uno requerido</span>
             </div>
             <div class="form-group">
-              <label>¿Cómo prefiere que lo contactemos?</label>
+              <label for="cf2-prefer">¿Cómo prefiere que lo contactemos?</label>
               <select name="prefer" id="cf2-prefer" style="font-size:16px;min-height:52px">
                 <option value="sms" selected>Mensaje de texto (SMS)</option>
                 <option value="whatsapp">WhatsApp</option>
@@ -964,7 +964,7 @@ a[href^="tel"] { white-space: nowrap; }
               </select>
             </div>
             <div class="form-group">
-              <label>¿En qué le podemos ayudar?</label>
+              <label for="cf2-topic">¿En qué le podemos ayudar?</label>
               <select name="topic" id="cf2-topic" style="font-size:16px;min-height:52px">
                 <option value="new">Me voy a inscribir por primera vez</option>
                 <option value="change">Quiero cambiar mi plan actual</option>
