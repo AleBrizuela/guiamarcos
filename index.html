@@ -316,9 +316,10 @@ section { padding: 80px 24px; }
   align-items: start;
 }
 .hero h1 {
-  font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px);
+  font-family: 'Playfair Display', serif; font-size: clamp(32px, 5vw, 52px);
   font-weight: 700; color: var(--navy); line-height: 1.15;
-  margin-bottom: 20px;
+  margin-bottom: 20px; white-space: nowrap;
+  position: relative; z-index: 2;
 }
 .hero h1 em {
   font-style: normal; color: var(--green);
@@ -903,8 +904,8 @@ a[href^="tel"] { white-space: nowrap; }
           </div>
         </div>
         <!-- Hero text on RIGHT (desktop) / BOTTOM (mobile) -->
-        <div>
-          <h1>Medicare <em>Fácil y Sin Estrés</em></h1>
+        <div style="position:relative;z-index:2">
+          <h1>Medicare <em>Sin Estrés</em></h1>
           <p style="font-size:20px;font-weight:600;color:var(--navy);opacity:0.7;margin-bottom:12px">Encuentre el plan ideal para sus doctores y medicinas con nuestra guía profesional.</p>
           <p>Analizamos planes de Kaiser, SCAN, Aetna y más, sin costo para usted.</p>
           <div class="hero-ctas">
