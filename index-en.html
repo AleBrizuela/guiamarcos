@@ -908,10 +908,10 @@ a[href^="tel"] { white-space: nowrap; }
   <!-- 3-STEP PROCESS -->
   <section class="how-it-works" style="padding:80px 24px;background:white">
     <div style="max-width:960px;margin:0 auto;padding:0 1.5rem">
-      <div style="text-align:center;margin-bottom:64px">
+      <div style="margin-bottom:64px">
         <div class="section-label" style="color:var(--green)">HOW IT WORKS</div>
         <h2 class="section-title">Simple as 1 — 2 — 3</h2>
-        <p style="color:var(--gray);font-size:1.05rem;max-width:500px;margin:12px auto 0">No forms. No confusion. No pressure.</p>
+        <p style="color:var(--gray);font-size:1.05rem;max-width:500px;margin:12px 0 0">No forms. No confusion. No pressure.</p>
       </div>
       <div class="steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative">
         <div style="text-align:center;padding:2.5rem 2rem">
@@ -1022,10 +1022,10 @@ a[href^="tel"] { white-space: nowrap; }
 
   <!-- AREAS WE SERVE -->
   <section style="background:var(--lt-mint);padding:60px 24px">
-    <div class="container" style="text-align:center">
+    <div class="container">
       <div class="section-label">AREAS WE SERVE</div>
       <div class="section-title">Licensed in 8 States</div>
-      <p style="font-size:18px;color:var(--gray);max-width:700px;margin:16px auto 24px">We serve clients across 8 states. If you recently moved, we may be able to help you too.</p>
+      <p style="font-size:18px;color:var(--gray);max-width:700px;margin:16px 0 24px">We serve clients across 8 states. If you recently moved, we may be able to help you too.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
         <span class="credential-tag" style="background:var(--green);color:white;font-weight:700">California</span>
         <span class="credential-tag" style="background:var(--green);color:white;font-weight:700">Florida</span>
@@ -1058,7 +1058,7 @@ a[href^="tel"] { white-space: nowrap; }
   <!-- FAQ Section -->
   <section style="padding:60px 24px;background:var(--lt-gray)">
     <div class="container" style="max-width:900px">
-      <div style="text-align:center;margin-bottom:48px">
+      <div style="margin-bottom:48px">
         <div class="section-label" style="color:var(--green);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:12px">FREQUENTLY ASKED QUESTIONS</div>
         <h2 style="font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1.3">Questions we hear all the time</h2>
       </div>
@@ -1266,9 +1266,22 @@ function showWidgetStep(id) {
     else { window.scrollTo({top:0,behavior:'smooth'}); }
   }
 }
-function wBack(id) { showWidgetStep(id); }
+let widgetHistory = [];
+function wPush(fn) { widgetHistory.push(fn); }
+function wBack() {
+  if (widgetHistory.length > 1) {
+    widgetHistory.pop();
+    var prev = widgetHistory.pop();
+    prev();
+  } else {
+    widgetHistory = [];
+    showWidgetStep('w-step-0');
+    document.body.classList.remove('widget-active');
+    updateWidgetProgress(0);
+  }
+}
 
-function startFlow(type) { document.body.classList.add('widget-active'); updateWidgetProgress(10);
+function startFlow(type) { widgetHistory = []; document.body.classList.add('widget-active'); updateWidgetProgress(10);
   const es = currentLang === 'es';
   if (type === 'first-time') { wData = { flow: type }; renderFT_Step1(es); }
   else if (type === 'moving') { wData = { flow: type }; renderMV_Step1(es); }
@@ -1280,7 +1293,7 @@ function startFlow(type) { document.body.classList.add('widget-active'); updateW
 function shell(containerId, backId, iconCls, bgColor, q_es, q_en, sub_es, sub_en, body) {
   const es = currentLang === 'es';
   document.getElementById(containerId).innerHTML = `
-    <button class="widget-back" onclick="wBack('${backId}')"><i class="fas fa-arrow-left"></i> Back</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> Back</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:${bgColor};display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="${iconCls}"></i></div>
       <div class="widget-q" style="margin:0">${es?q_es:q_en}</div>
@@ -1429,6 +1442,7 @@ function partABQuestion() {
 // FLOW 1 — TURNING 65 / FIRST TIME
 // ══════════════════════════════════════════════════
 function renderFT_Step1(es) {
+  wPush(function(){ renderFT_Step1(es); });
   const months_es = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
   const months_en = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const months = es ? months_es : months_en;
@@ -1438,7 +1452,7 @@ function renderFT_Step1(es) {
   for(let y=currentYear; y<=currentYear+2; y++) yearOpts += `<option value="${y}">${y}</option>`;
 
   document.getElementById('flow-first-time').innerHTML = `
-    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-birthday-cake"></i></div>
       <div class="widget-q" style="margin:0">${es?'¿Cuándo cumple 65?':'When do you turn 65?'}</div>
@@ -1472,6 +1486,12 @@ function renderFT_Step1(es) {
       });
       stEl.addEventListener('input', function() { this._touched = true; this.style.color='var(--dark)'; });
     }
+    if (wData.dob) {
+      var m=document.getElementById('ft-month'),d=document.getElementById('ft-day'),y=document.getElementById('ft-year');
+      if(m)m.value=wData.dob.month; if(d)d.value=wData.dob.day; if(y)y.value=wData.dob.year;
+    }
+    if (wData.zip) { var z=document.getElementById('ft-zip'); if(z)z.value=wData.zip; }
+    if (wData.state) { var s=document.getElementById('ft-state'); if(s)s.value=wData.state; }
   }, 0);
 }
 
@@ -1492,7 +1512,7 @@ function ft_step2() { updateWidgetProgress(30);
   wData.dob = { month, day, year, formatted: `${String(month).padStart(2,'0')}/${String(day).padStart(2,'0')}/${year}` };
   wData.zip = zip; wData.state = state;
   const es = currentLang === 'es';
-  shell('flow-first-time','flow-first-time','fas fa-briefcase','var(--navy)',
+  function _show(){ wPush(_show); shell('flow-first-time','flow-first-time','fas fa-briefcase','var(--navy)',
     '¿Sigue trabajando actualmente?', 'Are you currently still working?',
     'Si tiene seguro de empleador activo, hay reglas importantes sobre cuándo inscribirse.', 'If you have active employer coverage, there are important rules about when to enroll.',
     opt('Sí, trabajo y tengo seguro de mi empleador','Yes, I work and have employer insurance',"ft_work('yes-employer')",
@@ -1500,11 +1520,12 @@ function ft_step2() { updateWidgetProgress(30);
     opt('Sí trabajo, pero SIN seguro de empleador','Yes I work, but with NO employer insurance',"ft_work('yes-noinsurance')") +
     opt('No, ya estoy jubilado/a','No, I am retired',"ft_work('retired')") +
     opt('Tengo seguro del trabajo de mi esposo/a','I\'m on my spouse\'s employer plan',"ft_work('spouse-plan')")
-  );
+  );} _show();
 }
 
 function ft_work(w) {
   wData.workStatus = w;
+  wPush(function(){ ft_work(w); });
   const es = currentLang === 'es';
   shell('flow-first-time','flow-first-time','fas fa-id-card','var(--navy)',
     '¿Ya tiene Medicare Parte A y Parte B?', 'Do you already have Medicare Part A and Part B?',
@@ -1517,21 +1538,22 @@ function ft_work(w) {
 function ft_step3() { updateWidgetProgress(55);
   wData.partAB = getVal('partab');
   const es = currentLang === 'es';
-  shell('flow-first-time','flow-first-time','fas fa-pills','var(--navy)',
+  function _show(){ wPush(_show); shell('flow-first-time','flow-first-time','fas fa-pills','var(--navy)',
     '¿Toma medicamentos recetados regularmente?', 'Do you take prescription medications regularly?',
     'El tipo y cantidad de medicinas afecta cuál plan de Parte D o Medicare Advantage es el mejor para usted.', 'The type and quantity of medications affects which Part D or Medicare Advantage plan is best for you.',
     opt('No tomo ningún medicamento recetado','I take no prescription medications',"ft_meds('none')") +
     opt('Tomo 1–3 medicamentos','I take 1–3 medications',"ft_meds('few')") +
     opt('Tomo 4 o más medicamentos','I take 4 or more medications',"ft_meds('many')") +
     opt('Tengo medicamentos costosos o de marca','I have expensive or brand-name medications',"ft_meds('expensive')",'Más de $100/mes','More than $100/month')
-  );
+  );} _show();
 }
 
 function ft_meds(m) {
   wData.meds = m;
+  wPush(function(){ ft_meds(m); });
   const es = currentLang === 'es';
   document.getElementById('flow-first-time').innerHTML = `
-    <button class="widget-back" onclick="wBack('flow-first-time')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-heartbeat"></i></div>
       <div class="widget-q" style="margin:0">${es?'Condiciones de salud':'Health Conditions'}</div>
@@ -1551,8 +1573,9 @@ function ft_step4() { updateWidgetProgress(75);
 // FLOW 2 — MOVING
 // ══════════════════════════════════════════════════
 function renderMV_Step1(es) {
+  wPush(function(){ renderMV_Step1(es); });
   document.getElementById('flow-moving').innerHTML = `
-    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-truck-moving"></i></div>
       <div class="widget-q" style="margin:0">Tell Us About Your Move</div>
@@ -1580,6 +1603,11 @@ function renderMV_Step1(es) {
         });
       }
     });
+    if(wData.zipFrom){var z=document.getElementById('mv-zip-from');if(z)z.value=wData.zipFrom;}
+    if(wData.stateFrom){var s=document.getElementById('mv-state-from');if(s)s.value=wData.stateFrom;}
+    if(wData.zipTo){var z=document.getElementById('mv-zip-to');if(z)z.value=wData.zipTo;}
+    if(wData.stateTo){var s=document.getElementById('mv-state-to');if(s)s.value=wData.stateTo;}
+    if(wData.moveWhen){var w=document.getElementById('mv-when');if(w)w.value=wData.moveWhen;}
   }, 0);
 }
 
@@ -1589,18 +1617,19 @@ function mv_step2() { updateWidgetProgress(40);
   wData.zipFrom=zf; wData.stateFrom=getVal('mv-state-from');
   wData.zipTo=zt; wData.stateTo=getVal('mv-state-to'); wData.moveWhen=getVal('mv-when');
   const es = currentLang === 'es';
-  shell('flow-moving','flow-moving','fas fa-file-medical','var(--blue)',
+  function _show(){ wPush(_show); shell('flow-moving','flow-moving','fas fa-file-medical','var(--blue)',
     '¿Qué tipo de plan de Medicare tiene ahora?', 'What type of Medicare plan do you have now?',
     'Los planes de Medicare Advantage son locales. Al cruzar de condado o estado, su plan puede quedar inválido.', 'Medicare Advantage plans are local. Crossing county or state lines may invalidate your current plan.',
     opt('Medicare Advantage (Parte C) — plan todo-en-uno','Medicare Advantage (Part C) — all-in-one plan',"mv_plan('advantage')") +
     opt('Medicare Original + Suplemento (Medigap)','Original Medicare + Supplement (Medigap)',"mv_plan('medigap')") +
     opt('Medicare Original solamente (sin suplemento)','Original Medicare only (no supplement)',"mv_plan('original')") +
     opt('No sé / No estoy seguro/a',"I don't know / Not sure","mv_plan('unknown')")
-  );
+  );} _show();
 }
 
 function mv_plan(p) {
   wData.plantype = p;
+  wPush(function(){ mv_plan(p); });
   const es = currentLang === 'es';
   shell('flow-moving','flow-moving','fas fa-id-card','var(--blue)',
     '¿Ya tiene Medicare Parte A y Parte B?', 'Do you already have Medicare Part A and Part B?',
@@ -1613,8 +1642,9 @@ function mv_plan(p) {
 function mv_step3() { updateWidgetProgress(70);
   wData.partAB = getVal('partab');
   const es = currentLang === 'es';
+  function _show(){ wPush(_show);
   document.getElementById('flow-moving').innerHTML = `
-    <button class="widget-back" onclick="wBack('flow-moving')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-heartbeat"></i></div>
       <div class="widget-q" style="margin:0">${es?'Condiciones de salud':'Health Conditions'}</div>
@@ -1623,6 +1653,7 @@ function mv_step3() { updateWidgetProgress(70);
     ${chronicPanel()}
     ${nextBtn('Continuar','Continue','mv_step4()')}
   `;
+  } _show();
 }
 
 function mv_step4() { updateWidgetProgress(85);
@@ -1634,8 +1665,9 @@ function mv_step4() { updateWidgetProgress(85);
 // FLOW 3 — BETTER OPTIONS
 // ══════════════════════════════════════════════════
 function renderBT_Step1(es) {
+  wPush(function(){ renderBT_Step1(es); });
   document.getElementById('flow-better').innerHTML = `
-    <button class="widget-back" onclick="wBack('w-step-0')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-user-friends"></i></div>
       <div class="widget-q" style="margin:0">${es?'¿Para quién buscas opciones?':'Who are you looking for options for?'}</div>
@@ -1649,6 +1681,7 @@ function renderBT_Step1(es) {
 
 function bt_who(who) {
   wData.forWhom = who;
+  wPush(function(){ bt_who(who); });
   const es = currentLang === 'es';
   if (who === 'self') {
     shell('flow-better','flow-better','fas fa-balance-scale','var(--teal)',
@@ -1676,6 +1709,10 @@ function bt_who(who) {
           if (st) { stEl.value = st; }
         });
       }
+      if(wData.zip){var z=document.getElementById('bt-zip');if(z)z.value=wData.zip;}
+      if(wData.state){var s=document.getElementById('bt-state');if(s)s.value=wData.state;}
+      if(wData.carrier){var c=document.getElementById('bt-carrier');if(c)c.value=wData.carrier;}
+      if(wData.plantype){var p=document.getElementById('bt-plantype');if(p)p.value=wData.plantype;}
     }, 0);
   } else {
     shell('flow-better','flow-better','fas fa-hands-helping','var(--green)',
@@ -1716,6 +1753,13 @@ function bt_who(who) {
           if (st) { stEl.value = st; }
         });
       }
+      if(wData.parentZip){var z=document.getElementById('pr-zip');if(z)z.value=wData.parentZip;}
+      if(wData.parentState){var s=document.getElementById('pr-state');if(s)s.value=wData.parentState;}
+      if(wData.parentDob){
+        var m=document.getElementById('pr-dob-month'),d=document.getElementById('pr-dob-day'),y=document.getElementById('pr-dob-year');
+        if(m)m.value=wData.parentDob.month;if(d)d.value=wData.parentDob.day;if(y)y.value=wData.parentDob.year;
+      }
+      if(wData.parentLang){var l=document.getElementById('pr-lang');if(l)l.value=wData.parentLang;}
     }, 0);
   }
 }
@@ -1728,7 +1772,7 @@ function bt_step2_self() {
   if (carrier === 'other') { const oth = document.getElementById('bt-carrier-other'); carrier = oth ? oth.value.trim() || 'Otra' : 'Otra'; }
   wData.carrier = carrier; wData.zip = zip; wData.state = getVal('bt-state'); wData.plantype = getVal('bt-plantype');
   const es = currentLang === 'es';
-  shell('flow-better','flow-better','fas fa-exclamation-circle','var(--teal)',
+  function _show(){ wPush(_show); shell('flow-better','flow-better','fas fa-exclamation-circle','var(--teal)',
     '¿Cuál es su principal queja con su plan actual?', 'What is your main complaint about your current plan?',
     'Sé específico/a — esto nos ayuda a saber exactamente en qué enfocarnos.', 'Be specific — this helps us know exactly what to focus on.',
     opt('Los costos son muy altos (prima, copagos, deducibles)','Costs are too high (premium, copays, deductibles)',"bt_issue('cost')") +
@@ -1736,7 +1780,7 @@ function bt_step2_self() {
     opt('Mis medicamentos cuestan demasiado con este plan','My medications cost too much with this plan',"bt_issue('drugs')") +
     opt('Me falta cobertura dental, visión o auditiva','I am missing dental, vision, or hearing coverage',"bt_issue('extras')") +
     opt('Recibí carta que dice que mi plan cambia o se cancela','I received a letter saying my plan is changing or cancelled',"bt_issue('cancelled')",'¡Actúa rápido!','Act fast!')
-  );
+  );} _show();
 }
 
 function bt_step2_fam() {
@@ -1759,17 +1803,18 @@ function bt_step2_fam() {
   wData.parentZip = zip || ''; wData.parentState = getVal('pr-state') || '';
   wData.parentDob = { month, day, year, formatted: `${String(month).padStart(2,'0')}/${String(day).padStart(2,'0')}/${year}` };
   wData.parentLang = getVal('pr-lang');
-  shell('flow-better','flow-better','fas fa-id-card','var(--green)',
+  function _show(){ wPush(_show); shell('flow-better','flow-better','fas fa-id-card','var(--green)',
     es ? '¿Su familiar tiene Medicare actualmente?' : 'Does your family member currently have Medicare?',
     es ? '¿Su familiar tiene Medicare actualmente?' : 'Does your family member currently have Medicare?',
     es ? 'Esto nos ayuda a saber si necesitamos inscribirlos o mejorar su plan.' : 'This helps us know whether we need to enroll them or improve their plan.',
     opt(es?'Sí, tiene Medicare':'Yes, has Medicare','',"prMedicare('yes')") +
     opt(es?'No, no tiene Medicare':'No, does not have Medicare','',"prMedicare('no')") +
     opt(es?'No estoy seguro/a':'Not sure','',"prMedicare('unsure')")
-  );
+  );} _show();
 }
 function prMedicare(val) {
   wData.parentMedicare = val;
+  wPush(function(){ prMedicare(val); });
   const es = currentLang === 'es';
   shell('flow-better','flow-better','fas fa-id-card','var(--green)',
     '¿Su familiar ya tiene Medicare Parte A y Parte B?', 'Does your family member already have Medicare Part A and Part B?',
@@ -1780,6 +1825,7 @@ function prMedicare(val) {
 
 function bt_issue(i) {
   wData.issue = i;
+  wPush(function(){ bt_issue(i); });
   const es = currentLang === 'es';
   shell('flow-better','flow-better','fas fa-id-card','var(--teal)',
     '¿Ya tiene Medicare Parte A y Parte B?', 'Do you already have Medicare Part A and Part B?',
@@ -1796,7 +1842,7 @@ function bt_step3_self() {
 function bt_step3_fam() {
   wData.partAB = getVal('partab');
   const es = currentLang === 'es';
-  shell('flow-better','flow-better','fas fa-question-circle','var(--green)',
+  function _show(){ wPush(_show); shell('flow-better','flow-better','fas fa-question-circle','var(--green)',
     '¿Cuál es la situación de su familiar ahora mismo?', "What is your family member's situation right now?",
     'Sé específico/a — así sabemos exactamente cómo ayudar.', "Be specific — that's how we know exactly how to help.",
     opt('No tiene Medicare y necesita inscribirse','They do not have Medicare and need to enroll',"bt_sit('enroll')") +
@@ -1804,7 +1850,7 @@ function bt_step3_fam() {
     opt('Se va a mudar y necesita cambiar de plan','They are moving and need to change plans',"bt_sit('moving')") +
     opt('Recibió una carta confusa de Medicare o su seguro','They received a confusing letter from Medicare or their insurer',"bt_sit('letter')") +
     opt('Queremos entender las opciones desde cero','We want to understand the options from scratch',"bt_sit('education')")
-  );
+  );} _show();
 }
 
 function bt_sit(s) {
@@ -1813,11 +1859,12 @@ function bt_sit(s) {
 }
 
 function bt_showChronic(nextFn) {
+  wPush(function(){ bt_showChronic(nextFn); });
   const es = currentLang === 'es';
   const isFam = wData.forWhom === 'family';
   const label = isFam ? (es?'Condiciones de salud del familiar':"Family member's health conditions") : (es?'Condiciones de salud':'Health Conditions');
   document.getElementById('flow-better').innerHTML = `
-    <button class="widget-back" onclick="wBack('flow-better')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <div style="width:40px;height:40px;border-radius:10px;background:var(--teal);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0"><i class="fas fa-heartbeat"></i></div>
       <div class="widget-q" style="margin:0">${label}</div>
@@ -1839,9 +1886,10 @@ function bt_step4() { updateWidgetProgress(85);
 
 // ── URGENCY QUALIFIER (over-qualification step) ──────────────────────────
 function renderUrgencyStep(containerId, flow) {
+  wPush(function(){ renderUrgencyStep(containerId, flow); });
   const es = currentLang === 'es';
   document.getElementById(containerId).innerHTML = `
-    <button class="widget-back" onclick="history.go(-1)" style="display:none"></button>
+    <button class="widget-back" onclick="wBack()"></button>
     <div class="widget-q" style="margin-bottom:8px">${es?'Una pregunta más…':'One more question…'}</div>
     <div class="widget-qsub" style="margin-bottom:18px">${es?'Esto nos ayuda a priorizar su caso correctamente.':'This helps us prioritize your case correctly.'}</div>
     <div style="display:flex;flex-direction:column;gap:10px">
@@ -1866,6 +1914,7 @@ function setUrgency(urgency, containerId, flow) {
 }
 
 function renderContactForm(containerId, flow) {
+  wPush(function(){ renderContactForm(containerId, flow); });
   const es = currentLang === 'es';
   const badges = {
     'first-time': { icon:'🚨', lbl_es:'Primera Inscripción Medicare', lbl_en:'First Time Medicare Enrollment' },
@@ -1875,7 +1924,7 @@ function renderContactForm(containerId, flow) {
   };
   const b = badges[flow] || { icon:'📋', lbl_es:'Consulta', lbl_en:'Consultation' };
   document.getElementById(containerId).innerHTML = `
-    <button class="widget-back" onclick="wBack('${containerId}')"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
+    <button class="widget-back" onclick="wBack()"><i class="fas fa-arrow-left"></i> ${es?'Atrás':'Back'}</button>
     <div style="background:var(--lt-green);border-radius:var(--radius);padding:16px;margin-bottom:24px;display:flex;align-items:center;gap:12px">
       <i class="fas fa-check-circle" style="color:var(--green);font-size:24px;flex-shrink:0"></i>
       <div>
