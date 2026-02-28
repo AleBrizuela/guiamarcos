@@ -69,7 +69,8 @@ body { font-family: 'Inter', -apple-system, sans-serif; color: var(--dark); font
   text-transform: uppercase; font-weight: 700;
 }
 .carrier-logos {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+  display: flex; flex-wrap: nowrap; justify-content: center; gap: 12px;
+  overflow-x: auto;
 }
 .carrier-pill {
   padding: 10px 22px; border-radius: 50px;
@@ -1028,7 +1029,6 @@ a[href^="tel"] { white-space: nowrap; }
         <span class="carrier-pill" style="--brand-color:#7B1FA2">Aetna</span>
         <span class="carrier-pill" style="--brand-color:#1565C0">UnitedHealthcare</span>
         <span class="carrier-pill" style="--brand-color:#C62828">Anthem Blue Cross</span>
-        <span class="carrier-pill" style="--brand-color:#00695C">Alignment Health</span>
         <span class="carrier-pill" style="--brand-color:#1565C0">Blue Shield</span>
       </div>
     </div>
