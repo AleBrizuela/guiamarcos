@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>Home — Beneficios Medicare</title>
 <meta name="description" content="Beneficios Medicare — We compare plans from Kaiser, SCAN, Aetna, and more in California. Free, personalized guidance.">
-<meta name="keywords" content="medicare agent, guia marcos, medicare in english, health insurance, medicare, kaiser, humana, scan, aetna, unitedhealthcare, medicare enrollment, medicare advantage, medicare supplement, bilingual medicare agent">
+<meta name="keywords" content="medicare agent, beneficios medicare, medicare in english, health insurance, medicare, kaiser, humana, scan, aetna, unitedhealthcare, medicare enrollment, medicare advantage, medicare supplement, bilingual medicare agent">
 <link rel="canonical" href="https://beneficiosmedicare.com/index-en.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Beneficios Medicare — Free Guidance">
@@ -789,11 +789,6 @@ a[href^="tel"] { white-space: nowrap; }
 
 
 <body>
-<!-- CMS Medicare Disclaimer -->
-<div id="cms-disclaimer" style="background:#f0f4f8;border-bottom:1px solid #d1d9e0;padding:8px 16px;font-size:12px;color:#475569;text-align:center;line-height:1.5">
-  This website is not affiliated with, endorsed by, or part of the United States federal government or the Medicare program. We do not offer every plan available in your area. Currently we represent organizations that offer Medicare Advantage and Medicare Supplement products in your area. For information on all your options, visit <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:#1d72b8;text-decoration:underline">Medicare.gov</a> or call 1-800-MEDICARE (1-800-633-4227).
-  <button onclick="document.getElementById('cms-disclaimer').style.display='none'" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:16px;margin-left:12px;vertical-align:middle" aria-label="Close">&times;</button>
-</div>
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index-en.html" class="logo"><img src="favicon-192x192.png" alt="Beneficios Medicare" class="logo-icon">Beneficios <span>Medicare</span></a>
@@ -808,6 +803,11 @@ a[href^="tel"] { white-space: nowrap; }
     <button class="mobile-menu-btn" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
   </div>
 </header>
+<!-- CMS Medicare Disclaimer -->
+<div id="cms-disclaimer" style="background:#f0f4f8;border-bottom:1px solid #d1d9e0;padding:8px 16px;font-size:12px;color:#475569;text-align:center;line-height:1.5">
+  This website is not affiliated with, endorsed by, or part of the United States federal government or the Medicare program. We do not offer every plan available in your area. Currently we represent organizations that offer Medicare Advantage and Medicare Supplement products in your area. For information on all your options, visit <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:#1d72b8;text-decoration:underline">Medicare.gov</a> or call 1-800-MEDICARE (1-800-633-4227).
+  <button onclick="document.getElementById('cms-disclaimer').style.display='none'" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:16px;margin-left:12px;vertical-align:middle" aria-label="Close">&times;</button>
+</div>
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobile-nav">
@@ -2014,7 +2014,7 @@ function submitWidget(flow) {
       state: wData.state || '',
       subject: subject,
       body: body,
-      site: 'guiamarcos.com',
+      site: 'beneficiosmedicare.com',
       submittedAt: wData.submittedAt,
       language: wData.callLang || '',
       prefer: wData.contactMethod || '',
@@ -2045,13 +2045,13 @@ function submitWidget(flow) {
       parentLang: wData.parentLang || '',
       parentSituation: wData.parentSituation || ''
     };
-    console.log('[GuiaMarcos-EN] Zapier payload:', JSON.stringify(zapPayload));
+    console.log('[BeneficiosMedicare-EN] Zapier payload:', JSON.stringify(zapPayload));
     const params = new URLSearchParams();
     Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
     fetch('https://hooks.zapier.com/hooks/catch/26596586/u0m5tqb/', {
       method: 'POST',
       body: params
-    }).then(r => console.log('[GuiaMarcos-EN] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN] Zapier error:', e));
+    }).then(r => console.log('[BeneficiosMedicare-EN] Zapier response:', r.status)).catch(e => console.error('[BeneficiosMedicare-EN] Zapier error:', e));
   } catch(e) {}
   updateWidgetProgress(100); setTimeout(()=>{ showSuccessState('widget-box'); }, 400);
   setTimeout(()=>{ document.body.classList.remove('widget-active'); }, 2000);
@@ -2128,7 +2128,7 @@ function buildEmailBody() {
 
   lines.push('');
   lines.push('═══════════════════════════════════════════════════');
-  lines.push('Submitted from guiamarcos.com (English site)');
+  lines.push('Submitted from beneficiosmedicare.com (English site)');
   return lines.join('\n');
 }
 
@@ -2152,7 +2152,7 @@ function submitSeminar(e) {
     `▸ IDIOMA PREFERIDO: ${langLabels[lang]||lang}`,
     `▸ FECHA/HORA: ${new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'})}`,
     '',
-    'Inscrito desde: guiamarcos.com',
+    'Inscrito desde: beneficiosmedicare.com',
   ].join('\n');
   try {
     const zapPayload = {
@@ -2161,16 +2161,16 @@ function submitSeminar(e) {
       phone: phone || '',
       lang: langLabels[lang]||lang || '',
       subject: subject || '',
-      site: 'guiamarcos.com-seminar',
+      site: 'beneficiosmedicare.com-seminar',
       submittedAt: new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles',month:'2-digit',day:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})
     };
-    console.log('[GuiaMarcos-EN-Seminar] Zapier payload:', JSON.stringify(zapPayload));
+    console.log('[BeneficiosMedicare-EN-Seminar] Zapier payload:', JSON.stringify(zapPayload));
     const params = new URLSearchParams();
     Object.entries(zapPayload).forEach(([k,v]) => params.append(k, v));
     fetch('https://hooks.zapier.com/hooks/catch/26596586/u0m5tqb/', {
       method: 'POST',
       body: params
-    }).then(r => console.log('[GuiaMarcos-EN-Seminar] Zapier response:', r.status)).catch(e => console.error('[GuiaMarcos-EN-Seminar] Zapier error:', e));
+    }).then(r => console.log('[BeneficiosMedicare-EN-Seminar] Zapier response:', r.status)).catch(e => console.error('[BeneficiosMedicare-EN-Seminar] Zapier error:', e));
   } catch(e) {}
   setTimeout(() => { showSuccessState('seminar-widget'); }, 400);
   setTimeout(()=>{ document.body.classList.remove('widget-active'); }, 2000);
