@@ -195,8 +195,8 @@ body.widget-active .sms-float {
   /* Body: tighten line-height and font for small screens */
   body { font-size: 16px !important; line-height: 1.65 !important; }
 
-  /* Hero: give enough room above the headline so it clears the fixed header + CMS banner */
-  .hero { padding-top: 140px !important; padding-bottom: 40px !important; overflow: visible !important; }
+  /* Hero: clear the fixed header only (CMS banner is now static, scrolls away) */
+  .hero { padding-top: 100px !important; padding-bottom: 40px !important; }
   .hero h1 { font-size: 28px !important; line-height: 1.25 !important; white-space: normal !important; }
   .hero h1 em { text-underline-offset: 4px !important; }
 
@@ -301,9 +301,9 @@ section { padding: 80px 24px; }
 
 /* ── HERO ──────────────────────────────────────────────── */
 .hero {
-  padding-top: 140px; padding-bottom: 60px;
+  padding-top: 110px; padding-bottom: 60px;
   background: linear-gradient(135deg, var(--lt-mint) 0%, var(--lt-blue) 100%);
-  position: relative; overflow: visible;
+  position: relative;
 }
 .hero::after {
   content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
@@ -792,19 +792,9 @@ a[href^="tel"] { white-space: nowrap; }
 
 <body>
 <!-- CMS Disclaimer Banner -->
-<div id="cms-disclaimer" style="position:fixed;top:0;left:0;right:0;z-index:1100;background:#002147;color:white;text-align:center;padding:10px 16px;font-size:13px;line-height:1.5;font-weight:500">
-  This website is not part of the federal government or the Medicare program. <span style="opacity:0.85;font-weight:400">For official information visit <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:#A8D8B9;text-decoration:underline;font-weight:600">Medicare.gov</a> or call <a href="tel:18006334227" style="color:#A8D8B9;text-decoration:underline;font-weight:600">1-800-MEDICARE</a>.</span>
+<div id="cms-disclaimer" style="background:#f1f5f9;color:#64748b;text-align:center;padding:6px 16px;font-size:12px;line-height:1.5;font-weight:400;border-bottom:1px solid #e2e8f0">
+  This website is not part of the federal government or the Medicare program. For official information visit <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:#1d72b8;text-decoration:underline">Medicare.gov</a> or call <a href="tel:18006334227" style="color:#1d72b8;text-decoration:underline">1-800-MEDICARE</a>.
 </div>
-<style>
-  #cms-disclaimer ~ .header { top: 42px !important; }
-  #cms-disclaimer ~ .header ~ .mobile-nav { top: 112px !important; }
-  .hero { padding-top: 160px !important; }
-  @media(max-width:768px) {
-    #cms-disclaimer { font-size: 11px; padding: 8px 12px; }
-    #cms-disclaimer ~ .header { top: 38px !important; }
-    .hero { padding-top: 140px !important; }
-  }
-</style>
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index-en.html" class="logo"><img src="favicon-192x192.png" alt="Beneficios Medicare" class="logo-icon">Beneficios <span>Medicare</span></a>
@@ -905,7 +895,7 @@ a[href^="tel"] { white-space: nowrap; }
         </div>
         <!-- Hero text on RIGHT (desktop) / BOTTOM (mobile) -->
         <div style="position:relative;z-index:2">
-          <h1>You <em>Priority #1</em></h1>
+          <h1>Medicare <em>Made Easy</em></h1>
           <p style="font-size:20px;font-weight:600;color:var(--navy);opacity:0.7;margin-bottom:12px">Find the ideal plan for your doctors and medications with our professional guidance.</p>
           <p>We analyze plans from Kaiser, SCAN, Aetna, and more - at no cost to you.</p>
           <div class="hero-ctas">
