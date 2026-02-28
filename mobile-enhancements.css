@@ -19,8 +19,11 @@ section.hero {
 .how-it-works .section-label,
 .how-it-works .section-title,
 .how-it-works h2,
-.how-it-works > div > p:first-of-type {
+.how-it-works > div > p:first-of-type,
+.how-it-works > div > div > p {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ââ 1. HERO FIX: Prevent h1 clipping under CMS banner + fixed header ââ */
