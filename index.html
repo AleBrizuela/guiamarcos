@@ -801,12 +801,11 @@ a[href^="tel"] { white-space: nowrap; }
     </nav>
     <button class="mobile-menu-btn" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
   </div>
+  <div id="cms-disclaimer" style="background:#f0f4f8;border-top:1px solid #d1d9e0;padding:6px 16px;font-size:11px;color:#475569;text-align:center;line-height:1.4">
+    Este sitio web no está afiliado ni respaldado por el gobierno de los EE.UU. ni el programa Medicare. No ofrecemos todos los planes disponibles en su área. Para información completa, visite <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:#1d72b8;text-decoration:underline">Medicare.gov</a> o llame al 1-800-MEDICARE.
+    <button onclick="document.getElementById('cms-disclaimer').style.display='none'" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:14px;margin-left:8px;vertical-align:middle" aria-label="Cerrar">&times;</button>
+  </div>
 </header>
-<!-- CMS Medicare Disclaimer -->
-<div id="cms-disclaimer" style="background:#f0f4f8;border-bottom:1px solid #d1d9e0;padding:8px 16px;font-size:12px;color:#475569;text-align:center;line-height:1.5">
-  Este sitio web no está afiliado, respaldado ni es parte del gobierno federal de los Estados Unidos ni del programa Medicare. No ofrecemos todos los planes disponibles en su área. Actualmente representamos organizaciones que ofrecen productos de Medicare Advantage y Medicare Supplement en su área. Para información sobre todas sus opciones, contacte a <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:#1d72b8;text-decoration:underline">Medicare.gov</a> o llame al 1-800-MEDICARE (1-800-633-4227).
-  <button onclick="document.getElementById('cms-disclaimer').style.display='none'" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:16px;margin-left:12px;vertical-align:middle" aria-label="Cerrar">&times;</button>
-</div>
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobile-nav">
@@ -840,11 +839,11 @@ a[href^="tel"] { white-space: nowrap; }
           <p style="font-size:20px;font-weight:600;color:var(--navy);opacity:0.7;margin-bottom:12px">Encuentre el plan ideal para sus doctores y medicinas con nuestra guía profesional.</p>
           <p>Analizamos planes de Kaiser, SCAN, Aetna y más — sin costo para usted.</p>
           <div class="hero-ctas">
-            <a href="javascript:void(0)" onclick="smoothScrollToWidget()" class="btn btn-primary" style="font-size:17px;padding:18px 36px">
-              <i class="fas fa-search"></i> <span>Comparar Planes</span>
-            </a>
             <a href="contacto.html" class="btn btn-secondary" style="font-size:17px;padding:18px 36px">
               <i class="fas fa-comments"></i> <span>Hablar con Asesor</span>
+            </a>
+            <a href="javascript:void(0)" onclick="smoothScrollToWidget()" class="btn btn-primary" style="font-size:17px;padding:18px 36px">
+              <i class="fas fa-arrow-right"></i> <span>Comparar Planes</span>
             </a>
           </div>
         </div>
@@ -1028,7 +1027,7 @@ a[href^="tel"] { white-space: nowrap; }
     <div class="container">
       <div style="text-align:center">
         <div class="section-label">ÁREAS QUE SERVIMOS</div>
-        <div class="section-title">Licencia en 8 Estados</div>
+        <div class="section-title" style="text-align:center">Licencia en 8 Estados</div>
         <p style="font-size:18px;color:var(--gray);max-width:700px;margin:16px auto 24px">Servimos a comunidades hispanas en 8 estados. Si se mudó recientemente, es posible que también podamos ayudarle.</p>
       </div>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">

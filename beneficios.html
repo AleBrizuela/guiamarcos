@@ -7,14 +7,14 @@
 <meta name="theme-color" content="#002147">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Beneficios de Medicare | Guia Marcos</title>
+<title>Beneficios de Medicare | Beneficios Medicare</title>
 <meta name="description" content="Beneficios de Medicare: Guía completa en español sobre Medicare, partes A, B, C, D, Medigap. Educación para mis padres, mis abuelos y adultos mayores.">
-<meta name="keywords" content="agente medicare, guia marcos, medicare en español, medicare 101, guía medicare, medicare parte a, parte b, parte c, parte d, medigap, medicare advantage, medicare para mis padres, medicare para mis abuelos, educación medicare, seguros salud mayores">
-<link rel="canonical" href="https://guiamarcos.com/beneficios.html">
+<meta name="keywords" content="agente medicare, beneficios medicare, medicare en español, medicare 101, guía medicare, medicare parte a, parte b, parte c, parte d, medigap, medicare advantage, medicare para mis padres, medicare para mis abuelos, educación medicare, seguros salud mayores">
+<link rel="canonical" href="https://beneficiosmedicare.com/beneficios.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Medicare Made Simple | Susana Marcos LLC | Los Angeles">
 <meta property="og:description" content="Susana Marcos y Alejandra Brizuela Marcos — equipo de madre e hija. Comparamos planes de Kaiser, SCAN, Humana, Aetna, UnitedHealthcare. 100% gratuito.">
-<meta property="og:url" content="https://guiamarcos.com/beneficios.html">
+<meta property="og:url" content="https://beneficiosmedicare.com/beneficios.html">
 <meta property="og:locale" content="es_US">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"InsuranceAgency","name":"Guia Marcos","description":"Bilingual Medicare insurance agency. Independent brokers comparing top carriers at no cost.","url":"https://guiamarcos.com","telephone":"+1-800-MEDICARE","email":"alejamedicare@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":[{"@type":"State","name":"California"},{"@type":"State","name":"Illinois"},{"@type":"State","name":"Texas"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Florida"},{"@type":"State","name":"Iowa"}],"openingHours":"Mo-Fr 07:00-16:00 PST, Sa 08:00-12:00 PST","priceRange":"Free","knowsLanguage":["Spanish","English"],"founder":[{"@type":"Person","name":"Susana Marcos","jobTitle":"JD, MBA — Founder and Principal Agent"},{"@type":"Person","name":"Alejandra Brizuela Marcos","jobTitle":"Licensed Medicare Insurance Agent — Partner"}]}
@@ -721,7 +721,7 @@ a[href^="tel"] { white-space: nowrap; }
       "@type": "Organization",
       "name": "Guia Marcos"
     },
-    "url": "https://guiamarcos.com/beneficios.html"
+    "url": "https://beneficiosmedicare.com/beneficios.html"
   }
   </script>
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
@@ -733,7 +733,7 @@ a[href^="tel"] { white-space: nowrap; }
 <body>
 <header class="header" id="header">
   <div class="header-inner">
-    <a href="javascript:void(0)" class="logo" href="index.html"><img src="favicon-192x192.png" alt="Guia Marcos" class="logo-icon">Medicare <span>en Español</span></a>
+    <a href="index.html" class="logo"><img src="favicon-192x192.png" alt="Beneficios Medicare" class="logo-icon">Beneficios <span>Medicare</span></a>
     <nav id="desktop-nav">
       <a href="index.html">Inicio</a>
       <a href="beneficios.html" class="active">Beneficios</a>
@@ -744,6 +744,11 @@ a[href^="tel"] { white-space: nowrap; }
     <button class="mobile-menu-btn" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
   </div>
 </header>
+
+<div id="cms-disclaimer" style="background:#f0f4f8;border-bottom:1px solid #d1d9e0;padding:8px 16px;font-size:12px;color:#475569;text-align:center;line-height:1.5">
+  Este sitio web no está afiliado ni respaldado por el gobierno de los Estados Unidos ni por el programa federal de Medicare. No ofrecemos todos los planes disponibles en su área. La información proporcionada es solo para fines educativos. Contacte a Medicare.gov o 1-800-MEDICARE para obtener información completa.
+  <button onclick="document.getElementById('cms-disclaimer').style.display='none'" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:16px;margin-left:12px;vertical-align:middle" aria-label="Cerrar">&times;</button>
+</div>
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobile-nav">
@@ -1888,7 +1893,7 @@ function buildEmailBody() {
 
   lines.push('');
   lines.push('═══════════════════════════════════════════════════');
-  lines.push('Enviado desde guiamarcos.com');
+  lines.push('Enviado desde beneficiosmedicare.com');
   return lines.join('\n');
 }
 
@@ -1912,7 +1917,7 @@ function submitSeminar(e) {
     `▸ IDIOMA PREFERIDO: ${langLabels[lang]||lang}`,
     `▸ FECHA/HORA: ${new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'})}`,
     '',
-    'Inscrito desde: guiamarcos.com',
+    'Inscrito desde: beneficiosmedicare.com',
   ].join('\n');
   window.location.href = `mailto:alejamedicare@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   setTimeout(() => { showSuccessState('seminar-widget'); }, 400);

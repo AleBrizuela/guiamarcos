@@ -7,14 +7,14 @@
 <meta name="theme-color" content="#002147">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Medicare Benefits | Guia Marcos</title>
+<title>Medicare Benefits | Beneficios Medicare</title>
 <meta name="description" content="Medicare Benefits Guide: Complete overview of Medicare Parts A, B, C, D — explained in simple terms. We help you compare plans and find the right coverage. Free service.">
-<meta name="keywords" content="medicare benefits, medicare parts a b c d, medicare advantage, medicare supplement, guia marcos, bilingual medicare agent, medicare california">
-<link rel="canonical" href="https://guiamarcos.com/beneficios-en.html">
+<meta name="keywords" content="medicare benefits, medicare parts a b c d, medicare advantage, medicare supplement, beneficios medicare, bilingual medicare agent, medicare california">
+<link rel="canonical" href="https://beneficiosmedicare.com/beneficios-en.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Medicare Made Simple | Susana Marcos LLC | Los Angeles">
 <meta property="og:description" content="Medicare made simple. We explain all your Medicare options — Parts A, B, C, D — and help you compare and enroll in the right plan. Free, no obligation.">
-<meta property="og:url" content="https://guiamarcos.com/beneficios-en.html">
+<meta property="og:url" content="https://beneficiosmedicare.com/beneficios-en.html">
 <meta property="og:locale" content="en_US">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"InsuranceAgency","name":"Guia Marcos","description":"Bilingual Medicare insurance agency. Independent brokers comparing top carriers at no cost.","url":"https://guiamarcos.com","telephone":"+1-800-MEDICARE","email":"alejamedicare@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},"areaServed":[{"@type":"State","name":"California"},{"@type":"State","name":"Illinois"},{"@type":"State","name":"Texas"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Florida"},{"@type":"State","name":"Iowa"}],"openingHours":"Mo-Fr 07:00-16:00 PST, Sa 08:00-12:00 PST","priceRange":"Free","knowsLanguage":["Spanish","English"],"founder":[{"@type":"Person","name":"Susana Marcos","jobTitle":"JD, MBA — Founder and Principal Agent"},{"@type":"Person","name":"Alejandra Brizuela Marcos","jobTitle":"Licensed Medicare Insurance Agent — Partner"}]}
@@ -721,7 +721,7 @@ a[href^="tel"] { white-space: nowrap; }
       "@type": "Organization",
       "name": "Guia Marcos"
     },
-    "url": "https://guiamarcos.com/beneficios-en.html"
+    "url": "https://beneficiosmedicare.com/beneficios-en.html"
   }
   </script>
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
@@ -733,7 +733,7 @@ a[href^="tel"] { white-space: nowrap; }
 <body>
 <header class="header" id="header">
   <div class="header-inner">
-    <a href="index-en.html" class="logo"><img src="favicon-192x192.png" alt="Guia Marcos" class="logo-icon">Guia Marcos <span>Medicare</span></a>
+    <a href="index-en.html" class="logo"><img src="favicon-192x192.png" alt="Beneficios Medicare" class="logo-icon">Beneficios <span>Medicare</span></a>
     <nav id="desktop-nav">
       <a href="index-en.html">Home</a>
       <a href="beneficios-en.html" class="active">Benefits</a>
@@ -744,6 +744,11 @@ a[href^="tel"] { white-space: nowrap; }
     <button class="mobile-menu-btn" onclick="toggleMobile()"><i class="fas fa-bars"></i></button>
   </div>
 </header>
+
+<div id="cms-disclaimer" style="background:#f0f4f8;border-bottom:1px solid #d1d9e0;padding:8px 16px;font-size:12px;color:#475569;text-align:center;line-height:1.5">
+  This website is not affiliated with or endorsed by the United States government or the federal Medicare program. We do not offer every plan available in your area. Information provided is for educational purposes only. Contact Medicare.gov or 1-800-MEDICARE for complete information.
+  <button onclick="document.getElementById('cms-disclaimer').style.display='none'" style="background:none;border:none;color:#94a3b8;cursor:pointer;font-size:16px;margin-left:12px;vertical-align:middle" aria-label="Close">&times;</button>
+</div>
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobile-nav">
@@ -1077,7 +1082,7 @@ a[href^="tel"] { white-space: nowrap; }
   </div>
   <div class="footer-bottom">
     <p style="margin-bottom:6px">We do not offer every plan available in your area. Any information we provide is limited to the plans we offer in your area. Please contact <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7)">Medicare.gov</a> or call 1-800-MEDICARE for information on all of your options. Our advice is free and without obligation to you.</p>
-    <p>Not connected with or endorsed by the U.S. government or the federal Medicare program. — <a href="https://guiamarcos.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none">guiamarcos.com</a> — our site in Spanish</p>
+    <p>Not connected with or endorsed by the U.S. government or the federal Medicare program. — <a href="https://beneficiosmedicare.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.7);text-decoration:none">beneficiosmedicare.com</a> — our site in Spanish</p>
   </div>
 </footer>
 
@@ -1888,7 +1893,7 @@ function buildEmailBody() {
 
   lines.push('');
   lines.push('═══════════════════════════════════════════════════');
-  lines.push('Enviado desde guiamarcos.com');
+  lines.push('Enviado desde beneficiosmedicare.com');
   return lines.join('\n');
 }
 
@@ -1912,7 +1917,7 @@ function submitSeminar(e) {
     `▸ IDIOMA PREFERIDO: ${langLabels[lang]||lang}`,
     `▸ FECHA/HORA: ${new Date().toLocaleString('en-US',{timeZone:'America/Los_Angeles'})}`,
     '',
-    'Inscrito desde: guiamarcos.com',
+    'Inscrito desde: beneficiosmedicare.com',
   ].join('\n');
   window.location.href = `mailto:alejamedicare@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   setTimeout(() => { showSuccessState('seminar-widget'); }, 400);
