@@ -194,8 +194,8 @@ body.widget-active .sms-float {
   /* Body: tighten line-height and font for small screens */
   body { font-size: 16px !important; line-height: 1.65 !important; }
 
-  /* Hero: give enough room above the headline so it clears the fixed header */
-  .hero { padding-top: 100px !important; padding-bottom: 40px !important; }
+  /* Hero: give enough room above the headline so it clears the fixed header + CMS banner */
+  .hero { padding-top: 140px !important; padding-bottom: 40px !important; overflow: visible !important; }
   .hero h1 { font-size: 28px !important; line-height: 1.25 !important; white-space: normal !important; }
   .hero h1 em { text-underline-offset: 4px !important; }
 
@@ -302,7 +302,7 @@ section { padding: 80px 24px; }
 .hero {
   padding-top: 140px; padding-bottom: 60px;
   background: linear-gradient(135deg, var(--lt-mint) 0%, var(--lt-blue) 100%);
-  position: relative; overflow: hidden;
+  position: relative; overflow: visible;
 }
 .hero::after {
   content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
@@ -926,7 +926,7 @@ a[href^="tel"] { white-space: nowrap; }
       <div style="margin-bottom:64px">
         <div class="section-label" style="color:var(--green)">HOW IT WORKS</div>
         <h2 class="section-title">Simple as 1, 2, 3</h2>
-        <p style="color:var(--gray);font-size:1.05rem;max-width:500px;margin:12px 0 0">No forms. No confusion. No pressure.</p>
+        <p style="color:var(--gray);font-size:1.05rem;max-width:500px;margin:12px auto 0;text-align:center">No forms. No confusion. No pressure.</p>
       </div>
       <div class="steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative">
         <div style="text-align:center;padding:2.5rem 2rem">
