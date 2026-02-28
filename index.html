@@ -773,8 +773,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--green); }
     border-left: none !important; border-right: none !important;
     border-top: 1px dashed #e2e8f0; border-bottom: 1px dashed #e2e8f0;
   }
-  .how-it-works [style*="width:88px"] { width: 64px !important; height: 64px !important; }
-  .how-it-works [style*="font-size:2.2rem"] { font-size: 1.6rem !important; }
+  .how-it-works [style*="width:64px"] { width: 56px !important; height: 56px !important; }
+  .how-it-works [style*="font-size:1.6rem"] { font-size: 1.4rem !important; }
 }
 
 /* Smooth scroll offset for fixed header */
@@ -947,26 +947,32 @@ a[href^="tel"] { white-space: nowrap; }
       </div>
       <div class="steps-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative">
         <div style="text-align:center;padding:2.5rem 2rem">
-          <div style="width:88px;height:88px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 4px 20px rgba(0,123,64,.3)">
-            <span style="font-size:2.2rem;font-weight:800;color:white;line-height:1">1</span>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 1.25rem">
+            <div style="width:64px;height:64px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,123,64,.3);flex-shrink:0">
+              <span style="font-size:1.6rem;font-weight:800;color:white;line-height:1">1</span>
+            </div>
+            <span style="font-size:2rem">🗣️</span>
           </div>
-          <div style="font-size:2.4rem;margin-bottom:1rem">🗣️</div>
           <h3 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.75rem">Asesoría Personal</h3>
           <p style="color:var(--gray);line-height:1.7;font-size:1rem;margin:0">Revisamos sus doctores y medicinas. Identificamos sus necesidades de cobertura en minutos y sin papeleo.</p>
         </div>
         <div style="text-align:center;padding:2.5rem 2rem;border-left:1px dashed #e2e8f0;border-right:1px dashed #e2e8f0">
-          <div style="width:88px;height:88px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 4px 20px rgba(29,114,184,.3)">
-            <span style="font-size:2.2rem;font-weight:800;color:white;line-height:1">2</span>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 1.25rem">
+            <div style="width:64px;height:64px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(29,114,184,.3);flex-shrink:0">
+              <span style="font-size:1.6rem;font-weight:800;color:white;line-height:1">2</span>
+            </div>
+            <span style="font-size:2rem">🔬</span>
           </div>
-          <div style="font-size:2.4rem;margin-bottom:1rem">🔬</div>
           <h3 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.75rem">Comparación Objetiva</h3>
           <p style="color:var(--gray);line-height:1.7;font-size:1rem;margin:0">Evaluamos planes de Medicare Advantage y Suplementarios. Comparamos redes y costos de farmacia para usted.</p>
         </div>
         <div style="text-align:center;padding:2.5rem 2rem">
-          <div style="width:88px;height:88px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 4px 20px rgba(0,123,123,.3)">
-            <span style="font-size:2.2rem;font-weight:800;color:white;line-height:1">3</span>
+          <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 1.25rem">
+            <div style="width:64px;height:64px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,123,123,.3);flex-shrink:0">
+              <span style="font-size:1.6rem;font-weight:800;color:white;line-height:1">3</span>
+            </div>
+            <span style="font-size:2rem">📋</span>
           </div>
-          <div style="font-size:2.4rem;margin-bottom:1rem">📋</div>
           <h3 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:.75rem">Inscripción y Apoyo</h3>
           <p style="color:var(--gray);line-height:1.7;font-size:1rem;margin:0">Gestionamos su inscripción y el seguimiento. Nuestro compromiso continúa después de activar su plan.</p>
         </div>
