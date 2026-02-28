@@ -12,7 +12,7 @@
 /* ââ 0a. DESKTOP HERO FIX: Prevent h1 clipping on all screens ââ */
 body .hero,
 section.hero {
-  padding-top: 140px;
+  padding-top: 60px;
   overflow: visible;
 }
 
@@ -32,13 +32,14 @@ section.hero {
 @media (max-width: 768px) {
   body .hero,
   section.hero {
-    padding-top: 140px !important;
+    padding-top: 100px !important;
     padding-bottom: 32px !important;
     overflow: visible !important;
   }
   .hero h1 {
-    font-size: 26px !important;
-    line-height: 1.3 !important;
+    font-size: 40px !important;
+    line-height: 1.1 !important;
+    font-weight: 800 !important;
     margin-bottom: 12px !important;
     white-space: normal !important;
   }
