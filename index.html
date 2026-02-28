@@ -401,7 +401,7 @@ section { padding: 80px 24px; }
 }
 .stats-grid {
   max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
   text-align: center;
 }
 .stat-item h3 {
@@ -796,12 +796,26 @@ a[href^="tel"] { white-space: nowrap; }
   Este sitio web no es parte del gobierno federal ni del programa Medicare. Para información oficial visite <a href="https://www.medicare.gov" target="_blank" rel="noopener" style="color:#1d72b8;text-decoration:underline">Medicare.gov</a> o llame al <a href="tel:18006334227" style="color:#1d72b8;text-decoration:underline">1-800-MEDICARE</a>.
 </div>
 <style>
-  .header { top: 30px !important; }
+  .header { top: 30px; transition: top 0.25s ease; }
+  .header.disclaimer-gone { top: 0 !important; }
   @media(max-width:768px) {
     #cms-disclaimer { font-size: 11px; padding: 4px 12px; }
-    .header { top: 26px !important; }
+    .header { top: 26px; }
   }
 </style>
+<script>
+(function(){
+  var d = document.getElementById('cms-disclaimer');
+  var h = document.getElementById('header');
+  if (!d || !h) return;
+  function check() {
+    if (d.getBoundingClientRect().bottom <= 0) h.classList.add('disclaimer-gone');
+    else h.classList.remove('disclaimer-gone');
+  }
+  window.addEventListener('scroll', check, {passive:true});
+  check();
+})();
+</script>
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index.html" class="logo"><img src="favicon-192x192.png" alt="Beneficios Medicare" class="logo-icon">Beneficios <span>Medicare</span></a>
@@ -1009,7 +1023,6 @@ a[href^="tel"] { white-space: nowrap; }
   <section class="stats-bar">
     <div class="stats-grid">
       <div class="stat-item"><h3>Miles</h3><p>de Clientes Satisfechos</p></div>
-      <div class="stat-item"><h3>Usted</h3><p>Prioridad #1</p></div>
       <div class="stat-item"><h3>15+</h3><p>Años de Experiencia</p></div>
       <div class="stat-item"><h3>8</h3><p>Estados con Licencia</p></div>
     </div>
