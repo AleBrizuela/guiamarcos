@@ -41,7 +41,7 @@
   --font-body:    'Inter', sans-serif;
 
   /* ── Hero — edit these two lines to move ALL hero sections at once */
-  --hero-pt: 140px;   /* padding-top  */
+  --hero-pt:  60px;   /* padding-top — desktop (static header)  */
   --hero-pb:  60px;   /* padding-bottom */
 
   /* ── Hero heading — edit this one line to resize ALL hero headings */
