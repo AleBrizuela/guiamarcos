@@ -827,8 +827,8 @@ a[href^="tel"] { white-space: nowrap; }
 .hero { background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 30%, #1B6B5A 70%, #1F7D6A 100%) !important; }
 .hero::after { background: white; }
 .hero h1 { color: white !important; }
-.hero h1 em { color: #B8D4C8 !important; text-decoration-color: rgba(184,212,200,0.4) !important; }
-.hero p { color: rgba(255,255,255,0.75) !important; opacity: 1 !important; }
+.hero h1 em { color: #FFFFFF !important; text-decoration: underline !important; text-decoration-color: #B8D4C8 !important; text-underline-offset: 5px !important; text-decoration-thickness: 3px !important; }
+.hero p { color: rgba(255,255,255,0.85) !important; opacity: 1 !important; font-size: 20px !important; }
 .hero .trust-badges { border-top-color: rgba(255,255,255,0.15) !important; }
 .hero .trust-badge { color: rgba(255,255,255,0.8) !important; }
 .hero .trust-badge i { color: #B8D4C8 !important; }
@@ -848,6 +848,15 @@ a[href^="tel"] { white-space: nowrap; }
 .cta-banner { background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 35%, #1B6B5A 70%, #1F7D6A 100%) !important; }
 .cta-banner .btn-primary { background: white !important; color: #1B6B5A !important; border-color: white !important; font-weight: 800; font-size: 17px; padding: 16px 32px; }
 .stats-bar { background: #0C2340 !important; }
+
+/* WhatsApp button: white pill with navy text to avoid green-on-green clash */
+.wa-float {
+  background: #0C2340 !important;
+  box-shadow: 0 4px 20px rgba(12,35,64,0.4) !important;
+  outline: 2px solid rgba(255,255,255,0.3) !important;
+}
+.wa-float i { color: #25D366 !important; }
+@keyframes pulse-wa { 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
 
 </style>
 <script>
