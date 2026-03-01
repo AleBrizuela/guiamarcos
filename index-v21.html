@@ -827,9 +827,10 @@ a[href^="tel"] { white-space: nowrap; }
 
 /* ── LIGHT HERO (keep it clean, readable) ── */
 .hero { background: linear-gradient(135deg, #FFFFFF 0%, #F0F7F4 40%, #E8F0F8 100%) !important; }
-.hero h1 { color: #0C2340 !important; font-size: clamp(28px, 8vw, 48px) !important; line-height: 1.15 !important; white-space: nowrap !important; }
+.hero-grid { grid-template-columns: 1.2fr 0.8fr !important; gap: 40px !important; align-items: center !important; }
+.hero h1 { color: #0C2340 !important; font-size: clamp(28px, 6vw, 40px) !important; line-height: 1.15 !important; white-space: nowrap !important; }
 .hero h1 em { color: #1B6B5A !important; text-decoration: underline !important; text-decoration-color: #1B6B5A !important; text-underline-offset: 5px !important; text-decoration-thickness: 3px !important; }
-.hero p { color: #2D3748 !important; opacity: 1 !important; font-size: 20px !important; line-height: 1.7 !important; }
+.hero p { color: #2D3748 !important; opacity: 1 !important; font-size: 18px !important; line-height: 1.6 !important; }
 .hero .trust-badge { color: #4A5568 !important; }
 .hero .trust-badge i { color: #1B6B5A !important; }
 
@@ -890,11 +891,32 @@ a[href^="tel"] { white-space: nowrap; }
   font-size: 13px !important;
 }
 
-/* ── WIDGET: subtle border, clean ── */
+/* ── WIDGET: dominant, glowing, the main event ── */
 .hero-widget {
-  border: 2px solid rgba(27,107,90,0.2) !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(27,107,90,0.05) !important;
+  border: 2.5px solid rgba(27,107,90,0.25) !important;
+  box-shadow: 0 8px 40px rgba(27,107,90,0.15), 0 0 0 6px rgba(27,107,90,0.06) !important;
   background: white !important;
+  transform: scale(1.02);
+}
+/* pulsing arrow pointing at widget on desktop */
+@media (min-width: 769px) {
+  .hero-grid > div:not(.hero-widget)::before {
+    content: '\f0d9';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: #1B6B5A;
+    opacity: 0.5;
+    animation: pulseArrow 2s ease-in-out infinite;
+  }
+}
+@keyframes pulseArrow {
+  0%, 100% { opacity: 0.3; transform: translateY(-50%) translateX(0); }
+  50% { opacity: 0.7; transform: translateY(-50%) translateX(-6px); }
 }
 
 /* ── CTA BANNER: gradient navy-to-green, big buttons ── */
@@ -929,22 +951,13 @@ a[href^="tel"] { white-space: nowrap; }
   border-radius: 12px !important;
 }
 
-/* ── MOBILE: single CTA full width ── */
+/* ── MOBILE: widget first, text minimal ── */
 @media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .hero-grid .hero-widget { order: -1 !important; transform: scale(1) !important; }
+  .hero-grid > div:not(.hero-widget) { order: 1 !important; text-align: center; }
   .hero h1 { font-size: clamp(26px, 7.5vw, 34px) !important; white-space: nowrap !important; }
-  .hero p { font-size: 18px !important; }
-  .hero-ctas { align-items: stretch !important; }
-  .btn-cta-main {
-    width: 100% !important;
-    padding: 22px 24px !important;
-    font-size: 20px !important;
-    min-height: 68px !important;
-    border-radius: 14px !important;
-  }
-  .hero-cta-hint {
-    text-align: center !important;
-    justify-content: center !important;
-  }
+  .hero p { font-size: 16px !important; }
 }
 
 /* Logo: both words same navy, icon gets the green accent */
@@ -1076,13 +1089,14 @@ a[href^="tel"] { white-space: nowrap; }
         <!-- Hero text on RIGHT (desktop) / BOTTOM (mobile) -->
         <div style="position:relative;z-index:2">
           <h1>Beneficios <em>Medicare</em></h1>
-          <p style="font-size:20px;font-weight:600;color:var(--navy);opacity:0.7;margin-bottom:12px">Encuentre el plan ideal para sus doctores y medicinas con nuestra guía profesional.</p>
-          <p>Analizamos planes de Kaiser, SCAN, Aetna y más, sin costo para usted.</p>
-          <div class="hero-ctas" style="flex-direction:column;align-items:flex-start;gap:16px">
-            <a href="javascript:void(0)" onclick="smoothScrollToWidget()" class="btn btn-cta-main">
-              <i class="fas fa-search"></i> <span>Comparar Planes Gratis</span>
-            </a>
-            <p class="hero-cta-hint"><i class="fas fa-clock"></i> 2 minutos. Sin compromiso. Le llamamos con opciones personalizadas.</p>
+          <p style="font-size:18px;font-weight:500;color:#2D3748;margin-bottom:16px;line-height:1.6">Comparamos planes de Kaiser, SCAN, Aetna y más. Sin costo para usted.</p>
+          <div style="display:flex;align-items:center;gap:8px;color:#1B6B5A;font-weight:600;font-size:15px;margin-bottom:12px">
+            <i class="fas fa-arrow-left"></i> Empiece aquí. Toma 2 minutos.
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#4A5568"><i class="fas fa-check-circle" style="color:#1B6B5A"></i> Asesoría 100% gratuita</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#4A5568"><i class="fas fa-check-circle" style="color:#1B6B5A"></i> Sin compromiso ni obligación</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#4A5568"><i class="fas fa-check-circle" style="color:#1B6B5A"></i> Le llamamos con opciones personalizadas</div>
           </div>
         </div>
       </div>
