@@ -898,26 +898,6 @@ a[href^="tel"] { white-space: nowrap; }
   background: white !important;
   transform: scale(1.02);
 }
-/* pulsing arrow pointing at widget on desktop */
-@media (min-width: 769px) {
-  .hero-grid > div:not(.hero-widget)::before {
-    content: '\f0d9';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px;
-    color: #1B6B5A;
-    opacity: 0.5;
-    animation: pulseArrow 2s ease-in-out infinite;
-  }
-}
-@keyframes pulseArrow {
-  0%, 100% { opacity: 0.3; transform: translateY(-50%) translateX(0); }
-  50% { opacity: 0.7; transform: translateY(-50%) translateX(-6px); }
-}
 
 /* ── CTA BANNER: gradient navy-to-green, big buttons ── */
 .cta-banner { background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 40%, #1B6B5A 100%) !important; }
@@ -1089,11 +1069,8 @@ a[href^="tel"] { white-space: nowrap; }
         <!-- Hero text on RIGHT (desktop) / BOTTOM (mobile) -->
         <div style="position:relative;z-index:2">
           <h1>Beneficios <em>Medicare</em></h1>
-          <p style="font-size:18px;font-weight:500;color:#2D3748;margin-bottom:16px;line-height:1.6">Comparamos planes de Kaiser, SCAN, Aetna y más. Sin costo para usted.</p>
-          <div style="display:flex;align-items:center;gap:8px;color:#1B6B5A;font-weight:600;font-size:15px;margin-bottom:12px">
-            <i class="fas fa-arrow-left"></i> Empiece aquí. Toma 2 minutos.
-          </div>
-          <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px">
+          <p style="font-size:18px;font-weight:500;color:#2D3748;margin-bottom:20px;line-height:1.6">Comparamos planes de Kaiser, SCAN, Aetna y más. Sin costo para usted.</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
             <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#4A5568"><i class="fas fa-check-circle" style="color:#1B6B5A"></i> Asesoría 100% gratuita</div>
             <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#4A5568"><i class="fas fa-check-circle" style="color:#1B6B5A"></i> Sin compromiso ni obligación</div>
             <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#4A5568"><i class="fas fa-check-circle" style="color:#1B6B5A"></i> Le llamamos con opciones personalizadas</div>
