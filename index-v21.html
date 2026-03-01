@@ -849,30 +849,46 @@ a[href^="tel"] { white-space: nowrap; }
   transition: all 0.2s ease !important;
 }
 
-/* "Hablar con Asesor" = btn-secondary → green gradient */
-.hero .btn-secondary {
+/* ── SINGLE DOMINANT CTA: green gradient ── */
+.btn-cta-main {
   background: linear-gradient(135deg, #155A4B 0%, #1B6B5A 40%, #1F7D6A 100%) !important;
   color: white !important;
   border: none !important;
-  box-shadow: 0 4px 16px rgba(27,107,90,0.35) !important;
+  box-shadow: 0 4px 20px rgba(27,107,90,0.4) !important;
+  padding: 22px 44px !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  border-radius: 14px !important;
+  min-height: 64px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  letter-spacing: 0.3px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
 }
-.hero .btn-secondary:hover {
+.btn-cta-main:hover {
   background: linear-gradient(135deg, #0F4A3D 0%, #155A4B 40%, #1B6B5A 100%) !important;
-  box-shadow: 0 6px 24px rgba(27,107,90,0.45) !important;
-  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 28px rgba(27,107,90,0.5) !important;
+  transform: translateY(-2px) !important;
 }
 
-/* "Comparar Planes" = btn-blue → navy-to-green gradient */
-.hero .btn-blue {
-  background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 50%, #1B6B5A 100%) !important;
-  color: white !important;
-  border: none !important;
-  box-shadow: 0 4px 16px rgba(12,35,64,0.3) !important;
+/* ── Subtle phone link below CTA ── */
+.hero-phone-link {
+  font-size: 15px !important;
+  color: var(--gray) !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
 }
-.hero .btn-blue:hover {
-  background: linear-gradient(135deg, #091B30 0%, #0C2340 50%, #155A4B 100%) !important;
-  box-shadow: 0 6px 24px rgba(12,35,64,0.4) !important;
-  transform: translateY(-1px) !important;
+.hero-phone-link a {
+  color: var(--navy) !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+.hero-phone-link a:hover {
+  text-decoration: underline !important;
 }
 
 /* ── WIDGET: subtle border, clean ── */
@@ -914,17 +930,21 @@ a[href^="tel"] { white-space: nowrap; }
   border-radius: 12px !important;
 }
 
-/* ── MOBILE: stack CTAs full width, even bigger ── */
+/* ── MOBILE: single CTA full width ── */
 @media (max-width: 768px) {
   .hero h1 { font-size: clamp(26px, 7.5vw, 34px) !important; white-space: nowrap !important; }
   .hero p { font-size: 18px !important; }
-  .hero-ctas { flex-direction: column !important; gap: 14px !important; }
-  .hero-ctas .btn {
+  .hero-ctas { align-items: stretch !important; }
+  .btn-cta-main {
     width: 100% !important;
     padding: 22px 24px !important;
-    font-size: 18px !important;
-    min-height: 64px !important;
+    font-size: 20px !important;
+    min-height: 68px !important;
     border-radius: 14px !important;
+  }
+  .hero-phone-link {
+    text-align: center !important;
+    font-size: 16px !important;
   }
 }
 
@@ -1059,13 +1079,11 @@ a[href^="tel"] { white-space: nowrap; }
           <h1>Beneficios <em>Medicare</em></h1>
           <p style="font-size:20px;font-weight:600;color:var(--navy);opacity:0.7;margin-bottom:12px">Encuentre el plan ideal para sus doctores y medicinas con nuestra guía profesional.</p>
           <p>Analizamos planes de Kaiser, SCAN, Aetna y más, sin costo para usted.</p>
-          <div class="hero-ctas">
-            <a href="contacto.html" class="btn btn-secondary" style="font-size:17px;padding:18px 36px">
-              <i class="fas fa-comments"></i> <span>Hablar con Asesor</span>
+          <div class="hero-ctas" style="flex-direction:column;align-items:flex-start;gap:16px">
+            <a href="javascript:void(0)" onclick="smoothScrollToWidget()" class="btn btn-cta-main">
+              <i class="fas fa-search"></i> <span>Comparar Planes Gratis</span>
             </a>
-            <a href="javascript:void(0)" onclick="smoothScrollToWidget()" class="btn btn-blue" style="font-size:17px;padding:18px 36px">
-              <i class="fas fa-search"></i> <span>Comparar Planes</span>
-            </a>
+            <p class="hero-phone-link">O llame a un asesor: <a href="tel:+13105979142"><i class="fas fa-phone-alt"></i> (310) 597-9142</a></p>
           </div>
         </div>
       </div>
