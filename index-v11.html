@@ -819,19 +819,35 @@ a[href^="tel"] { white-space: nowrap; }
     .header.disclaimer-gone { top: 0 !important; }
   }
 
-/* ══════════════════════════════════════
-   V11: Dark Blue Authority
-   ══════════════════════════════════════ */
+/* ==================================================
+   V11: Dark Navy Hero
+   ================================================== */
 
-/* V11: Dark blue banner, sage buttons, green-glow widget */
-.cta-banner { background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 40%, #2E6BA4 100%) !important; }
-.cta-banner .btn-primary { background: #5B8A72 !important; color: white !important; border-color: #5B8A72 !important; font-weight: 700; font-size: 17px; padding: 16px 32px; }
-.cta-banner .btn-primary:hover { background: #4A7561 !important; border-color: #4A7561 !important; }
-.cta-banner .btn-secondary { background: rgba(255,255,255,0.1) !important; color: #fff !important; border: 2px solid rgba(255,255,255,0.5) !important; }
-.hero-widget { border: 2.5px solid #5B8A72 !important; box-shadow: 0 8px 40px rgba(91,138,114,0.22), 0 0 0 4px rgba(91,138,114,0.08) !important; }
-.hero-widget h3 { color: #1E3A5F !important; }
-.btn-blue { background: #1E3A5F !important; border-color: #1E3A5F !important; }
-.btn-blue:hover { background: #0C2340 !important; border-color: #0C2340 !important; }
+/* ── DARK HERO MODE ── */
+.hero { background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 50%, #2E6BA4 100%) !important; }
+.hero::after { background: white; }
+.hero h1 { color: white !important; }
+.hero h1 em { color: #B8D4C8 !important; text-decoration-color: rgba(184,212,200,0.4) !important; }
+.hero p { color: rgba(255,255,255,0.75) !important; opacity: 1 !important; }
+.hero .trust-badges { border-top-color: rgba(255,255,255,0.15) !important; }
+.hero .trust-badge { color: rgba(255,255,255,0.8) !important; }
+.hero .trust-badge i { color: #B8D4C8 !important; }
+.hero .btn-primary { background: #5B8A72 !important; color: white !important; border-color: #5B8A72 !important; }
+.hero .btn-primary:hover { background: #4A7561 !important; border-color: #4A7561 !important; }
+.hero .btn-blue { background: white !important; color: #1E3A5F !important; border-color: white !important; }
+.hero .btn-blue:hover { background: rgba(255,255,255,0.9) !important; border-color: rgba(255,255,255,0.9) !important; }
+.hero .btn-secondary { background: rgba(255,255,255,0.1) !important; color: white !important; border-color: rgba(255,255,255,0.4) !important; }
+.hero .btn-secondary:hover { background: rgba(255,255,255,0.2) !important; }
+.hero-widget {
+  border: 2.5px solid #5B8A72 !important;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.25), 0 0 0 4px rgba(91,138,114,0.1) !important;
+  background: white !important;
+}
+
+
+.cta-banner { background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 60%, #2E6BA4 100%) !important; }
+.cta-banner .btn-primary { background: #5B8A72 !important; color: white !important; border-color: #5B8A72 !important; font-size: 17px; padding: 16px 32px; font-weight: 700; }
+.stats-bar { background: #0C2340 !important; }
 
 </style>
 <script>

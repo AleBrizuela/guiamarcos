@@ -819,22 +819,40 @@ a[href^="tel"] { white-space: nowrap; }
     .header.disclaimer-gone { top: 0 !important; }
   }
 
-/* ══════════════════════════════════════
-   V17: Dual Authority
-   ══════════════════════════════════════ */
+/* ==================================================
+   V17: Full Medicare Green
+   ================================================== */
 
-/* V17: Dual authority - green stats, blue CTA, widget pops */
-.stats-bar { background: linear-gradient(135deg, #004D1A 0%, #006227 100%) !important; }
-.stat-item h3 { color: #B8D4C8 !important; }
-.stat-item p { color: rgba(184,212,200,0.7) !important; }
+/* ── DARK HERO MODE ── */
+.hero { background: linear-gradient(135deg, #155A4B 0%, #1B6B5A 40%, #1F7D6A 100%) !important; }
+.hero::after { background: white; }
+.hero h1 { color: white !important; }
+.hero h1 em { color: white !important; text-decoration-color: rgba(255,255,255,0.35) !important; }
+.hero p { color: rgba(255,255,255,0.75) !important; opacity: 1 !important; }
+.hero .trust-badges { border-top-color: rgba(255,255,255,0.15) !important; }
+.hero .trust-badge { color: rgba(255,255,255,0.8) !important; }
+.hero .trust-badge i { color: white !important; }
+.hero .btn-primary { background: white !important; color: #1B6B5A !important; border-color: white !important; }
+.hero .btn-primary:hover { background: #E6F0ED !important; border-color: #E6F0ED !important; }
+.hero .btn-blue { background: white !important; color: #1B6B5A !important; border-color: white !important; }
+.hero .btn-blue:hover { background: #E6F0ED !important; border-color: #E6F0ED !important; }
+.hero .btn-secondary { background: rgba(255,255,255,0.1) !important; color: white !important; border-color: rgba(255,255,255,0.4) !important; }
+.hero .btn-secondary:hover { background: rgba(255,255,255,0.2) !important; }
+.hero-widget {
+  border: 3px solid #1B6B5A !important;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.25), 0 0 0 5px rgba(27,107,90,0.1) !important;
+  background: white !important;
+}
+
+
+.stats-bar { background: linear-gradient(135deg, #155A4B 0%, #1B6B5A 100%) !important; }
+.stat-item h3 { color: white !important; }
+.stat-item p { color: rgba(255,255,255,0.7) !important; }
 .cta-banner { background: linear-gradient(135deg, #0C2340 0%, #1E3A5F 60%, #2E6BA4 100%) !important; }
-.cta-banner .btn-primary { background: #006227 !important; color: white !important; border-color: #006227 !important; font-weight: 800; font-size: 17px; padding: 16px 32px; }
-.cta-banner .btn-primary:hover { background: #007238 !important; border-color: #007238 !important; }
-.hero-widget { border: 2.5px solid #3D5A80 !important; box-shadow: 0 10px 40px rgba(30,58,95,0.18), 0 0 0 4px rgba(61,90,128,0.06) !important; }
-.carrier-trust-bar { background: #0C2340 !important; }
-.trust-bar-label { color: #B8CCDB !important; }
+.cta-banner .btn-primary { background: #1B6B5A !important; color: white !important; border-color: #1B6B5A !important; font-weight: 800; font-size: 17px; padding: 16px 32px; }
+.carrier-trust-bar { background: #155A4B !important; }
+.trust-bar-label { color: #B8D4C8 !important; }
 .carrier-pill { background: rgba(255,255,255,0.08) !important; color: white !important; border-color: rgba(255,255,255,0.3) !important; }
-.carrier-pill:hover { background: rgba(255,255,255,0.15) !important; }
 
 </style>
 <script>

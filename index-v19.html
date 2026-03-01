@@ -819,26 +819,36 @@ a[href^="tel"] { white-space: nowrap; }
     .header.disclaimer-gone { top: 0 !important; }
   }
 
-/* ══════════════════════════════════════
-   V19: Bold Sage
-   ══════════════════════════════════════ */
+/* ==================================================
+   V19: Bold Sage Hero
+   ================================================== */
 
-/* V19: Bold sage - sage is THE brand color, everywhere */
-.btn-primary { background: #4A7561 !important; border-color: #4A7561 !important; }
-.btn-primary:hover { background: #3D6B55 !important; border-color: #3D6B55 !important; }
-.btn-blue { background: #5B8A72 !important; border-color: #5B8A72 !important; }
-.btn-blue:hover { background: #4A7561 !important; border-color: #4A7561 !important; }
+/* ── DARK HERO MODE ── */
+.hero { background: linear-gradient(135deg, #2D4A3E 0%, #3D6B55 40%, #5B8A72 100%) !important; }
+.hero::after { background: white; }
+.hero h1 { color: white !important; }
+.hero h1 em { color: white !important; text-decoration-color: rgba(255,255,255,0.3) !important; }
+.hero p { color: rgba(255,255,255,0.75) !important; opacity: 1 !important; }
+.hero .trust-badges { border-top-color: rgba(255,255,255,0.15) !important; }
+.hero .trust-badge { color: rgba(255,255,255,0.8) !important; }
+.hero .trust-badge i { color: #B8D4C8 !important; }
+.hero .btn-primary { background: white !important; color: #2D4A3E !important; border-color: white !important; }
+.hero .btn-primary:hover { background: #F0FFF4 !important; border-color: #F0FFF4 !important; }
+.hero .btn-blue { background: white !important; color: #2D4A3E !important; border-color: white !important; }
+.hero .btn-blue:hover { background: rgba(255,255,255,0.9) !important; border-color: rgba(255,255,255,0.9) !important; }
+.hero .btn-secondary { background: rgba(255,255,255,0.1) !important; color: white !important; border-color: rgba(255,255,255,0.4) !important; }
+.hero .btn-secondary:hover { background: rgba(255,255,255,0.2) !important; }
+.hero-widget {
+  border: 2.5px solid #5B8A72 !important;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.25), 0 0 0 4px rgba(91,138,114,0.12) !important;
+  background: white !important;
+}
+
+
 .cta-banner { background: linear-gradient(135deg, #2D4A3E 0%, #3D6B55 40%, #5B8A72 100%) !important; }
 .cta-banner .btn-primary { background: white !important; color: #2D4A3E !important; border-color: white !important; font-weight: 800; font-size: 18px; padding: 18px 36px; }
-.cta-banner .btn-secondary { border-color: rgba(255,255,255,0.5) !important; }
-.hero-widget { border: 2.5px solid #5B8A72 !important; box-shadow: 0 8px 40px rgba(91,138,114,0.18) !important; }
 .stats-bar { background: #2D4A3E !important; }
 .stat-item h3 { color: #B8D4C8 !important; }
-.section-label { color: #4A7561 !important; }
-.trust-badge i { color: #4A7561 !important; }
-.widget-progress-dot.filled { background: #5B8A72 !important; }
-.carrier-trust-bar { background: #EEF4F0 !important; }
-.trust-bar-label { color: #4A7561 !important; }
 
 </style>
 <script>

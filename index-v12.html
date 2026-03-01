@@ -819,18 +819,36 @@ a[href^="tel"] { white-space: nowrap; }
     .header.disclaimer-gone { top: 0 !important; }
   }
 
-/* ══════════════════════════════════════
-   V12: Medicare Green Banner
-   ══════════════════════════════════════ */
+/* ==================================================
+   V12: Medicare.gov Green Hero
+   ================================================== */
 
-/* V12: Medicare.gov green banner for instant recognition */
-.cta-banner { background: linear-gradient(135deg, #004D1A 0%, #006227 40%, #007238 80%, #5B8A72 100%) !important; }
-.cta-banner .btn-primary { background: white !important; color: #006227 !important; border-color: white !important; font-weight: 800; font-size: 17px; padding: 16px 32px; }
-.cta-banner .btn-primary:hover { background: #E8F0F8 !important; color: #004D1A !important; }
-.cta-banner .btn-secondary { background: rgba(255,255,255,0.12) !important; color: #fff !important; border: 2px solid rgba(255,255,255,0.5) !important; }
-.cta-banner p { color: #B8D4C8 !important; }
-.hero-widget { border: 2px solid rgba(0,98,39,0.25) !important; box-shadow: 0 8px 40px rgba(0,98,39,0.12), 0 0 0 3px rgba(0,98,39,0.06) !important; }
-.stats-bar { background: #004D1A !important; }
+/* ── DARK HERO MODE ── */
+.hero { background: linear-gradient(135deg, #155A4B 0%, #1B6B5A 50%, #1F7D6A 100%) !important; }
+.hero::after { background: white; }
+.hero h1 { color: white !important; }
+.hero h1 em { color: #B8D4C8 !important; text-decoration-color: rgba(184,212,200,0.4) !important; }
+.hero p { color: rgba(255,255,255,0.75) !important; opacity: 1 !important; }
+.hero .trust-badges { border-top-color: rgba(255,255,255,0.15) !important; }
+.hero .trust-badge { color: rgba(255,255,255,0.8) !important; }
+.hero .trust-badge i { color: #B8D4C8 !important; }
+.hero .btn-primary { background: white !important; color: #1B6B5A !important; border-color: white !important; }
+.hero .btn-primary:hover { background: #E6F0ED !important; border-color: #E6F0ED !important; }
+.hero .btn-blue { background: white !important; color: #1B6B5A !important; border-color: white !important; }
+.hero .btn-blue:hover { background: #E6F0ED !important; border-color: #E6F0ED !important; }
+.hero .btn-secondary { background: rgba(255,255,255,0.1) !important; color: white !important; border-color: rgba(255,255,255,0.4) !important; }
+.hero .btn-secondary:hover { background: rgba(255,255,255,0.2) !important; }
+.hero-widget {
+  border: 2.5px solid #1B6B5A !important;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.25), 0 0 0 4px rgba(27,107,90,0.1) !important;
+  background: white !important;
+}
+
+
+.cta-banner { background: linear-gradient(135deg, #155A4B 0%, #1B6B5A 50%, #1F7D6A 100%) !important; }
+.cta-banner .btn-primary { background: white !important; color: #1B6B5A !important; border-color: white !important; font-size: 17px; padding: 16px 32px; font-weight: 800; }
+.cta-banner .btn-secondary { border-color: rgba(255,255,255,0.5) !important; color: white !important; }
+.stats-bar { background: #155A4B !important; }
 .stat-item h3 { color: #B8D4C8 !important; }
 
 </style>

@@ -819,18 +819,36 @@ a[href^="tel"] { white-space: nowrap; }
     .header.disclaimer-gone { top: 0 !important; }
   }
 
-/* ══════════════════════════════════════
-   V16: Warm Conversion
-   ══════════════════════════════════════ */
+/* ==================================================
+   V16: Dark Slate Hero
+   ================================================== */
 
-/* V16: Warm conversion - bigger CTAs, warm gradients, inviting widget */
-.btn-primary { padding: 16px 32px !important; font-size: 17px !important; border-radius: 12px !important; font-weight: 700 !important; box-shadow: 0 4px 14px rgba(91,138,114,0.25) !important; }
-.btn-blue { padding: 16px 32px !important; font-size: 17px !important; border-radius: 12px !important; box-shadow: 0 4px 14px rgba(61,90,128,0.25) !important; }
+/* ── DARK HERO MODE ── */
+.hero { background: linear-gradient(135deg, #1E3A5F 0%, #3D5A80 50%, #4A7BA7 100%) !important; }
+.hero::after { background: white; }
+.hero h1 { color: white !important; }
+.hero h1 em { color: #B8D4C8 !important; text-decoration-color: rgba(184,212,200,0.4) !important; }
+.hero p { color: rgba(255,255,255,0.75) !important; opacity: 1 !important; }
+.hero .trust-badges { border-top-color: rgba(255,255,255,0.15) !important; }
+.hero .trust-badge { color: rgba(255,255,255,0.8) !important; }
+.hero .trust-badge i { color: #B8D4C8 !important; }
+.hero .btn-primary { background: #5B8A72 !important; color: white !important; border-color: #5B8A72 !important; }
+.hero .btn-primary:hover { background: #4A7561 !important; border-color: #4A7561 !important; }
+.hero .btn-blue { background: white !important; color: #3D5A80 !important; border-color: white !important; }
+.hero .btn-blue:hover { background: rgba(255,255,255,0.9) !important; border-color: rgba(255,255,255,0.9) !important; }
+.hero .btn-secondary { background: rgba(255,255,255,0.1) !important; color: white !important; border-color: rgba(255,255,255,0.4) !important; }
+.hero .btn-secondary:hover { background: rgba(255,255,255,0.2) !important; }
+.hero-widget {
+  border: 2px solid rgba(61,90,128,0.3) !important;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.25), 0 0 0 4px rgba(61,90,128,0.08) !important;
+  background: white !important;
+}
+
+
 .cta-banner { background: linear-gradient(135deg, #5B8A72 0%, #3D5A80 50%, #1E3A5F 100%) !important; }
-.cta-banner .btn-primary { background: white !important; color: #5B8A72 !important; border-color: white !important; font-size: 18px !important; padding: 18px 40px !important; box-shadow: 0 4px 20px rgba(255,255,255,0.3) !important; }
-.cta-banner .btn-primary:hover { transform: translateY(-2px) !important; box-shadow: 0 6px 28px rgba(255,255,255,0.4) !important; }
-.hero-widget { border: 2px solid rgba(91,138,114,0.3) !important; box-shadow: 0 8px 40px rgba(91,138,114,0.15) !important; background: linear-gradient(180deg, white 0%, #F8FAFB 100%) !important; }
-.widget-opt-icon { width: 48px !important; height: 48px !important; border-radius: 12px !important; }
+.cta-banner .btn-primary { background: white !important; color: #3D5A80 !important; border-color: white !important; font-size: 18px; padding: 18px 40px; font-weight: 700; }
+.hero .btn-primary { padding: 16px 32px !important; font-size: 17px !important; }
+.hero .btn-blue { font-size: 17px !important; padding: 16px 32px !important; }
 
 </style>
 <script>
