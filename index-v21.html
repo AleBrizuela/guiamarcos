@@ -875,20 +875,19 @@ a[href^="tel"] { white-space: nowrap; }
   transform: translateY(-2px) !important;
 }
 
-/* ── Subtle phone link below CTA ── */
-.hero-phone-link {
-  font-size: 15px !important;
+/* ── Hint text below CTA ── */
+.hero-cta-hint {
+  font-size: 14px !important;
   color: var(--gray) !important;
   margin: 0 !important;
   font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
 }
-.hero-phone-link a {
-  color: var(--navy) !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-}
-.hero-phone-link a:hover {
-  text-decoration: underline !important;
+.hero-cta-hint i {
+  color: var(--green) !important;
+  font-size: 13px !important;
 }
 
 /* ── WIDGET: subtle border, clean ── */
@@ -942,9 +941,9 @@ a[href^="tel"] { white-space: nowrap; }
     min-height: 68px !important;
     border-radius: 14px !important;
   }
-  .hero-phone-link {
+  .hero-cta-hint {
     text-align: center !important;
-    font-size: 16px !important;
+    justify-content: center !important;
   }
 }
 
@@ -1083,7 +1082,7 @@ a[href^="tel"] { white-space: nowrap; }
             <a href="javascript:void(0)" onclick="smoothScrollToWidget()" class="btn btn-cta-main">
               <i class="fas fa-search"></i> <span>Comparar Planes Gratis</span>
             </a>
-            <p class="hero-phone-link">O llame a un asesor: <a href="tel:+13105979142"><i class="fas fa-phone-alt"></i> (310) 597-9142</a></p>
+            <p class="hero-cta-hint"><i class="fas fa-clock"></i> 2 minutos. Sin compromiso. Le llamamos con opciones personalizadas.</p>
           </div>
         </div>
       </div>
@@ -1231,13 +1230,13 @@ a[href^="tel"] { white-space: nowrap; }
     </div>
   </section>
 
-  <!-- CTA BANNER -->
+  <!-- CTA BANNER: HABLAR CON ASESOR -->
   <section class="cta-banner">
-    <h2>¿Prefiere una consulta virtual?</h2>
-    <p>Ofrecemos consultas virtuales y visitas a domicilio para adultos mayores dentro del área de Los Angeles.</p>
+    <h2>¿Prefiere hablar con un asesor?</h2>
+    <p>Estamos aquí para ayudarle. Escoja la opción que prefiera.</p>
     <div class="cta-buttons" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-      <a href="https://calendar.app.google/6D4obxzxERQXBpaf7" target="_blank" class="btn btn-primary" style="font-size:17px;padding:18px 36px"><i class="fas fa-calendar-check"></i> Consulta Virtual</a>
-      <a href="https://wa.me/13105979142?text=Hola%2C%20necesito%20ayuda%20con%20Medicare" target="_blank" class="btn btn-secondary" style="font-size:17px;padding:18px 36px"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="tel:+13105979142" class="btn btn-primary" style="font-size:17px;padding:18px 36px"><i class="fas fa-phone-alt"></i> Llame por Teléfono</a>
+      <a href="https://calendar.app.google/6D4obxzxERQXBpaf7" target="_blank" class="btn btn-secondary" style="font-size:17px;padding:18px 36px"><i class="fas fa-video"></i> Agende Video Llamada</a>
     </div>
   </section>
 </div>
@@ -1306,9 +1305,12 @@ a[href^="tel"] { white-space: nowrap; }
     <div class="container">
       <div class="section-title" style="color:white;margin-bottom:8px">¿Listo para encontrar su plan?</div>
       <p style="color:rgba(255,255,255,0.9);font-size:18px;margin-bottom:28px">La comparación es gratis y sin compromiso.</p>
-      <a href="index.html#widget-anchor" class="btn" style="background:white;color:var(--navy);font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
-        <i class="fas fa-search"></i> <span>Comparar Planes</span>
-      </a>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+        <a href="index.html#widget-anchor" class="btn" style="background:white;color:var(--navy);font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:8px">
+          <i class="fas fa-search"></i> <span>Comparar Planes Gratis</span>
+        </a>
+      </div>
+      <p style="color:rgba(255,255,255,0.65);font-size:14px;margin:0">O si prefiere: <a href="tel:+13105979142" style="color:white;text-decoration:underline;font-weight:600"><i class="fas fa-phone-alt"></i> Llame</a> · <a href="https://calendar.app.google/6D4obxzxERQXBpaf7" target="_blank" style="color:white;text-decoration:underline;font-weight:600"><i class="fas fa-video"></i> Video Llamada</a></p>
     </div>
   </section>
 </div>
@@ -1320,7 +1322,8 @@ a[href^="tel"] { white-space: nowrap; }
     <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:20px;font-size:14px">
       <a href="index.html" style="color:var(--lt-blue);text-decoration:none">Inicio</a>
       <a href="beneficios.html" style="color:var(--lt-blue);text-decoration:none">Beneficios</a>
-      <a href="contacto.html" style="color:var(--lt-blue);text-decoration:none">Contacto</a>
+      <a href="tel:+13105979142" style="color:var(--lt-blue);text-decoration:none"><i class="fas fa-phone-alt"></i> Llamar</a>
+      <a href="https://calendar.app.google/6D4obxzxERQXBpaf7" target="_blank" style="color:var(--lt-blue);text-decoration:none"><i class="fas fa-video"></i> Video Llamada</a>
       <a href="mailto:alejamedicare@gmail.com" style="color:var(--lt-blue);text-decoration:none">alejamedicare@gmail.com</a>
       <a href="https://wa.me/13105979142" target="_blank" style="color:var(--lt-blue);text-decoration:none">WhatsApp</a>
     </div>
